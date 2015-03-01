@@ -1,0 +1,12 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Dr.COM"
+msgstr "Dr.COM Client for ZJUT"
+
+msgid "Dr.COM is not running"
+msgstr "Dr.COM is not running"
+
+msgid "Dr.COM is running"
+msgstr "Dr.COM is running"
+
