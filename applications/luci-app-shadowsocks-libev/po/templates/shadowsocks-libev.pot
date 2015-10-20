@@ -1,19 +1,61 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
-msgid "ShadowSocks-libev"
+msgid "Access Control"
 msgstr ""
 
-msgid "ShadowSocks-libev is running"
+msgid "Allow all except listed"
 msgstr ""
 
-msgid "ShadowSocks-libev is not running"
+msgid "Allow listed only"
+msgstr ""
+
+msgid "Bypassed IP"
+msgstr ""
+
+msgid "Connection Timeout"
+msgstr ""
+
+msgid "Custom"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Encrypt Method"
+msgstr ""
+
+msgid "Forwarded IP"
+msgstr ""
+
+msgid "Forwarding Tunnel"
 msgstr ""
 
 msgid "Global Setting"
 msgstr ""
 
-msgid "Enable"
+msgid "Ignore List"
+msgstr ""
+
+msgid "LAN"
+msgstr ""
+
+msgid "LAN IP List"
+msgstr ""
+
+msgid "Local Port"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Relay Mode"
 msgstr ""
 
 msgid "Server Address"
@@ -22,25 +64,13 @@ msgstr ""
 msgid "Server Port"
 msgstr ""
 
-msgid "Local Port"
+msgid "ShadowSocks-libev"
 msgstr ""
 
-msgid "Connection Timeout"
+msgid "ShadowSocks-libev is not running"
 msgstr ""
 
-msgid "Password"
-msgstr ""
-
-msgid "Encrypt Method"
-msgstr ""
-
-msgid "Proxy Setting"
-msgstr ""
-
-msgid "Proxy Protocol"
-msgstr ""
-
-msgid "Ignore List"
+msgid "ShadowSocks-libev is running"
 msgstr ""
 
 msgid "UDP Forward"
@@ -49,26 +79,8 @@ msgstr ""
 msgid "UDP Local Port"
 msgstr ""
 
-msgid "Forwarding Tunnel"
+msgid "UDP Relay"
 msgstr ""
 
-msgid "Access Control"
-msgstr ""
-
-msgid "Disabled"
-msgstr ""
-
-msgid "Allow listed only"
-msgstr ""
-
-msgid "Allow all except listed"
-msgstr ""
-
-msgid "LAN IP List"
-msgstr ""
-
-msgid "Bypassed IP"
-msgstr ""
-
-msgid "Forwarded IP"
+msgid "WAN"
 msgstr ""

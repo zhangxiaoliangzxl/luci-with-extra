@@ -20,7 +20,7 @@ function index()
 
 	local labels = {
 		s_output	= _("Output plugins"),
-		s_system	= _("System plugins"),
+		s_general	= _("General plugins"),
 		s_network	= _("Network plugins"),
 
 		conntrack	= _("Conntrack"),
@@ -30,6 +30,7 @@ function index()
 		disk		= _("Disk Usage"),
 		dns			= _("DNS"),
 		email		= _("Email"),
+		entropy		= _("Entropy"),
 		exec		= _("Exec"),
 		interface	= _("Interfaces"),
 		iptables	= _("Firewall"),
@@ -41,9 +42,11 @@ function index()
 		network		= _("Network"),
 		nut			= _("UPS"),
 		olsrd		= _("OLSRd"),
+		openvpn		= _("OpenVPN"),
 		ping		= _("Ping"),
 		processes	= _("Processes"),
 		rrdtool		= _("RRDTool"),
+		sensors     = _("Sensors"),
 		splash_leases = _("Splash Leases"),
 		tcpconns	= _("TCP Connections"),
 		unixsock	= _("UnixSock"),
@@ -53,15 +56,15 @@ function index()
 	-- our collectd menu
 	local collectd_menu = {
 		output  = { "csv", "network", "rrdtool", "unixsock" },
-		system  = { "cpu", "df", "disk", "email", "exec", "irq", "load", "memory", "nut", "processes", "uptime" },
-		network = { "conntrack", "dns", "interface", "iptables", "netlink", "olsrd", "ping", "splash_leases", "tcpconns", "iwinfo" }
+		general = { "cpu", "df", "disk", "email", "entropy", "exec", "irq", "load", "memory", "nut", "processes", "sensors", "uptime" },
+		network = { "conntrack", "dns", "interface", "iptables", "netlink", "olsrd", "openvpn", "ping", "splash_leases", "tcpconns", "iwinfo" }
 	}
 
 	-- create toplevel menu nodes
 	local st = entry({"admin", "statistics"}, template("admin_statistics/index"), _("Statistics"), 80)
 	st.index = true
 
-	entry({"admin", "statistics", "collectd"}, cbi("luci_statistics/collectd"), _("Collectd"), 10).subindex = true
+	entry({"admin", "statistics", "collectd"}, cbi("luci_statistics/collectd"), _("Setup"), 20).subindex = true
 
 
 	-- populate collectd plugin menu
@@ -86,7 +89,7 @@ function index()
 	end
 
 	-- output views
-	local page = entry( { "admin", "statistics", "graph" }, template("admin_statistics/index"), _("Graphs"), 80)
+	local page = entry( { "admin", "statistics", "graph" }, template("admin_statistics/index"), _("Graphs"), 10)
 	      page.setuser  = "nobody"
 	      page.setgroup = "nogroup"
 
@@ -169,7 +172,7 @@ function statistics_render()
 	if #instances == 0 then
 		--instances = { graph.tree:plugin_instances( plugin )[1] }
 		instances = graph.tree:plugin_instances( plugin )
-		is_index = true
+		is_index = (#instances > 1)
 
 	-- index instance requested
 	elseif instances[1] == "-" then
