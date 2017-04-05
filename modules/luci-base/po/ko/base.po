@@ -52,11 +52,35 @@ msgstr "1 분 부하:"
 msgid "15 Minute Load:"
 msgstr "15 분 부하:"
 
+msgid "4-character hexadecimal ID"
+msgstr ""
+
 msgid "464XLAT (CLAT)"
 msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "5 분 부하:"
+
+msgid "6-octet identifier as a hex string - no colons"
+msgstr ""
+
+msgid "802.11r Fast Transition"
+msgstr ""
+
+msgid "802.11w Association SA Query maximum timeout"
+msgstr ""
+
+msgid "802.11w Association SA Query retry timeout"
+msgstr ""
+
+msgid "802.11w Management Frame Protection"
+msgstr ""
+
+msgid "802.11w maximum timeout"
+msgstr ""
+
+msgid "802.11w retry timeout"
+msgstr ""
 
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
 msgstr ""
@@ -140,9 +164,6 @@ msgid "ANSI T1.413"
 msgstr ""
 
 msgid "APN"
-msgstr ""
-
-msgid "AR Support"
 msgstr ""
 
 msgid "ARP retry threshold"
@@ -382,9 +403,6 @@ msgstr ""
 msgid "Associated Stations"
 msgstr "연결된 station 들"
 
-msgid "Atheros 802.11%s Wireless Controller"
-msgstr ""
-
 msgid "Auth Group"
 msgstr ""
 
@@ -461,9 +479,6 @@ msgid "Back to overview"
 msgstr ""
 
 msgid "Back to scan results"
-msgstr ""
-
-msgid "Background Scan"
 msgstr ""
 
 msgid "Backup / Flash Firmware"
@@ -633,9 +648,6 @@ msgstr "명령어"
 
 msgid "Common Configuration"
 msgstr "공통 설정"
-
-msgid "Compression"
-msgstr ""
 
 msgid "Configuration"
 msgstr "설정"
@@ -859,10 +871,10 @@ msgstr ""
 msgid "Disable Encryption"
 msgstr ""
 
-msgid "Disable HW-Beacon timer"
+msgid "Disabled"
 msgstr ""
 
-msgid "Disabled"
+msgid "Disabled (default)"
 msgstr ""
 
 msgid "Discard upstream RFC1918 responses"
@@ -900,9 +912,6 @@ msgid "Do not forward requests that cannot be answered by public name servers"
 msgstr ""
 
 msgid "Do not forward reverse lookups for local networks"
-msgstr ""
-
-msgid "Do not send probe responses"
 msgstr ""
 
 msgid "Domain required"
@@ -1031,6 +1040,11 @@ msgstr "활성/비활성"
 msgid "Enabled"
 msgstr "활성화됨"
 
+msgid ""
+"Enables fast roaming among access points that belong to the same Mobility "
+"Domain"
+msgstr ""
+
 msgid "Enables the Spanning Tree Protocol on this bridge"
 msgstr "이 bridge 에 Spanning Tree Protocol 활성화합니다"
 
@@ -1077,6 +1091,12 @@ msgstr "임대한 주소의 유효 시간.  최소값은  2 분 (<code>2m</code>
 msgid "External"
 msgstr ""
 
+msgid "External R0 Key Holder List"
+msgstr ""
+
+msgid "External R1 Key Holder List"
+msgstr ""
+
 msgid "External system log server"
 msgstr "외부 system log 서버"
 
@@ -1087,9 +1107,6 @@ msgid "External system log server protocol"
 msgstr "외부 system log 서버 프로토콜"
 
 msgid "Extra SSH command options"
-msgstr ""
-
-msgid "Fast Frames"
 msgstr ""
 
 msgid "File"
@@ -1126,6 +1143,9 @@ msgstr ""
 
 msgid "Firewall"
 msgstr "방화벽"
+
+msgid "Firewall Mark"
+msgstr ""
 
 msgid "Firewall Settings"
 msgstr "방화벽 설정"
@@ -1325,6 +1345,9 @@ msgstr ""
 msgid "IKE DH Group"
 msgstr ""
 
+msgid "IP Addresses"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP 주소"
 
@@ -1417,6 +1440,9 @@ msgstr ""
 
 msgid "IPv6-Address"
 msgstr "IPv6-주소"
+
+msgid "IPv6-PD"
+msgstr ""
 
 msgid "IPv6-in-IPv4 (RFC4213)"
 msgstr ""
@@ -1562,7 +1588,7 @@ msgid ""
 "flash memory, please verify the image file!"
 msgstr ""
 
-msgid "Java Script required!"
+msgid "JavaScript required!"
 msgstr ""
 
 msgid "Join Network"
@@ -1674,6 +1700,22 @@ msgstr ""
 msgid ""
 "List of <abbr title=\"Domain Name System\">DNS</abbr> servers to forward "
 "requests to"
+msgstr ""
+
+msgid ""
+"List of R0KHs in the same Mobility Domain. <br />Format: MAC-address,NAS-"
+"Identifier,128-bit key as hex string. <br />This list is used to map R0KH-ID "
+"(NAS Identifier) to a destination MAC address when requesting PMK-R1 key "
+"from the R0KH that the STA used during the Initial Mobility Domain "
+"Association."
+msgstr ""
+
+msgid ""
+"List of R1KHs in the same Mobility Domain. <br />Format: MAC-address,R1KH-ID "
+"as 6 octets with colons,128-bit key as hex string. <br />This list is used "
+"to map R1KH-ID to a destination MAC address when sending PMK-R1 key from the "
+"R0KH. This is also the list of authorized R1KHs in the MD that can request "
+"PMK-R1 keys."
 msgstr ""
 
 msgid "List of SSH key files for auth"
@@ -1809,9 +1851,6 @@ msgstr ""
 msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
-msgid "Maximum Rate"
-msgstr ""
-
 msgid "Maximum allowed number of active DHCP leases"
 msgstr "Active DHCP lease 건의 최대 허용 숫자"
 
@@ -1847,9 +1886,6 @@ msgstr "메모리 사용량 (%)"
 msgid "Metric"
 msgstr ""
 
-msgid "Minimum Rate"
-msgstr ""
-
 msgid "Minimum hold time"
 msgstr ""
 
@@ -1860,6 +1896,9 @@ msgid "Mirror source port"
 msgstr ""
 
 msgid "Missing protocol extension for proto %q"
+msgstr ""
+
+msgid "Mobility Domain"
 msgstr ""
 
 msgid "Mode"
@@ -1918,9 +1957,6 @@ msgstr ""
 msgid "Move up"
 msgstr ""
 
-msgid "Multicast Rate"
-msgstr ""
-
 msgid "Multicast address"
 msgstr ""
 
@@ -1931,6 +1967,9 @@ msgid "NAT-T Mode"
 msgstr ""
 
 msgid "NAT64 Prefix"
+msgstr ""
+
+msgid "NCM"
 msgstr ""
 
 msgid "NDP-Proxy"
@@ -2113,6 +2152,9 @@ msgstr "변경된 option"
 msgid "Option removed"
 msgstr "삭제된 option"
 
+msgid "Optional"
+msgstr ""
+
 msgid "Optional, specify to override default server (tic.sixxs.net)"
 msgstr ""
 
@@ -2123,8 +2165,13 @@ msgid "Optional."
 msgstr ""
 
 msgid ""
-"Optional. Adds in an additional layer of symmetric-key cryptography for post-"
-"quantum resistance."
+"Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "
+"starting with <code>0x</code>."
+msgstr ""
+
+msgid ""
+"Optional. Base64-encoded preshared key. Adds in an additional layer of "
+"symmetric-key cryptography for post-quantum resistance."
 msgstr ""
 
 msgid "Optional. Create routes for Allowed IPs for this peer."
@@ -2159,9 +2206,6 @@ msgid "Out"
 msgstr ""
 
 msgid "Outbound:"
-msgstr ""
-
-msgid "Outdoor Channels"
 msgstr ""
 
 msgid "Output Interface"
@@ -2211,6 +2255,9 @@ msgid "PID"
 msgstr ""
 
 msgid "PIN"
+msgstr ""
+
+msgid "PMK R1 Push"
 msgstr ""
 
 msgid "PPP"
@@ -2342,6 +2389,15 @@ msgstr ""
 msgid "Pre-emtive CRC errors (CRCP_P)"
 msgstr ""
 
+msgid "Prefer LTE"
+msgstr ""
+
+msgid "Prefer UMTS"
+msgstr ""
+
+msgid "Prefix Delegated"
+msgstr ""
+
 msgid "Preshared Key"
 msgstr ""
 
@@ -2405,6 +2461,12 @@ msgid "QMI Cellular"
 msgstr ""
 
 msgid "Quality"
+msgstr ""
+
+msgid "R0 Key Lifetime"
+msgstr ""
+
+msgid "R1 Key Holder"
 msgstr ""
 
 msgid "RFC3947 NAT-T mode"
@@ -2490,6 +2552,9 @@ msgstr "실시간 트래픽"
 msgid "Realtime Wireless"
 msgstr ""
 
+msgid "Reassociation Deadline"
+msgstr ""
+
 msgid "Rebind protection"
 msgstr ""
 
@@ -2508,6 +2573,9 @@ msgstr ""
 msgid "Receiver Antenna"
 msgstr ""
 
+msgid "Recommended. IP addresses of the WireGuard interface."
+msgstr ""
+
 msgid "Reconnect this interface"
 msgstr "이 인터페이스를 재연결합니다"
 
@@ -2515,9 +2583,6 @@ msgid "Reconnecting interface"
 msgstr "인터페이스 재연결중입니다"
 
 msgid "References"
-msgstr ""
-
-msgid "Regulatory Domain"
 msgstr ""
 
 msgid "Relay"
@@ -2559,10 +2624,16 @@ msgstr ""
 msgid "Require TLS"
 msgstr ""
 
+msgid "Required"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr "특정 ISP 들에 요구됨.  예: Charter (DOCSIS 3 기반)"
 
 msgid "Required. Base64-encoded private key for this interface."
+msgstr ""
+
+msgid "Required. Base64-encoded public key of peer."
 msgstr ""
 
 msgid ""
@@ -2571,7 +2642,9 @@ msgid ""
 "routes through the tunnel."
 msgstr ""
 
-msgid "Required. Public key of peer."
+msgid ""
+"Requires the 'full' version of wpad/hostapd and support from the wifi driver "
+"<br />(as of Feb 2017: ath9k and ath10k, in LEDE also mwlwifi and mt76)"
 msgstr ""
 
 msgid ""
@@ -2711,9 +2784,6 @@ msgid ""
 msgstr ""
 
 msgid "Separate Clients"
-msgstr ""
-
-msgid "Separate WDS"
 msgstr ""
 
 msgid "Server Settings"
@@ -2872,9 +2942,6 @@ msgstr "Static Lease 들"
 
 msgid "Static Routes"
 msgstr "Static Route 경로"
-
-msgid "Static WDS"
-msgstr ""
 
 msgid "Static address"
 msgstr ""
@@ -3123,8 +3190,8 @@ msgid ""
 "There is no password set on this router. Please configure a root password to "
 "protect the web interface and enable SSH."
 msgstr ""
-"이 공유기에 암호 설정이 되지 않았습니다. 웹 UI 와 SSH 부분을 보호하기 "
-"위해서 꼭 root 암호를 설정해 주세요."
+"이 공유기에 암호 설정이 되지 않았습니다. 웹 UI 와 SSH 부분을 보호하기 위해서 "
+"꼭 root 암호를 설정해 주세요."
 
 msgid "This IPv4 address of the relay"
 msgstr ""
@@ -3262,9 +3329,6 @@ msgstr ""
 msgid "Tunnel type"
 msgstr ""
 
-msgid "Turbo Mode"
-msgstr ""
-
 msgid "Tx-Power"
 msgstr ""
 
@@ -3281,6 +3345,9 @@ msgid "UMTS/GPRS/EV-DO"
 msgstr ""
 
 msgid "USB Device"
+msgstr ""
+
+msgid "USB Ports"
 msgstr ""
 
 msgid "UUID"
@@ -3390,6 +3457,11 @@ msgid "Used"
 msgstr ""
 
 msgid "Used Key Slot"
+msgstr ""
+
+msgid ""
+"Used for two different purposes: RADIUS NAS ID and 802.11r R0KH-ID. Not "
+"needed with normal WPA(2)-PSK."
 msgstr ""
 
 msgid "User certificate (PEM encoded)"
@@ -3542,9 +3614,6 @@ msgstr "받은 DNS 요청 내용을 systlog 에 기록합니다"
 msgid "Write system log to file"
 msgstr "System log 출력 파일 경로"
 
-msgid "XR Support"
-msgstr ""
-
 msgid ""
 "You can enable or disable installed init scripts here. Changes will applied "
 "after a device reboot.<br /><strong>Warning: If you disable essential init "
@@ -3556,7 +3625,7 @@ msgstr ""
 "다!</strong>"
 
 msgid ""
-"You must enable Java Script in your browser or LuCI will not work properly."
+"You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
 
 msgid ""
@@ -3647,6 +3716,9 @@ msgstr "local <abbr title=\"Domain Name System\">DNS</abbr> 파일"
 msgid "minimum 1280, maximum 1480"
 msgstr ""
 
+msgid "minutes"
+msgstr ""
+
 msgid "navigation Navigation"
 msgstr ""
 
@@ -3699,6 +3771,9 @@ msgid "stateless + stateful"
 msgstr ""
 
 msgid "tagged"
+msgstr ""
+
+msgid "time units (TUs / 1.024 ms) [1000-65535]"
 msgstr ""
 
 msgid "unknown"

@@ -52,10 +52,34 @@ msgstr ""
 msgid "15 Minute Load:"
 msgstr ""
 
+msgid "4-character hexadecimal ID"
+msgstr ""
+
 msgid "464XLAT (CLAT)"
 msgstr ""
 
 msgid "5 Minute Load:"
+msgstr ""
+
+msgid "6-octet identifier as a hex string - no colons"
+msgstr ""
+
+msgid "802.11r Fast Transition"
+msgstr ""
+
+msgid "802.11w Association SA Query maximum timeout"
+msgstr ""
+
+msgid "802.11w Association SA Query retry timeout"
+msgstr ""
+
+msgid "802.11w Management Frame Protection"
+msgstr ""
+
+msgid "802.11w maximum timeout"
+msgstr ""
+
+msgid "802.11w retry timeout"
 msgstr ""
 
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
@@ -138,9 +162,6 @@ msgstr ""
 
 msgid "APN"
 msgstr ""
-
-msgid "AR Support"
-msgstr "AR-Penyokong"
 
 msgid "ARP retry threshold"
 msgstr ""
@@ -377,9 +398,6 @@ msgstr ""
 msgid "Associated Stations"
 msgstr "Associated Stesen"
 
-msgid "Atheros 802.11%s Wireless Controller"
-msgstr ""
-
 msgid "Auth Group"
 msgstr ""
 
@@ -457,9 +475,6 @@ msgstr "Kembali ke ikhtisar"
 
 msgid "Back to scan results"
 msgstr "Kembali ke keputusan scan"
-
-msgid "Background Scan"
-msgstr "Latar Belakang Scan"
 
 msgid "Backup / Flash Firmware"
 msgstr ""
@@ -615,9 +630,6 @@ msgstr "Perintah"
 
 msgid "Common Configuration"
 msgstr ""
-
-msgid "Compression"
-msgstr "Mampatan"
 
 msgid "Configuration"
 msgstr "Konfigurasi"
@@ -832,10 +844,10 @@ msgstr ""
 msgid "Disable Encryption"
 msgstr ""
 
-msgid "Disable HW-Beacon timer"
-msgstr "Mematikan pemasa HW-Beacon"
-
 msgid "Disabled"
+msgstr ""
+
+msgid "Disabled (default)"
 msgstr ""
 
 msgid "Discard upstream RFC1918 responses"
@@ -876,9 +888,6 @@ msgstr ""
 
 msgid "Do not forward reverse lookups for local networks"
 msgstr ""
-
-msgid "Do not send probe responses"
-msgstr "Jangan menghantar jawapan penyelidikan"
 
 msgid "Domain required"
 msgstr "Domain diperlukan"
@@ -1003,6 +1012,11 @@ msgstr ""
 msgid "Enabled"
 msgstr ""
 
+msgid ""
+"Enables fast roaming among access points that belong to the same Mobility "
+"Domain"
+msgstr ""
+
 msgid "Enables the Spanning Tree Protocol on this bridge"
 msgstr "Aktifkan spanning Tree Protokol di jambatan ini"
 
@@ -1049,6 +1063,12 @@ msgstr ""
 msgid "External"
 msgstr ""
 
+msgid "External R0 Key Holder List"
+msgstr ""
+
+msgid "External R1 Key Holder List"
+msgstr ""
+
 msgid "External system log server"
 msgstr ""
 
@@ -1060,9 +1080,6 @@ msgstr ""
 
 msgid "Extra SSH command options"
 msgstr ""
-
-msgid "Fast Frames"
-msgstr "Frame Cepat"
 
 msgid "File"
 msgstr ""
@@ -1098,6 +1115,9 @@ msgstr "Selesai"
 
 msgid "Firewall"
 msgstr "Firewall"
+
+msgid "Firewall Mark"
+msgstr ""
 
 msgid "Firewall Settings"
 msgstr "Tetapan Firewall"
@@ -1296,6 +1316,9 @@ msgstr ""
 msgid "IKE DH Group"
 msgstr ""
 
+msgid "IP Addresses"
+msgstr ""
+
 msgid "IP address"
 msgstr "Alamat IP"
 
@@ -1387,6 +1410,9 @@ msgid "IPv6 routed prefix"
 msgstr ""
 
 msgid "IPv6-Address"
+msgstr ""
+
+msgid "IPv6-PD"
 msgstr ""
 
 msgid "IPv6-in-IPv4 (RFC4213)"
@@ -1541,7 +1567,7 @@ msgstr ""
 "Tampak bahawa anda cuba untuk flash fail gambar yang tidak sesuai dengan "
 "memori flash, sila buat pengesahan pada fail gambar!"
 
-msgid "Java Script required!"
+msgid "JavaScript required!"
 msgstr ""
 
 #, fuzzy
@@ -1653,6 +1679,22 @@ msgstr "Link Pada"
 msgid ""
 "List of <abbr title=\"Domain Name System\">DNS</abbr> servers to forward "
 "requests to"
+msgstr ""
+
+msgid ""
+"List of R0KHs in the same Mobility Domain. <br />Format: MAC-address,NAS-"
+"Identifier,128-bit key as hex string. <br />This list is used to map R0KH-ID "
+"(NAS Identifier) to a destination MAC address when requesting PMK-R1 key "
+"from the R0KH that the STA used during the Initial Mobility Domain "
+"Association."
+msgstr ""
+
+msgid ""
+"List of R1KHs in the same Mobility Domain. <br />Format: MAC-address,R1KH-ID "
+"as 6 octets with colons,128-bit key as hex string. <br />This list is used "
+"to map R1KH-ID to a destination MAC address when sending PMK-R1 key from the "
+"R0KH. This is also the list of authorized R1KHs in the MD that can request "
+"PMK-R1 keys."
 msgstr ""
 
 msgid "List of SSH key files for auth"
@@ -1787,9 +1829,6 @@ msgstr ""
 msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
-msgid "Maximum Rate"
-msgstr "Rate Maksimum"
-
 msgid "Maximum allowed number of active DHCP leases"
 msgstr ""
 
@@ -1826,9 +1865,6 @@ msgstr "Penggunaan Memori (%)"
 msgid "Metric"
 msgstr "Metrik"
 
-msgid "Minimum Rate"
-msgstr "Rate Minimum"
-
 #, fuzzy
 msgid "Minimum hold time"
 msgstr "Memegang masa minimum"
@@ -1840,6 +1876,9 @@ msgid "Mirror source port"
 msgstr ""
 
 msgid "Missing protocol extension for proto %q"
+msgstr ""
+
+msgid "Mobility Domain"
 msgstr ""
 
 msgid "Mode"
@@ -1900,9 +1939,6 @@ msgstr ""
 msgid "Move up"
 msgstr ""
 
-msgid "Multicast Rate"
-msgstr "Multicast Rate"
-
 msgid "Multicast address"
 msgstr ""
 
@@ -1913,6 +1949,9 @@ msgid "NAT-T Mode"
 msgstr ""
 
 msgid "NAT64 Prefix"
+msgstr ""
+
+msgid "NCM"
 msgstr ""
 
 msgid "NDP-Proxy"
@@ -2094,6 +2133,9 @@ msgstr ""
 msgid "Option removed"
 msgstr ""
 
+msgid "Optional"
+msgstr ""
+
 msgid "Optional, specify to override default server (tic.sixxs.net)"
 msgstr ""
 
@@ -2104,8 +2146,13 @@ msgid "Optional."
 msgstr ""
 
 msgid ""
-"Optional. Adds in an additional layer of symmetric-key cryptography for post-"
-"quantum resistance."
+"Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "
+"starting with <code>0x</code>."
+msgstr ""
+
+msgid ""
+"Optional. Base64-encoded preshared key. Adds in an additional layer of "
+"symmetric-key cryptography for post-quantum resistance."
 msgstr ""
 
 msgid "Optional. Create routes for Allowed IPs for this peer."
@@ -2141,9 +2188,6 @@ msgstr "Keluar"
 
 msgid "Outbound:"
 msgstr ""
-
-msgid "Outdoor Channels"
-msgstr "Saluran Outdoor"
 
 msgid "Output Interface"
 msgstr ""
@@ -2190,6 +2234,9 @@ msgid "PID"
 msgstr "PID"
 
 msgid "PIN"
+msgstr ""
+
+msgid "PMK R1 Push"
 msgstr ""
 
 msgid "PPP"
@@ -2321,6 +2368,15 @@ msgstr ""
 msgid "Pre-emtive CRC errors (CRCP_P)"
 msgstr ""
 
+msgid "Prefer LTE"
+msgstr ""
+
+msgid "Prefer UMTS"
+msgstr ""
+
+msgid "Prefix Delegated"
+msgstr ""
+
 msgid "Preshared Key"
 msgstr ""
 
@@ -2384,6 +2440,12 @@ msgid "QMI Cellular"
 msgstr ""
 
 msgid "Quality"
+msgstr ""
+
+msgid "R0 Key Lifetime"
+msgstr ""
+
+msgid "R1 Key Holder"
 msgstr ""
 
 msgid "RFC3947 NAT-T mode"
@@ -2466,6 +2528,9 @@ msgstr ""
 msgid "Realtime Wireless"
 msgstr ""
 
+msgid "Reassociation Deadline"
+msgstr ""
+
 msgid "Rebind protection"
 msgstr ""
 
@@ -2484,6 +2549,9 @@ msgstr "Menerima"
 msgid "Receiver Antenna"
 msgstr "Antena Penerima"
 
+msgid "Recommended. IP addresses of the WireGuard interface."
+msgstr ""
+
 msgid "Reconnect this interface"
 msgstr ""
 
@@ -2492,9 +2560,6 @@ msgstr ""
 
 msgid "References"
 msgstr "Rujukan"
-
-msgid "Regulatory Domain"
-msgstr "Peraturan Domain"
 
 msgid "Relay"
 msgstr ""
@@ -2535,10 +2600,16 @@ msgstr ""
 msgid "Require TLS"
 msgstr ""
 
+msgid "Required"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr ""
 
 msgid "Required. Base64-encoded private key for this interface."
+msgstr ""
+
+msgid "Required. Base64-encoded public key of peer."
 msgstr ""
 
 msgid ""
@@ -2547,7 +2618,9 @@ msgid ""
 "routes through the tunnel."
 msgstr ""
 
-msgid "Required. Public key of peer."
+msgid ""
+"Requires the 'full' version of wpad/hostapd and support from the wifi driver "
+"<br />(as of Feb 2017: ath9k and ath10k, in LEDE also mwlwifi and mt76)"
 msgstr ""
 
 msgid ""
@@ -2688,9 +2761,6 @@ msgstr ""
 
 msgid "Separate Clients"
 msgstr "Pisahkan Pelanggan"
-
-msgid "Separate WDS"
-msgstr "Pisahkan WDS"
 
 msgid "Server Settings"
 msgstr ""
@@ -2849,9 +2919,6 @@ msgstr "Statische Einträge"
 
 msgid "Static Routes"
 msgstr "Laluan Statik"
-
-msgid "Static WDS"
-msgstr ""
 
 msgid "Static address"
 msgstr ""
@@ -3236,9 +3303,6 @@ msgstr ""
 msgid "Tunnel type"
 msgstr ""
 
-msgid "Turbo Mode"
-msgstr "Mod Turbo"
-
 msgid "Tx-Power"
 msgstr ""
 
@@ -3255,6 +3319,9 @@ msgid "UMTS/GPRS/EV-DO"
 msgstr ""
 
 msgid "USB Device"
+msgstr ""
+
+msgid "USB Ports"
 msgstr ""
 
 msgid "UUID"
@@ -3356,6 +3423,11 @@ msgid "Used"
 msgstr "Diguna"
 
 msgid "Used Key Slot"
+msgstr ""
+
+msgid ""
+"Used for two different purposes: RADIUS NAS ID and 802.11r R0KH-ID. Not "
+"needed with normal WPA(2)-PSK."
 msgstr ""
 
 msgid "User certificate (PEM encoded)"
@@ -3510,9 +3582,6 @@ msgstr ""
 msgid "Write system log to file"
 msgstr ""
 
-msgid "XR Support"
-msgstr "Sokongan XR"
-
 msgid ""
 "You can enable or disable installed init scripts here. Changes will applied "
 "after a device reboot.<br /><strong>Warning: If you disable essential init "
@@ -3520,7 +3589,7 @@ msgid ""
 msgstr ""
 
 msgid ""
-"You must enable Java Script in your browser or LuCI will not work properly."
+"You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
 
 msgid ""
@@ -3609,6 +3678,9 @@ msgstr "Fail DNS tempatan"
 msgid "minimum 1280, maximum 1480"
 msgstr ""
 
+msgid "minutes"
+msgstr ""
+
 msgid "navigation Navigation"
 msgstr ""
 
@@ -3663,6 +3735,9 @@ msgstr ""
 msgid "tagged"
 msgstr ""
 
+msgid "time units (TUs / 1.024 ms) [1000-65535]"
+msgstr ""
+
 msgid "unknown"
 msgstr ""
 
@@ -3683,3 +3758,45 @@ msgstr ""
 
 msgid "« Back"
 msgstr "« Kembali"
+
+#~ msgid "AR Support"
+#~ msgstr "AR-Penyokong"
+
+#~ msgid "Background Scan"
+#~ msgstr "Latar Belakang Scan"
+
+#~ msgid "Compression"
+#~ msgstr "Mampatan"
+
+#~ msgid "Disable HW-Beacon timer"
+#~ msgstr "Mematikan pemasa HW-Beacon"
+
+#~ msgid "Do not send probe responses"
+#~ msgstr "Jangan menghantar jawapan penyelidikan"
+
+#~ msgid "Fast Frames"
+#~ msgstr "Frame Cepat"
+
+#~ msgid "Maximum Rate"
+#~ msgstr "Rate Maksimum"
+
+#~ msgid "Minimum Rate"
+#~ msgstr "Rate Minimum"
+
+#~ msgid "Multicast Rate"
+#~ msgstr "Multicast Rate"
+
+#~ msgid "Outdoor Channels"
+#~ msgstr "Saluran Outdoor"
+
+#~ msgid "Regulatory Domain"
+#~ msgstr "Peraturan Domain"
+
+#~ msgid "Separate WDS"
+#~ msgstr "Pisahkan WDS"
+
+#~ msgid "Turbo Mode"
+#~ msgstr "Mod Turbo"
+
+#~ msgid "XR Support"
+#~ msgstr "Sokongan XR"

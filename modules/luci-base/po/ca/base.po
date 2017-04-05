@@ -52,11 +52,35 @@ msgstr "Càrrega d'1 minut:"
 msgid "15 Minute Load:"
 msgstr "Càrrega de 15 minuts:"
 
+msgid "4-character hexadecimal ID"
+msgstr ""
+
 msgid "464XLAT (CLAT)"
 msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "Càrrega de 5 minuts:"
+
+msgid "6-octet identifier as a hex string - no colons"
+msgstr ""
+
+msgid "802.11r Fast Transition"
+msgstr ""
+
+msgid "802.11w Association SA Query maximum timeout"
+msgstr ""
+
+msgid "802.11w Association SA Query retry timeout"
+msgstr ""
+
+msgid "802.11w Management Frame Protection"
+msgstr ""
+
+msgid "802.11w maximum timeout"
+msgstr ""
+
+msgid "802.11w retry timeout"
+msgstr ""
 
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
 msgstr "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
@@ -145,9 +169,6 @@ msgstr ""
 
 msgid "APN"
 msgstr "APN"
-
-msgid "AR Support"
-msgstr "Suport AR"
 
 msgid "ARP retry threshold"
 msgstr "Llindar de reintent ARP"
@@ -390,9 +411,6 @@ msgstr ""
 msgid "Associated Stations"
 msgstr "Estacions associades"
 
-msgid "Atheros 802.11%s Wireless Controller"
-msgstr "Controlador sense fils d'Atheros 802.11%s"
-
 msgid "Auth Group"
 msgstr ""
 
@@ -471,9 +489,6 @@ msgstr "Enrere al resum"
 # Endarrere cap a resultats d'escaneig
 msgid "Back to scan results"
 msgstr "Enrere als resultats de l'escaneig"
-
-msgid "Background Scan"
-msgstr "Escaneig de fons"
 
 msgid "Backup / Flash Firmware"
 msgstr "Còpia de seguretat / Recàrrega de programari"
@@ -637,9 +652,6 @@ msgstr "Ordre"
 
 msgid "Common Configuration"
 msgstr "Configuració comuna"
-
-msgid "Compression"
-msgstr "Compressió"
 
 msgid "Configuration"
 msgstr "Configuració"
@@ -858,11 +870,11 @@ msgstr ""
 msgid "Disable Encryption"
 msgstr ""
 
-msgid "Disable HW-Beacon timer"
-msgstr "Inhabilita el temporitzador HW-Beacon"
-
 msgid "Disabled"
 msgstr "Inhabilitat"
+
+msgid "Disabled (default)"
+msgstr ""
 
 msgid "Discard upstream RFC1918 responses"
 msgstr "Descarta les respostes RFC1918 des de dalt"
@@ -901,9 +913,6 @@ msgstr ""
 
 msgid "Do not forward reverse lookups for local networks"
 msgstr ""
-
-msgid "Do not send probe responses"
-msgstr "No enviïs les respostes de prova"
 
 msgid "Domain required"
 msgstr "Es requereix un domini"
@@ -1032,6 +1041,11 @@ msgstr "Activa/Desactiva"
 msgid "Enabled"
 msgstr "Habilitat"
 
+msgid ""
+"Enables fast roaming among access points that belong to the same Mobility "
+"Domain"
+msgstr ""
+
 msgid "Enables the Spanning Tree Protocol on this bridge"
 msgstr "Habilita l'Spanning Tree Protocol a aquest pont"
 
@@ -1078,6 +1092,12 @@ msgstr ""
 msgid "External"
 msgstr ""
 
+msgid "External R0 Key Holder List"
+msgstr ""
+
+msgid "External R1 Key Holder List"
+msgstr ""
+
 msgid "External system log server"
 msgstr ""
 
@@ -1089,9 +1109,6 @@ msgstr ""
 
 msgid "Extra SSH command options"
 msgstr ""
-
-msgid "Fast Frames"
-msgstr "Fast Frames"
 
 msgid "File"
 msgstr "Fitxer"
@@ -1127,6 +1144,9 @@ msgstr "Acaba"
 
 msgid "Firewall"
 msgstr "Tallafocs"
+
+msgid "Firewall Mark"
+msgstr ""
 
 msgid "Firewall Settings"
 msgstr "Ajusts de tallafocs"
@@ -1328,6 +1348,9 @@ msgstr ""
 msgid "IKE DH Group"
 msgstr ""
 
+msgid "IP Addresses"
+msgstr ""
+
 msgid "IP address"
 msgstr "Adreça IP"
 
@@ -1420,6 +1443,9 @@ msgstr ""
 
 msgid "IPv6-Address"
 msgstr "Adreça IPv6"
+
+msgid "IPv6-PD"
+msgstr ""
 
 msgid "IPv6-in-IPv4 (RFC4213)"
 msgstr "IPv6-en-IPv4 (RFC4213)"
@@ -1574,7 +1600,7 @@ msgstr ""
 "Sembla que intentes actualitzar una imatge que no hi cap a la memòria flaix, "
 "si us plau verifica el fitxer d'imatge!"
 
-msgid "Java Script required!"
+msgid "JavaScript required!"
 msgstr "Es requereix JavaScript!"
 
 msgid "Join Network"
@@ -1685,6 +1711,22 @@ msgstr "Enllaç activa"
 msgid ""
 "List of <abbr title=\"Domain Name System\">DNS</abbr> servers to forward "
 "requests to"
+msgstr ""
+
+msgid ""
+"List of R0KHs in the same Mobility Domain. <br />Format: MAC-address,NAS-"
+"Identifier,128-bit key as hex string. <br />This list is used to map R0KH-ID "
+"(NAS Identifier) to a destination MAC address when requesting PMK-R1 key "
+"from the R0KH that the STA used during the Initial Mobility Domain "
+"Association."
+msgstr ""
+
+msgid ""
+"List of R1KHs in the same Mobility Domain. <br />Format: MAC-address,R1KH-ID "
+"as 6 octets with colons,128-bit key as hex string. <br />This list is used "
+"to map R1KH-ID to a destination MAC address when sending PMK-R1 key from the "
+"R0KH. This is also the list of authorized R1KHs in the MD that can request "
+"PMK-R1 keys."
 msgstr ""
 
 msgid "List of SSH key files for auth"
@@ -1819,9 +1861,6 @@ msgstr ""
 msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
-msgid "Maximum Rate"
-msgstr "Velocitat màxima"
-
 msgid "Maximum allowed number of active DHCP leases"
 msgstr ""
 
@@ -1857,9 +1896,6 @@ msgstr "Ús de Memòria (%)"
 msgid "Metric"
 msgstr "Mètric"
 
-msgid "Minimum Rate"
-msgstr "Velocitat mínima"
-
 msgid "Minimum hold time"
 msgstr ""
 
@@ -1871,6 +1907,9 @@ msgstr ""
 
 msgid "Missing protocol extension for proto %q"
 msgstr "Manca l'extensió de protocol del protocol %q"
+
+msgid "Mobility Domain"
+msgstr ""
 
 msgid "Mode"
 msgstr "Mode"
@@ -1930,9 +1969,6 @@ msgstr "Baixa"
 msgid "Move up"
 msgstr "Puja"
 
-msgid "Multicast Rate"
-msgstr "Velocitat de difusió selectiva"
-
 msgid "Multicast address"
 msgstr "Adreça de difusió selectiva"
 
@@ -1943,6 +1979,9 @@ msgid "NAT-T Mode"
 msgstr ""
 
 msgid "NAT64 Prefix"
+msgstr ""
+
+msgid "NCM"
 msgstr ""
 
 msgid "NDP-Proxy"
@@ -2125,6 +2164,9 @@ msgstr "Opció canviada"
 msgid "Option removed"
 msgstr "Opció treta"
 
+msgid "Optional"
+msgstr ""
+
 msgid "Optional, specify to override default server (tic.sixxs.net)"
 msgstr ""
 
@@ -2135,8 +2177,13 @@ msgid "Optional."
 msgstr ""
 
 msgid ""
-"Optional. Adds in an additional layer of symmetric-key cryptography for post-"
-"quantum resistance."
+"Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "
+"starting with <code>0x</code>."
+msgstr ""
+
+msgid ""
+"Optional. Base64-encoded preshared key. Adds in an additional layer of "
+"symmetric-key cryptography for post-quantum resistance."
 msgstr ""
 
 msgid "Optional. Create routes for Allowed IPs for this peer."
@@ -2172,9 +2219,6 @@ msgstr ""
 
 msgid "Outbound:"
 msgstr "Sortint:"
-
-msgid "Outdoor Channels"
-msgstr "Canals d'exteriors"
 
 msgid "Output Interface"
 msgstr ""
@@ -2222,6 +2266,9 @@ msgstr "PID"
 
 msgid "PIN"
 msgstr "PIN"
+
+msgid "PMK R1 Push"
+msgstr ""
 
 msgid "PPP"
 msgstr "PPP"
@@ -2352,6 +2399,15 @@ msgstr ""
 msgid "Pre-emtive CRC errors (CRCP_P)"
 msgstr ""
 
+msgid "Prefer LTE"
+msgstr ""
+
+msgid "Prefer UMTS"
+msgstr ""
+
+msgid "Prefix Delegated"
+msgstr ""
+
 msgid "Preshared Key"
 msgstr ""
 
@@ -2416,6 +2472,12 @@ msgstr ""
 
 msgid "Quality"
 msgstr "Calidad"
+
+msgid "R0 Key Lifetime"
+msgstr ""
+
+msgid "R1 Key Holder"
+msgstr ""
 
 msgid "RFC3947 NAT-T mode"
 msgstr ""
@@ -2498,6 +2560,9 @@ msgstr ""
 msgid "Realtime Wireless"
 msgstr ""
 
+msgid "Reassociation Deadline"
+msgstr ""
+
 msgid "Rebind protection"
 msgstr ""
 
@@ -2516,6 +2581,9 @@ msgstr "Rep"
 msgid "Receiver Antenna"
 msgstr "Antena receptora"
 
+msgid "Recommended. IP addresses of the WireGuard interface."
+msgstr ""
+
 msgid "Reconnect this interface"
 msgstr "Reconnex aquesta interfície"
 
@@ -2524,9 +2592,6 @@ msgstr "Reconnectant la interfície"
 
 msgid "References"
 msgstr "Referències"
-
-msgid "Regulatory Domain"
-msgstr "Domini regulatori"
 
 msgid "Relay"
 msgstr "Relé"
@@ -2567,10 +2632,16 @@ msgstr ""
 msgid "Require TLS"
 msgstr ""
 
+msgid "Required"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr "Alguns ISP ho requereixen, per exemple el Charter amb DOCSIS 3"
 
 msgid "Required. Base64-encoded private key for this interface."
+msgstr ""
+
+msgid "Required. Base64-encoded public key of peer."
 msgstr ""
 
 msgid ""
@@ -2579,7 +2650,9 @@ msgid ""
 "routes through the tunnel."
 msgstr ""
 
-msgid "Required. Public key of peer."
+msgid ""
+"Requires the 'full' version of wpad/hostapd and support from the wifi driver "
+"<br />(as of Feb 2017: ath9k and ath10k, in LEDE also mwlwifi and mt76)"
 msgstr ""
 
 msgid ""
@@ -2720,9 +2793,6 @@ msgstr ""
 
 msgid "Separate Clients"
 msgstr "Clients separats"
-
-msgid "Separate WDS"
-msgstr "WDS separat"
 
 msgid "Server Settings"
 msgstr "Ajusts de servidor"
@@ -2881,9 +2951,6 @@ msgstr "Leases estàtics"
 
 msgid "Static Routes"
 msgstr "Rutes estàtiques"
-
-msgid "Static WDS"
-msgstr "WDS estàtic"
 
 msgid "Static address"
 msgstr "Adreça estàtica"
@@ -3278,9 +3345,6 @@ msgstr ""
 msgid "Tunnel type"
 msgstr ""
 
-msgid "Turbo Mode"
-msgstr "Mode Turbo"
-
 msgid "Tx-Power"
 msgstr "Potència Tx"
 
@@ -3298,6 +3362,9 @@ msgstr "UMTS/GPRS/EV-DO"
 
 msgid "USB Device"
 msgstr "Dispositiu USB"
+
+msgid "USB Ports"
+msgstr ""
 
 msgid "UUID"
 msgstr "UUID"
@@ -3398,6 +3465,11 @@ msgid "Used"
 msgstr "Usat"
 
 msgid "Used Key Slot"
+msgstr ""
+
+msgid ""
+"Used for two different purposes: RADIUS NAS ID and 802.11r R0KH-ID. Not "
+"needed with normal WPA(2)-PSK."
 msgstr ""
 
 msgid "User certificate (PEM encoded)"
@@ -3552,9 +3624,6 @@ msgstr "Escriure les peticions DNS rebudes al syslog"
 msgid "Write system log to file"
 msgstr ""
 
-msgid "XR Support"
-msgstr "Suport XR"
-
 msgid ""
 "You can enable or disable installed init scripts here. Changes will applied "
 "after a device reboot.<br /><strong>Warning: If you disable essential init "
@@ -3566,9 +3635,9 @@ msgstr ""
 "dispositiu pot resultar inaccessible!</strong>"
 
 msgid ""
-"You must enable Java Script in your browser or LuCI will not work properly."
+"You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
-"Has d'activar el Java Script al teu navegador o LuCI no funcionarà "
+"Has d'activar el JavaScript al teu navegador o LuCI no funcionarà "
 "correctament."
 
 msgid ""
@@ -3660,6 +3729,9 @@ msgstr "fitxer <abbr title=\"Domain Name System\">DNS</abbr> local"
 msgid "minimum 1280, maximum 1480"
 msgstr ""
 
+msgid "minutes"
+msgstr ""
+
 msgid "navigation Navigation"
 msgstr ""
 
@@ -3714,6 +3786,9 @@ msgstr ""
 msgid "tagged"
 msgstr "etiquetat"
 
+msgid "time units (TUs / 1.024 ms) [1000-65535]"
+msgstr ""
+
 msgid "unknown"
 msgstr "desconegut"
 
@@ -3734,6 +3809,54 @@ msgstr "sí"
 
 msgid "« Back"
 msgstr "« Enrere"
+
+#~ msgid "AR Support"
+#~ msgstr "Suport AR"
+
+#~ msgid "Atheros 802.11%s Wireless Controller"
+#~ msgstr "Controlador sense fils d'Atheros 802.11%s"
+
+#~ msgid "Background Scan"
+#~ msgstr "Escaneig de fons"
+
+#~ msgid "Compression"
+#~ msgstr "Compressió"
+
+#~ msgid "Disable HW-Beacon timer"
+#~ msgstr "Inhabilita el temporitzador HW-Beacon"
+
+#~ msgid "Do not send probe responses"
+#~ msgstr "No enviïs les respostes de prova"
+
+#~ msgid "Fast Frames"
+#~ msgstr "Fast Frames"
+
+#~ msgid "Maximum Rate"
+#~ msgstr "Velocitat màxima"
+
+#~ msgid "Minimum Rate"
+#~ msgstr "Velocitat mínima"
+
+#~ msgid "Multicast Rate"
+#~ msgstr "Velocitat de difusió selectiva"
+
+#~ msgid "Outdoor Channels"
+#~ msgstr "Canals d'exteriors"
+
+#~ msgid "Regulatory Domain"
+#~ msgstr "Domini regulatori"
+
+#~ msgid "Separate WDS"
+#~ msgstr "WDS separat"
+
+#~ msgid "Static WDS"
+#~ msgstr "WDS estàtic"
+
+#~ msgid "Turbo Mode"
+#~ msgstr "Mode Turbo"
+
+#~ msgid "XR Support"
+#~ msgstr "Suport XR"
 
 #~ msgid "An additional network will be created if you leave this unchecked."
 #~ msgstr "Es crearà una xarxa addicional si deixes això sense marcar."

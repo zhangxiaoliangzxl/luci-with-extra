@@ -51,11 +51,35 @@ msgstr "Навантаження за 1 хвилину:"
 msgid "15 Minute Load:"
 msgstr "Навантаження за 15 хвилин:"
 
+msgid "4-character hexadecimal ID"
+msgstr ""
+
 msgid "464XLAT (CLAT)"
 msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "Навантаження за 5 хвилин:"
+
+msgid "6-octet identifier as a hex string - no colons"
+msgstr ""
+
+msgid "802.11r Fast Transition"
+msgstr ""
+
+msgid "802.11w Association SA Query maximum timeout"
+msgstr ""
+
+msgid "802.11w Association SA Query retry timeout"
+msgstr ""
+
+msgid "802.11w Management Frame Protection"
+msgstr ""
+
+msgid "802.11w maximum timeout"
+msgstr ""
+
+msgid "802.11w retry timeout"
+msgstr ""
 
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
 msgstr ""
@@ -157,9 +181,6 @@ msgstr ""
 msgid "APN"
 msgstr ""
 "<abbr title=\"Access Point Name — символічна назва точки доступу\">APN</abbr>"
-
-msgid "AR Support"
-msgstr "Підтримка AR"
 
 msgid "ARP retry threshold"
 msgstr "Поріг повтору ARP"
@@ -408,9 +429,6 @@ msgstr ""
 msgid "Associated Stations"
 msgstr "Приєднані станції"
 
-msgid "Atheros 802.11%s Wireless Controller"
-msgstr "Бездротовий 802.11%s контролер Atheros"
-
 msgid "Auth Group"
 msgstr ""
 
@@ -488,9 +506,6 @@ msgstr "Повернутися до переліку"
 
 msgid "Back to scan results"
 msgstr "Повернутися до результатів сканування"
-
-msgid "Background Scan"
-msgstr "Сканування у фоновому режимі"
 
 msgid "Backup / Flash Firmware"
 msgstr "Резервне копіювання / Оновлення прошивки"
@@ -659,9 +674,6 @@ msgstr "Команда"
 
 msgid "Common Configuration"
 msgstr "Загальна конфігурація"
-
-msgid "Compression"
-msgstr "Стиснення"
 
 msgid "Configuration"
 msgstr "Конфігурація"
@@ -883,11 +895,11 @@ msgstr "Вимкнути настроювання DNS"
 msgid "Disable Encryption"
 msgstr ""
 
-msgid "Disable HW-Beacon timer"
-msgstr "Вимкнути таймер HW-Beacon"
-
 msgid "Disabled"
 msgstr "Вимкнено"
+
+msgid "Disabled (default)"
+msgstr ""
 
 msgid "Discard upstream RFC1918 responses"
 msgstr "Відкидати RFC1918-відповіді від клієнта на сервер"
@@ -929,9 +941,6 @@ msgstr ""
 
 msgid "Do not forward reverse lookups for local networks"
 msgstr "Не спрямовувати зворотний перегляд для локальних мереж"
-
-msgid "Do not send probe responses"
-msgstr "Не надсилати відповіді на зондування"
 
 msgid "Domain required"
 msgstr "Потрібен домен"
@@ -1064,6 +1073,11 @@ msgstr "Увімкнено/Вимкнено"
 msgid "Enabled"
 msgstr "Увімкнено"
 
+msgid ""
+"Enables fast roaming among access points that belong to the same Mobility "
+"Domain"
+msgstr ""
+
 msgid "Enables the Spanning Tree Protocol on this bridge"
 msgstr ""
 "Увімкнути <abbr title=\"Spanning Tree Protocol\">STP</abbr> на цьому мосту"
@@ -1112,6 +1126,12 @@ msgstr "Термін оренди адрес, мінімум 2 хвилини (<
 msgid "External"
 msgstr ""
 
+msgid "External R0 Key Holder List"
+msgstr ""
+
+msgid "External R1 Key Holder List"
+msgstr ""
+
 msgid "External system log server"
 msgstr "Зовнішній сервер системного журналу"
 
@@ -1123,9 +1143,6 @@ msgstr ""
 
 msgid "Extra SSH command options"
 msgstr ""
-
-msgid "Fast Frames"
-msgstr "Швидкі фрейми"
 
 msgid "File"
 msgstr "Файл"
@@ -1161,6 +1178,9 @@ msgstr "Готово"
 
 msgid "Firewall"
 msgstr "Брандмауер"
+
+msgid "Firewall Mark"
+msgstr ""
 
 msgid "Firewall Settings"
 msgstr "Настройки брандмауера"
@@ -1363,6 +1383,9 @@ msgstr ""
 msgid "IKE DH Group"
 msgstr ""
 
+msgid "IP Addresses"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP-адреса"
 
@@ -1455,6 +1478,9 @@ msgstr ""
 
 msgid "IPv6-Address"
 msgstr "IPv6-адреса"
+
+msgid "IPv6-PD"
+msgstr ""
 
 msgid "IPv6-in-IPv4 (RFC4213)"
 msgstr "IPv6 у IPv4 (RFC4213)"
@@ -1614,8 +1640,8 @@ msgstr ""
 "Схоже, що ви намагаєтеся залити образ, який не вміщається у флеш-пам'ять! "
 "Перевірте файл образу!"
 
-msgid "Java Script required!"
-msgstr "Потрібен Java Script!"
+msgid "JavaScript required!"
+msgstr "Потрібен JavaScript!"
 
 msgid "Join Network"
 msgstr "Підключення до мережі"
@@ -1728,6 +1754,22 @@ msgid ""
 msgstr ""
 "Список <abbr title=\"Domain Name System\">DNS</abbr>-серверів, до яких "
 "пересилати запити"
+
+msgid ""
+"List of R0KHs in the same Mobility Domain. <br />Format: MAC-address,NAS-"
+"Identifier,128-bit key as hex string. <br />This list is used to map R0KH-ID "
+"(NAS Identifier) to a destination MAC address when requesting PMK-R1 key "
+"from the R0KH that the STA used during the Initial Mobility Domain "
+"Association."
+msgstr ""
+
+msgid ""
+"List of R1KHs in the same Mobility Domain. <br />Format: MAC-address,R1KH-ID "
+"as 6 octets with colons,128-bit key as hex string. <br />This list is used "
+"to map R1KH-ID to a destination MAC address when sending PMK-R1 key from the "
+"R0KH. This is also the list of authorized R1KHs in the MD that can request "
+"PMK-R1 keys."
+msgstr ""
 
 msgid "List of SSH key files for auth"
 msgstr ""
@@ -1870,9 +1912,6 @@ msgstr ""
 msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
-msgid "Maximum Rate"
-msgstr "Максимальна швидкість"
-
 msgid "Maximum allowed number of active DHCP leases"
 msgstr "Максимально допустима кількість активних оренд DHCP"
 
@@ -1908,9 +1947,6 @@ msgstr "Використання пам'яті, %"
 msgid "Metric"
 msgstr "Метрика"
 
-msgid "Minimum Rate"
-msgstr "Мінімальна швидкість"
-
 msgid "Minimum hold time"
 msgstr "Мінімальний час утримування"
 
@@ -1922,6 +1958,9 @@ msgstr ""
 
 msgid "Missing protocol extension for proto %q"
 msgstr "Відсутні розширення для протоколу %q"
+
+msgid "Mobility Domain"
+msgstr ""
 
 msgid "Mode"
 msgstr "Режим"
@@ -1981,9 +2020,6 @@ msgstr "Вниз"
 msgid "Move up"
 msgstr "Вгору"
 
-msgid "Multicast Rate"
-msgstr "Швидкість багатоадресного потоку"
-
 msgid "Multicast address"
 msgstr "Адреса багатоадресного потоку"
 
@@ -1994,6 +2030,9 @@ msgid "NAT-T Mode"
 msgstr ""
 
 msgid "NAT64 Prefix"
+msgstr ""
+
+msgid "NCM"
 msgstr ""
 
 msgid "NDP-Proxy"
@@ -2176,6 +2215,9 @@ msgstr "Опція змінена"
 msgid "Option removed"
 msgstr "Опція видалена"
 
+msgid "Optional"
+msgstr ""
+
 msgid "Optional, specify to override default server (tic.sixxs.net)"
 msgstr ""
 
@@ -2186,8 +2228,13 @@ msgid "Optional."
 msgstr ""
 
 msgid ""
-"Optional. Adds in an additional layer of symmetric-key cryptography for post-"
-"quantum resistance."
+"Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "
+"starting with <code>0x</code>."
+msgstr ""
+
+msgid ""
+"Optional. Base64-encoded preshared key. Adds in an additional layer of "
+"symmetric-key cryptography for post-quantum resistance."
 msgstr ""
 
 msgid "Optional. Create routes for Allowed IPs for this peer."
@@ -2223,9 +2270,6 @@ msgstr "Вих."
 
 msgid "Outbound:"
 msgstr "Вихідний:"
-
-msgid "Outdoor Channels"
-msgstr "Зовнішні канали"
 
 msgid "Output Interface"
 msgstr ""
@@ -2278,6 +2322,9 @@ msgid "PIN"
 msgstr ""
 "<abbr title=\"Personal Identification Number — Персональний ідентифікаційний "
 "номер\">>PIN</abbr>"
+
+msgid "PMK R1 Push"
+msgstr ""
 
 msgid "PPP"
 msgstr "PPP"
@@ -2408,6 +2455,15 @@ msgstr ""
 msgid "Pre-emtive CRC errors (CRCP_P)"
 msgstr ""
 
+msgid "Prefer LTE"
+msgstr ""
+
+msgid "Prefer UMTS"
+msgstr ""
+
+msgid "Prefix Delegated"
+msgstr ""
+
 msgid "Preshared Key"
 msgstr ""
 
@@ -2474,6 +2530,12 @@ msgstr ""
 
 msgid "Quality"
 msgstr "Якість"
+
+msgid "R0 Key Lifetime"
+msgstr ""
+
+msgid "R1 Key Holder"
+msgstr ""
 
 msgid "RFC3947 NAT-T mode"
 msgstr ""
@@ -2570,6 +2632,9 @@ msgstr "Трафік у реальному часі"
 msgid "Realtime Wireless"
 msgstr "Бездротові мережі у реальному часі"
 
+msgid "Reassociation Deadline"
+msgstr ""
+
 msgid "Rebind protection"
 msgstr "Захист від переприв'язки"
 
@@ -2588,6 +2653,9 @@ msgstr "Прийом"
 msgid "Receiver Antenna"
 msgstr "Антена приймача"
 
+msgid "Recommended. IP addresses of the WireGuard interface."
+msgstr ""
+
 msgid "Reconnect this interface"
 msgstr "Перепідключити цей інтерфейс"
 
@@ -2596,9 +2664,6 @@ msgstr "Перепідключення інтерфейсу"
 
 msgid "References"
 msgstr "Посилання"
-
-msgid "Regulatory Domain"
-msgstr "Регулятивний домен"
 
 msgid "Relay"
 msgstr "Ретранслятор"
@@ -2639,10 +2704,16 @@ msgstr ""
 msgid "Require TLS"
 msgstr ""
 
+msgid "Required"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr "Потрібно для деяких провайдерів, наприклад, Charter із DOCSIS 3"
 
 msgid "Required. Base64-encoded private key for this interface."
+msgstr ""
+
+msgid "Required. Base64-encoded public key of peer."
 msgstr ""
 
 msgid ""
@@ -2651,7 +2722,9 @@ msgid ""
 "routes through the tunnel."
 msgstr ""
 
-msgid "Required. Public key of peer."
+msgid ""
+"Requires the 'full' version of wpad/hostapd and support from the wifi driver "
+"<br />(as of Feb 2017: ath9k and ath10k, in LEDE also mwlwifi and mt76)"
 msgstr ""
 
 msgid ""
@@ -2794,9 +2867,6 @@ msgstr ""
 
 msgid "Separate Clients"
 msgstr "Розділяти клієнтів"
-
-msgid "Separate WDS"
-msgstr "Розділяти WDS"
 
 msgid "Server Settings"
 msgstr "Настройки сервера"
@@ -2962,9 +3032,6 @@ msgstr "Статичні оренди"
 
 msgid "Static Routes"
 msgstr "Статичні маршрути"
-
-msgid "Static WDS"
-msgstr "Статичний WDS"
 
 msgid "Static address"
 msgstr "Статичні адреси"
@@ -3392,9 +3459,6 @@ msgstr ""
 msgid "Tunnel type"
 msgstr ""
 
-msgid "Turbo Mode"
-msgstr "Режим Turbo"
-
 msgid "Tx-Power"
 msgstr "Потужність передавача"
 
@@ -3412,6 +3476,9 @@ msgstr "UMTS/GPRS/EV-DO"
 
 msgid "USB Device"
 msgstr "USB-пристрій"
+
+msgid "USB Ports"
+msgstr ""
 
 msgid "UUID"
 msgstr "UUID"
@@ -3520,6 +3587,11 @@ msgstr "Використано"
 
 msgid "Used Key Slot"
 msgstr "Використовується слот ключа"
+
+msgid ""
+"Used for two different purposes: RADIUS NAS ID and 802.11r R0KH-ID. Not "
+"needed with normal WPA(2)-PSK."
+msgstr ""
 
 msgid "User certificate (PEM encoded)"
 msgstr ""
@@ -3673,9 +3745,6 @@ msgstr "Записувати отримані DNS-запити до систем
 msgid "Write system log to file"
 msgstr ""
 
-msgid "XR Support"
-msgstr "Підтримка XR"
-
 msgid ""
 "You can enable or disable installed init scripts here. Changes will applied "
 "after a device reboot.<br /><strong>Warning: If you disable essential init "
@@ -3687,9 +3756,9 @@ msgstr ""
 "пристрій може стати недоступним!</strong>"
 
 msgid ""
-"You must enable Java Script in your browser or LuCI will not work properly."
+"You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
-"Ви повинні увімкнути Java Script у вашому браузері, або LuCI не буде "
+"Ви повинні увімкнути JavaScript у вашому браузері, або LuCI не буде "
 "працювати належним чином."
 
 msgid ""
@@ -3782,6 +3851,9 @@ msgstr ""
 msgid "minimum 1280, maximum 1480"
 msgstr ""
 
+msgid "minutes"
+msgstr ""
+
 msgid "navigation Navigation"
 msgstr ""
 
@@ -3836,6 +3908,9 @@ msgstr ""
 msgid "tagged"
 msgstr "з позначкою"
 
+msgid "time units (TUs / 1.024 ms) [1000-65535]"
+msgstr ""
+
 msgid "unknown"
 msgstr "невідомий"
 
@@ -3856,6 +3931,54 @@ msgstr "так"
 
 msgid "« Back"
 msgstr "« Назад"
+
+#~ msgid "AR Support"
+#~ msgstr "Підтримка AR"
+
+#~ msgid "Atheros 802.11%s Wireless Controller"
+#~ msgstr "Бездротовий 802.11%s контролер Atheros"
+
+#~ msgid "Background Scan"
+#~ msgstr "Сканування у фоновому режимі"
+
+#~ msgid "Compression"
+#~ msgstr "Стиснення"
+
+#~ msgid "Disable HW-Beacon timer"
+#~ msgstr "Вимкнути таймер HW-Beacon"
+
+#~ msgid "Do not send probe responses"
+#~ msgstr "Не надсилати відповіді на зондування"
+
+#~ msgid "Fast Frames"
+#~ msgstr "Швидкі фрейми"
+
+#~ msgid "Maximum Rate"
+#~ msgstr "Максимальна швидкість"
+
+#~ msgid "Minimum Rate"
+#~ msgstr "Мінімальна швидкість"
+
+#~ msgid "Multicast Rate"
+#~ msgstr "Швидкість багатоадресного потоку"
+
+#~ msgid "Outdoor Channels"
+#~ msgstr "Зовнішні канали"
+
+#~ msgid "Regulatory Domain"
+#~ msgstr "Регулятивний домен"
+
+#~ msgid "Separate WDS"
+#~ msgstr "Розділяти WDS"
+
+#~ msgid "Static WDS"
+#~ msgstr "Статичний WDS"
+
+#~ msgid "Turbo Mode"
+#~ msgstr "Режим Turbo"
+
+#~ msgid "XR Support"
+#~ msgstr "Підтримка XR"
 
 #~ msgid "An additional network will be created if you leave this unchecked."
 #~ msgstr "Якщо ви залишите це невибраним, буде створена додаткова мережа."

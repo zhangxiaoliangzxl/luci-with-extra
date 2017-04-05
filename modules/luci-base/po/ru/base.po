@@ -54,11 +54,35 @@ msgstr "Загрузка за 1 минуту:"
 msgid "15 Minute Load:"
 msgstr "Загрузка за 15 минут:"
 
+msgid "4-character hexadecimal ID"
+msgstr ""
+
 msgid "464XLAT (CLAT)"
 msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "Загрузка за 5 минут:"
+
+msgid "6-octet identifier as a hex string - no colons"
+msgstr ""
+
+msgid "802.11r Fast Transition"
+msgstr ""
+
+msgid "802.11w Association SA Query maximum timeout"
+msgstr ""
+
+msgid "802.11w Association SA Query retry timeout"
+msgstr ""
+
+msgid "802.11w Management Frame Protection"
+msgstr ""
+
+msgid "802.11w maximum timeout"
+msgstr ""
+
+msgid "802.11w retry timeout"
+msgstr ""
 
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
 msgstr "<abbr title=\"Базовый идентификатор обслуживания\">BSSID</abbr>"
@@ -148,9 +172,6 @@ msgstr ""
 
 msgid "APN"
 msgstr "APN"
-
-msgid "AR Support"
-msgstr "Поддержка AR"
 
 msgid "ARP retry threshold"
 msgstr "Порог повтора ARP"
@@ -398,9 +419,6 @@ msgstr ""
 msgid "Associated Stations"
 msgstr "Подключенные клиенты"
 
-msgid "Atheros 802.11%s Wireless Controller"
-msgstr "Беспроводной 802.11%s контроллер Atheros"
-
 msgid "Auth Group"
 msgstr ""
 
@@ -478,9 +496,6 @@ msgstr "Назад к обзору"
 
 msgid "Back to scan results"
 msgstr "Назад к результатам сканирования"
-
-msgid "Background Scan"
-msgstr "Фоновое сканирование"
 
 msgid "Backup / Flash Firmware"
 msgstr "Резервная копия / прошивка"
@@ -650,9 +665,6 @@ msgstr "Команда"
 
 msgid "Common Configuration"
 msgstr "Общая конфигурация"
-
-msgid "Compression"
-msgstr "Сжатие"
 
 msgid "Configuration"
 msgstr "Конфигурация"
@@ -873,11 +885,11 @@ msgstr "Отключить настройку DNS"
 msgid "Disable Encryption"
 msgstr ""
 
-msgid "Disable HW-Beacon timer"
-msgstr "Отключить таймер HW-Beacon"
-
 msgid "Disabled"
 msgstr "Отключено"
+
+msgid "Disabled (default)"
+msgstr ""
 
 msgid "Discard upstream RFC1918 responses"
 msgstr "Отбрасывать ответы RFC1918"
@@ -918,9 +930,6 @@ msgstr ""
 
 msgid "Do not forward reverse lookups for local networks"
 msgstr "Не перенаправлять обратные DNS-запросы для локальных сетей"
-
-msgid "Do not send probe responses"
-msgstr "Не посылать тестовые ответы"
 
 msgid "Domain required"
 msgstr "Требуется домен"
@@ -1055,6 +1064,11 @@ msgstr "Включить/выключить"
 msgid "Enabled"
 msgstr "Включено"
 
+msgid ""
+"Enables fast roaming among access points that belong to the same Mobility "
+"Domain"
+msgstr ""
+
 msgid "Enables the Spanning Tree Protocol on this bridge"
 msgstr "Включает Spanning Tree Protocol на этом мосту"
 
@@ -1104,6 +1118,12 @@ msgstr ""
 msgid "External"
 msgstr ""
 
+msgid "External R0 Key Holder List"
+msgstr ""
+
+msgid "External R1 Key Holder List"
+msgstr ""
+
 msgid "External system log server"
 msgstr "Сервер системного журнала"
 
@@ -1115,9 +1135,6 @@ msgstr ""
 
 msgid "Extra SSH command options"
 msgstr ""
-
-msgid "Fast Frames"
-msgstr "Быстрые кадры"
 
 msgid "File"
 msgstr "Файл"
@@ -1153,6 +1170,9 @@ msgstr "Завершить"
 
 msgid "Firewall"
 msgstr "Межсетевой экран"
+
+msgid "Firewall Mark"
+msgstr ""
 
 msgid "Firewall Settings"
 msgstr "Настройки межсетевого экрана"
@@ -1355,6 +1375,9 @@ msgstr ""
 msgid "IKE DH Group"
 msgstr ""
 
+msgid "IP Addresses"
+msgstr ""
+
 msgid "IP address"
 msgstr "IP-адрес"
 
@@ -1447,6 +1470,9 @@ msgstr ""
 
 msgid "IPv6-Address"
 msgstr "IPv6-адрес"
+
+msgid "IPv6-PD"
+msgstr ""
 
 msgid "IPv6-in-IPv4 (RFC4213)"
 msgstr "IPv6 в IPv4 (RFC4213)"
@@ -1607,8 +1633,8 @@ msgstr ""
 "Вы пытаетесь обновить прошивку файлом, который не помещается в память "
 "устройства! Пожалуйста, проверьте файл образа."
 
-msgid "Java Script required!"
-msgstr "Требуется Java Script!"
+msgid "JavaScript required!"
+msgstr "Требуется JavaScript!"
 
 msgid "Join Network"
 msgstr "Подключение к сети"
@@ -1721,6 +1747,22 @@ msgid ""
 msgstr ""
 "Список <abbr title=\"Domain Name System\">DNS</abbr>-серверов для "
 "перенаправления запросов"
+
+msgid ""
+"List of R0KHs in the same Mobility Domain. <br />Format: MAC-address,NAS-"
+"Identifier,128-bit key as hex string. <br />This list is used to map R0KH-ID "
+"(NAS Identifier) to a destination MAC address when requesting PMK-R1 key "
+"from the R0KH that the STA used during the Initial Mobility Domain "
+"Association."
+msgstr ""
+
+msgid ""
+"List of R1KHs in the same Mobility Domain. <br />Format: MAC-address,R1KH-ID "
+"as 6 octets with colons,128-bit key as hex string. <br />This list is used "
+"to map R1KH-ID to a destination MAC address when sending PMK-R1 key from the "
+"R0KH. This is also the list of authorized R1KHs in the MD that can request "
+"PMK-R1 keys."
+msgstr ""
 
 msgid "List of SSH key files for auth"
 msgstr ""
@@ -1861,9 +1903,6 @@ msgstr ""
 msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
-msgid "Maximum Rate"
-msgstr "Максимальная скорость"
-
 msgid "Maximum allowed number of active DHCP leases"
 msgstr "Максимальное количество активных арендованных DHCP-адресов"
 
@@ -1899,9 +1938,6 @@ msgstr "Использование памяти (%)"
 msgid "Metric"
 msgstr "Метрика"
 
-msgid "Minimum Rate"
-msgstr "Минимальная скорость"
-
 msgid "Minimum hold time"
 msgstr "Минимальное время удержания"
 
@@ -1913,6 +1949,9 @@ msgstr ""
 
 msgid "Missing protocol extension for proto %q"
 msgstr "Отсутствует расширение протокола %q"
+
+msgid "Mobility Domain"
+msgstr ""
 
 msgid "Mode"
 msgstr "Режим"
@@ -1973,9 +2012,6 @@ msgstr "Переместить вниз"
 msgid "Move up"
 msgstr "Переместить вверх"
 
-msgid "Multicast Rate"
-msgstr "Скорость групповой передачи"
-
 msgid "Multicast address"
 msgstr "Адрес групповой передачи"
 
@@ -1986,6 +2022,9 @@ msgid "NAT-T Mode"
 msgstr ""
 
 msgid "NAT64 Prefix"
+msgstr ""
+
+msgid "NCM"
 msgstr ""
 
 msgid "NDP-Proxy"
@@ -2168,6 +2207,9 @@ msgstr "Опция изменена"
 msgid "Option removed"
 msgstr "Опция удалена"
 
+msgid "Optional"
+msgstr ""
+
 msgid "Optional, specify to override default server (tic.sixxs.net)"
 msgstr ""
 
@@ -2178,8 +2220,13 @@ msgid "Optional."
 msgstr ""
 
 msgid ""
-"Optional. Adds in an additional layer of symmetric-key cryptography for post-"
-"quantum resistance."
+"Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "
+"starting with <code>0x</code>."
+msgstr ""
+
+msgid ""
+"Optional. Base64-encoded preshared key. Adds in an additional layer of "
+"symmetric-key cryptography for post-quantum resistance."
 msgstr ""
 
 msgid "Optional. Create routes for Allowed IPs for this peer."
@@ -2215,9 +2262,6 @@ msgstr "Вне"
 
 msgid "Outbound:"
 msgstr "Исходящий:"
-
-msgid "Outdoor Channels"
-msgstr "Внешние каналы"
 
 msgid "Output Interface"
 msgstr ""
@@ -2267,6 +2311,9 @@ msgstr "PID"
 
 msgid "PIN"
 msgstr "PIN"
+
+msgid "PMK R1 Push"
+msgstr ""
 
 msgid "PPP"
 msgstr "PPP"
@@ -2397,6 +2444,15 @@ msgstr ""
 msgid "Pre-emtive CRC errors (CRCP_P)"
 msgstr ""
 
+msgid "Prefer LTE"
+msgstr ""
+
+msgid "Prefer UMTS"
+msgstr ""
+
+msgid "Prefix Delegated"
+msgstr ""
+
 msgid "Preshared Key"
 msgstr ""
 
@@ -2463,6 +2519,12 @@ msgstr ""
 
 msgid "Quality"
 msgstr "Качество"
+
+msgid "R0 Key Lifetime"
+msgstr ""
+
+msgid "R1 Key Holder"
+msgstr ""
 
 msgid "RFC3947 NAT-T mode"
 msgstr ""
@@ -2556,6 +2618,9 @@ msgstr "Трафик в реальном времени"
 msgid "Realtime Wireless"
 msgstr "Беспроводная сеть в реальном времени"
 
+msgid "Reassociation Deadline"
+msgstr ""
+
 msgid "Rebind protection"
 msgstr "Защита от DNS Rebinding"
 
@@ -2574,6 +2639,9 @@ msgstr "Приём"
 msgid "Receiver Antenna"
 msgstr "Приёмная антенна"
 
+msgid "Recommended. IP addresses of the WireGuard interface."
+msgstr ""
+
 msgid "Reconnect this interface"
 msgstr "Переподключить этот интерфейс"
 
@@ -2583,9 +2651,6 @@ msgstr "Интерфейс переподключается"
 # References to firewall chains
 msgid "References"
 msgstr "Ссылки"
-
-msgid "Regulatory Domain"
-msgstr "Нормативная зона"
 
 msgid "Relay"
 msgstr "Ретранслятор"
@@ -2626,10 +2691,16 @@ msgstr ""
 msgid "Require TLS"
 msgstr ""
 
+msgid "Required"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr "Требуется для некоторых интернет-провайдеров"
 
 msgid "Required. Base64-encoded private key for this interface."
+msgstr ""
+
+msgid "Required. Base64-encoded public key of peer."
 msgstr ""
 
 msgid ""
@@ -2638,7 +2709,9 @@ msgid ""
 "routes through the tunnel."
 msgstr ""
 
-msgid "Required. Public key of peer."
+msgid ""
+"Requires the 'full' version of wpad/hostapd and support from the wifi driver "
+"<br />(as of Feb 2017: ath9k and ath10k, in LEDE also mwlwifi and mt76)"
 msgstr ""
 
 msgid ""
@@ -2781,9 +2854,6 @@ msgstr ""
 
 msgid "Separate Clients"
 msgstr "Разделять клиентов"
-
-msgid "Separate WDS"
-msgstr "Отдельный WDS"
 
 msgid "Server Settings"
 msgstr "Настройки сервера"
@@ -2948,9 +3018,6 @@ msgstr "Постоянные аренды"
 
 msgid "Static Routes"
 msgstr "Статические маршруты"
-
-msgid "Static WDS"
-msgstr "Статический WDS"
 
 msgid "Static address"
 msgstr "Статический адрес"
@@ -3376,9 +3443,6 @@ msgstr ""
 msgid "Tunnel type"
 msgstr ""
 
-msgid "Turbo Mode"
-msgstr "Турбо-режим"
-
 msgid "Tx-Power"
 msgstr "Мощность передатчика"
 
@@ -3396,6 +3460,9 @@ msgstr "UMTS/GPRS/EV-DO"
 
 msgid "USB Device"
 msgstr "USB-устройство"
+
+msgid "USB Ports"
+msgstr ""
 
 msgid "UUID"
 msgstr "UUID"
@@ -3504,6 +3571,11 @@ msgstr "Использовано"
 
 msgid "Used Key Slot"
 msgstr "Используемый слот ключа"
+
+msgid ""
+"Used for two different purposes: RADIUS NAS ID and 802.11r R0KH-ID. Not "
+"needed with normal WPA(2)-PSK."
+msgstr ""
 
 msgid "User certificate (PEM encoded)"
 msgstr ""
@@ -3658,9 +3730,6 @@ msgstr "Записывать полученные DNS-запросы в сист
 msgid "Write system log to file"
 msgstr ""
 
-msgid "XR Support"
-msgstr "Поддержка XR"
-
 msgid ""
 "You can enable or disable installed init scripts here. Changes will applied "
 "after a device reboot.<br /><strong>Warning: If you disable essential init "
@@ -3672,9 +3741,9 @@ msgstr ""
 "(например \"network\"), ваше устройство может оказаться недоступным!</strong>"
 
 msgid ""
-"You must enable Java Script in your browser or LuCI will not work properly."
+"You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
-"Вам необходимо включить Java Script в вашем браузере для корректной работы "
+"Вам необходимо включить JavaScript в вашем браузере для корректной работы "
 "LuCI."
 
 msgid ""
@@ -3767,6 +3836,9 @@ msgstr "локальный <abbr title=\"Служба доменных имён\
 msgid "minimum 1280, maximum 1480"
 msgstr ""
 
+msgid "minutes"
+msgstr ""
+
 msgid "navigation Navigation"
 msgstr ""
 
@@ -3821,6 +3893,9 @@ msgstr ""
 msgid "tagged"
 msgstr "с тегом"
 
+msgid "time units (TUs / 1.024 ms) [1000-65535]"
+msgstr ""
+
 msgid "unknown"
 msgstr "неизвестный"
 
@@ -3841,6 +3916,54 @@ msgstr "да"
 
 msgid "« Back"
 msgstr "« Назад"
+
+#~ msgid "AR Support"
+#~ msgstr "Поддержка AR"
+
+#~ msgid "Atheros 802.11%s Wireless Controller"
+#~ msgstr "Беспроводной 802.11%s контроллер Atheros"
+
+#~ msgid "Background Scan"
+#~ msgstr "Фоновое сканирование"
+
+#~ msgid "Compression"
+#~ msgstr "Сжатие"
+
+#~ msgid "Disable HW-Beacon timer"
+#~ msgstr "Отключить таймер HW-Beacon"
+
+#~ msgid "Do not send probe responses"
+#~ msgstr "Не посылать тестовые ответы"
+
+#~ msgid "Fast Frames"
+#~ msgstr "Быстрые кадры"
+
+#~ msgid "Maximum Rate"
+#~ msgstr "Максимальная скорость"
+
+#~ msgid "Minimum Rate"
+#~ msgstr "Минимальная скорость"
+
+#~ msgid "Multicast Rate"
+#~ msgstr "Скорость групповой передачи"
+
+#~ msgid "Outdoor Channels"
+#~ msgstr "Внешние каналы"
+
+#~ msgid "Regulatory Domain"
+#~ msgstr "Нормативная зона"
+
+#~ msgid "Separate WDS"
+#~ msgstr "Отдельный WDS"
+
+#~ msgid "Static WDS"
+#~ msgstr "Статический WDS"
+
+#~ msgid "Turbo Mode"
+#~ msgstr "Турбо-режим"
+
+#~ msgid "XR Support"
+#~ msgstr "Поддержка XR"
 
 #~ msgid "An additional network will be created if you leave this unchecked."
 #~ msgstr ""

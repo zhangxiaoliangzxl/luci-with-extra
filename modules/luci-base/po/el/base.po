@@ -52,11 +52,35 @@ msgstr "Φορτίο 1 λεπτού:"
 msgid "15 Minute Load:"
 msgstr "Φορτίο 15 λεπτών:"
 
+msgid "4-character hexadecimal ID"
+msgstr ""
+
 msgid "464XLAT (CLAT)"
 msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "Φορτίο 5 λεπτών:"
+
+msgid "6-octet identifier as a hex string - no colons"
+msgstr ""
+
+msgid "802.11r Fast Transition"
+msgstr ""
+
+msgid "802.11w Association SA Query maximum timeout"
+msgstr ""
+
+msgid "802.11w Association SA Query retry timeout"
+msgstr ""
+
+msgid "802.11w Management Frame Protection"
+msgstr ""
+
+msgid "802.11w maximum timeout"
+msgstr ""
+
+msgid "802.11w retry timeout"
+msgstr ""
 
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
 msgstr "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
@@ -145,9 +169,6 @@ msgstr ""
 
 msgid "APN"
 msgstr "APN"
-
-msgid "AR Support"
-msgstr "Υποστήριξη AR"
 
 msgid "ARP retry threshold"
 msgstr "Όριο επαναδοκιμών ARP"
@@ -397,9 +418,6 @@ msgstr ""
 msgid "Associated Stations"
 msgstr "Συνδεδεμένοι Σταθμοί"
 
-msgid "Atheros 802.11%s Wireless Controller"
-msgstr ""
-
 msgid "Auth Group"
 msgstr ""
 
@@ -477,9 +495,6 @@ msgstr "Πίσω προς επισκόπηση"
 
 msgid "Back to scan results"
 msgstr "Πίσω στα αποτελέσματα σάρωσης"
-
-msgid "Background Scan"
-msgstr "Σάρωση Παρασκηνίου"
 
 msgid "Backup / Flash Firmware"
 msgstr "Αντίγραφο ασφαλείας / Εγγραφή FLASH Υλικολογισμικό"
@@ -650,9 +665,6 @@ msgstr "Εντολή"
 
 msgid "Common Configuration"
 msgstr "Κοινή Παραμετροποίηση"
-
-msgid "Compression"
-msgstr "Συμπίεση"
 
 msgid "Configuration"
 msgstr "Παραμετροποίηση"
@@ -873,11 +885,11 @@ msgstr "Απενεργοποίηση ρυθμίσεων DNS"
 msgid "Disable Encryption"
 msgstr ""
 
-msgid "Disable HW-Beacon timer"
-msgstr "Απενεργοποίηση χρονιστή HW-Beacon"
-
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
+
+msgid "Disabled (default)"
+msgstr ""
 
 msgid "Discard upstream RFC1918 responses"
 msgstr "Αγνόησε τις απαντήσεις ανοδικής ροής RFC1918"
@@ -920,9 +932,6 @@ msgstr ""
 
 msgid "Do not forward reverse lookups for local networks"
 msgstr ""
-
-msgid "Do not send probe responses"
-msgstr "Να μην στέλνονται απαντήσεις σε probes"
 
 msgid "Domain required"
 msgstr "Απαίτηση για όνομα τομέα"
@@ -1054,6 +1063,11 @@ msgstr "Ενεργοποίηση/Απενεργοποίηση"
 msgid "Enabled"
 msgstr "Ενεργοποιημένο"
 
+msgid ""
+"Enables fast roaming among access points that belong to the same Mobility "
+"Domain"
+msgstr ""
+
 msgid "Enables the Spanning Tree Protocol on this bridge"
 msgstr ""
 
@@ -1103,6 +1117,12 @@ msgstr ""
 msgid "External"
 msgstr ""
 
+msgid "External R0 Key Holder List"
+msgstr ""
+
+msgid "External R1 Key Holder List"
+msgstr ""
+
 msgid "External system log server"
 msgstr "Εξωτερικός εξυπηρετητής καταγραφής συστήματος"
 
@@ -1114,9 +1134,6 @@ msgstr ""
 
 msgid "Extra SSH command options"
 msgstr ""
-
-msgid "Fast Frames"
-msgstr "Γρήγορα Πλαίσια"
 
 msgid "File"
 msgstr "Αρχείο"
@@ -1152,6 +1169,9 @@ msgstr "Τέλος"
 
 msgid "Firewall"
 msgstr "Τείχος Προστασίας"
+
+msgid "Firewall Mark"
+msgstr ""
 
 msgid "Firewall Settings"
 msgstr "Ρυθμίσεις Τείχους Προστασίας"
@@ -1352,6 +1372,9 @@ msgstr ""
 msgid "IKE DH Group"
 msgstr ""
 
+msgid "IP Addresses"
+msgstr ""
+
 msgid "IP address"
 msgstr "Διεύθυνση IP"
 
@@ -1443,6 +1466,9 @@ msgid "IPv6 routed prefix"
 msgstr ""
 
 msgid "IPv6-Address"
+msgstr ""
+
+msgid "IPv6-PD"
 msgstr ""
 
 msgid "IPv6-in-IPv4 (RFC4213)"
@@ -1602,8 +1628,8 @@ msgstr ""
 "Φαίνεται πως προσπαθείτε να φλασάρετε μια εικόνα που δεν χωράει στην μνήμη "
 "flash, παρακαλώ επιβεβαιώστε το αρχείο εικόνας!"
 
-msgid "Java Script required!"
-msgstr "Απαιτείται Javascript!"
+msgid "JavaScript required!"
+msgstr "Απαιτείται JavaScript!"
 
 msgid "Join Network"
 msgstr ""
@@ -1713,6 +1739,22 @@ msgstr "Αναμμένο με Ζεύξη"
 msgid ""
 "List of <abbr title=\"Domain Name System\">DNS</abbr> servers to forward "
 "requests to"
+msgstr ""
+
+msgid ""
+"List of R0KHs in the same Mobility Domain. <br />Format: MAC-address,NAS-"
+"Identifier,128-bit key as hex string. <br />This list is used to map R0KH-ID "
+"(NAS Identifier) to a destination MAC address when requesting PMK-R1 key "
+"from the R0KH that the STA used during the Initial Mobility Domain "
+"Association."
+msgstr ""
+
+msgid ""
+"List of R1KHs in the same Mobility Domain. <br />Format: MAC-address,R1KH-ID "
+"as 6 octets with colons,128-bit key as hex string. <br />This list is used "
+"to map R1KH-ID to a destination MAC address when sending PMK-R1 key from the "
+"R0KH. This is also the list of authorized R1KHs in the MD that can request "
+"PMK-R1 keys."
 msgstr ""
 
 msgid "List of SSH key files for auth"
@@ -1847,9 +1889,6 @@ msgstr ""
 msgid "Max. Attainable Data Rate (ATTNDR)"
 msgstr ""
 
-msgid "Maximum Rate"
-msgstr "Μέγιστος Ρυθμός"
-
 msgid "Maximum allowed number of active DHCP leases"
 msgstr "Μέγιστος επιτρεπόμενος αριθμός ενεργών DHCP leases"
 
@@ -1886,9 +1925,6 @@ msgstr "Χρήση Μνήμης (%)"
 msgid "Metric"
 msgstr "Μέτρο"
 
-msgid "Minimum Rate"
-msgstr "Ελάχιστος Ρυθμός"
-
 msgid "Minimum hold time"
 msgstr "Ελάχιστος χρόνος κράτησης"
 
@@ -1899,6 +1935,9 @@ msgid "Mirror source port"
 msgstr ""
 
 msgid "Missing protocol extension for proto %q"
+msgstr ""
+
+msgid "Mobility Domain"
 msgstr ""
 
 msgid "Mode"
@@ -1960,9 +1999,6 @@ msgstr "Μετακίνηση κάτω"
 msgid "Move up"
 msgstr "Μετακίνηση πάνω"
 
-msgid "Multicast Rate"
-msgstr "Ρυθμός Multicast"
-
 msgid "Multicast address"
 msgstr "Διεύθυνση Multicast"
 
@@ -1973,6 +2009,9 @@ msgid "NAT-T Mode"
 msgstr ""
 
 msgid "NAT64 Prefix"
+msgstr ""
+
+msgid "NCM"
 msgstr ""
 
 msgid "NDP-Proxy"
@@ -2155,6 +2194,9 @@ msgstr "Η επιλογή άλλαξε"
 msgid "Option removed"
 msgstr "Η επιλογή αφαιρέθηκε"
 
+msgid "Optional"
+msgstr ""
+
 msgid "Optional, specify to override default server (tic.sixxs.net)"
 msgstr ""
 
@@ -2165,8 +2207,13 @@ msgid "Optional."
 msgstr ""
 
 msgid ""
-"Optional. Adds in an additional layer of symmetric-key cryptography for post-"
-"quantum resistance."
+"Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "
+"starting with <code>0x</code>."
+msgstr ""
+
+msgid ""
+"Optional. Base64-encoded preshared key. Adds in an additional layer of "
+"symmetric-key cryptography for post-quantum resistance."
 msgstr ""
 
 msgid "Optional. Create routes for Allowed IPs for this peer."
@@ -2202,9 +2249,6 @@ msgstr "Έξοδος"
 
 msgid "Outbound:"
 msgstr ""
-
-msgid "Outdoor Channels"
-msgstr "Εξωτερικά Κανάλια"
 
 msgid "Output Interface"
 msgstr ""
@@ -2252,6 +2296,9 @@ msgstr "PID"
 
 msgid "PIN"
 msgstr "PIN"
+
+msgid "PMK R1 Push"
+msgstr ""
 
 msgid "PPP"
 msgstr "PPP"
@@ -2382,6 +2429,15 @@ msgstr ""
 msgid "Pre-emtive CRC errors (CRCP_P)"
 msgstr ""
 
+msgid "Prefer LTE"
+msgstr ""
+
+msgid "Prefer UMTS"
+msgstr ""
+
+msgid "Prefix Delegated"
+msgstr ""
+
 msgid "Preshared Key"
 msgstr ""
 
@@ -2446,6 +2502,12 @@ msgid "QMI Cellular"
 msgstr ""
 
 msgid "Quality"
+msgstr ""
+
+msgid "R0 Key Lifetime"
+msgstr ""
+
+msgid "R1 Key Holder"
 msgstr ""
 
 msgid "RFC3947 NAT-T mode"
@@ -2529,6 +2591,9 @@ msgstr "Κίνηση πραγματικού χρόνου"
 msgid "Realtime Wireless"
 msgstr ""
 
+msgid "Reassociation Deadline"
+msgstr ""
+
 msgid "Rebind protection"
 msgstr ""
 
@@ -2547,6 +2612,9 @@ msgstr "Λήψη"
 msgid "Receiver Antenna"
 msgstr "Κεραία Λήψης"
 
+msgid "Recommended. IP addresses of the WireGuard interface."
+msgstr ""
+
 msgid "Reconnect this interface"
 msgstr "Επανασύνδεση της διεπαφής"
 
@@ -2555,9 +2623,6 @@ msgstr "Επανασύνδεση της διεπαφής"
 
 msgid "References"
 msgstr "Αναφορές"
-
-msgid "Regulatory Domain"
-msgstr "Ρυθμιστική Περιοχή"
 
 msgid "Relay"
 msgstr ""
@@ -2598,10 +2663,16 @@ msgstr ""
 msgid "Require TLS"
 msgstr ""
 
+msgid "Required"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr ""
 
 msgid "Required. Base64-encoded private key for this interface."
+msgstr ""
+
+msgid "Required. Base64-encoded public key of peer."
 msgstr ""
 
 msgid ""
@@ -2610,7 +2681,9 @@ msgid ""
 "routes through the tunnel."
 msgstr ""
 
-msgid "Required. Public key of peer."
+msgid ""
+"Requires the 'full' version of wpad/hostapd and support from the wifi driver "
+"<br />(as of Feb 2017: ath9k and ath10k, in LEDE also mwlwifi and mt76)"
 msgstr ""
 
 msgid ""
@@ -2753,9 +2826,6 @@ msgstr ""
 #, fuzzy
 msgid "Separate Clients"
 msgstr "Απομόνωση Πελατών"
-
-msgid "Separate WDS"
-msgstr "Ξεχωριστά WDS"
 
 msgid "Server Settings"
 msgstr "Ρυθμίσεις Εξυπηρετητή"
@@ -2915,9 +2985,6 @@ msgstr "Στατικά Leases"
 
 msgid "Static Routes"
 msgstr "Στατικές Διαδρομές"
-
-msgid "Static WDS"
-msgstr ""
 
 msgid "Static address"
 msgstr "Στατική διεύθυνση"
@@ -3303,9 +3370,6 @@ msgstr ""
 msgid "Tunnel type"
 msgstr ""
 
-msgid "Turbo Mode"
-msgstr "Λειτουργία Turbo"
-
 msgid "Tx-Power"
 msgstr "Ισχύς Εκπομπής"
 
@@ -3323,6 +3387,9 @@ msgstr "UMTS/GPRS/EV-DO"
 
 msgid "USB Device"
 msgstr "Συσκευή USB"
+
+msgid "USB Ports"
+msgstr ""
 
 msgid "UUID"
 msgstr "UUID"
@@ -3424,6 +3491,11 @@ msgstr "Σε χρήση"
 
 msgid "Used Key Slot"
 msgstr "Χρησιμοποιούμενη Υποδοχή Κλειδιού"
+
+msgid ""
+"Used for two different purposes: RADIUS NAS ID and 802.11r R0KH-ID. Not "
+"needed with normal WPA(2)-PSK."
+msgstr ""
 
 msgid "User certificate (PEM encoded)"
 msgstr ""
@@ -3575,9 +3647,6 @@ msgstr "Καταγραφή των ληφθέντων DNS αιτήσεων στο
 msgid "Write system log to file"
 msgstr ""
 
-msgid "XR Support"
-msgstr "Υποστήριξη XR"
-
 msgid ""
 "You can enable or disable installed init scripts here. Changes will applied "
 "after a device reboot.<br /><strong>Warning: If you disable essential init "
@@ -3589,7 +3658,7 @@ msgstr ""
 "όπως το \"network\", η συσκευή σας μπορεί να καταστεί μη-προσβάσιμη!</strong>"
 
 msgid ""
-"You must enable Java Script in your browser or LuCI will not work properly."
+"You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
 
 msgid ""
@@ -3682,6 +3751,9 @@ msgstr "τοπικό αρχείο <abbr title=\"Domain Name System\">DNS</abbr>"
 msgid "minimum 1280, maximum 1480"
 msgstr ""
 
+msgid "minutes"
+msgstr ""
+
 msgid "navigation Navigation"
 msgstr ""
 
@@ -3736,6 +3808,9 @@ msgstr ""
 msgid "tagged"
 msgstr ""
 
+msgid "time units (TUs / 1.024 ms) [1000-65535]"
+msgstr ""
+
 msgid "unknown"
 msgstr ""
 
@@ -3756,6 +3831,48 @@ msgstr "ναι"
 
 msgid "« Back"
 msgstr "« Πίσω"
+
+#~ msgid "AR Support"
+#~ msgstr "Υποστήριξη AR"
+
+#~ msgid "Background Scan"
+#~ msgstr "Σάρωση Παρασκηνίου"
+
+#~ msgid "Compression"
+#~ msgstr "Συμπίεση"
+
+#~ msgid "Disable HW-Beacon timer"
+#~ msgstr "Απενεργοποίηση χρονιστή HW-Beacon"
+
+#~ msgid "Do not send probe responses"
+#~ msgstr "Να μην στέλνονται απαντήσεις σε probes"
+
+#~ msgid "Fast Frames"
+#~ msgstr "Γρήγορα Πλαίσια"
+
+#~ msgid "Maximum Rate"
+#~ msgstr "Μέγιστος Ρυθμός"
+
+#~ msgid "Minimum Rate"
+#~ msgstr "Ελάχιστος Ρυθμός"
+
+#~ msgid "Multicast Rate"
+#~ msgstr "Ρυθμός Multicast"
+
+#~ msgid "Outdoor Channels"
+#~ msgstr "Εξωτερικά Κανάλια"
+
+#~ msgid "Regulatory Domain"
+#~ msgstr "Ρυθμιστική Περιοχή"
+
+#~ msgid "Separate WDS"
+#~ msgstr "Ξεχωριστά WDS"
+
+#~ msgid "Turbo Mode"
+#~ msgstr "Λειτουργία Turbo"
+
+#~ msgid "XR Support"
+#~ msgstr "Υποστήριξη XR"
 
 #~ msgid "An additional network will be created if you leave this unchecked."
 #~ msgstr "Ένα επιπλέον δίκτυο θα δημιουργηθεί εάν αυτό αφεθεί κενό"
