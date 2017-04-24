@@ -8,6 +8,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.6\n"
 
+msgid "%s is untagged in multiple VLANs!"
+msgstr ""
+
 msgid "(%d minute window, %d second interval)"
 msgstr "(%d minutters vindu, %d sekunds intervall)"
 
@@ -35,17 +38,44 @@ msgstr ""
 msgid "-- match by label --"
 msgstr ""
 
+msgid "-- match by uuid --"
+msgstr ""
+
 msgid "1 Minute Load:"
 msgstr "1 minutts belastning:"
 
 msgid "15 Minute Load:"
 msgstr "15 minutters belastning:"
 
+msgid "4-character hexadecimal ID"
+msgstr ""
+
 msgid "464XLAT (CLAT)"
 msgstr ""
 
 msgid "5 Minute Load:"
 msgstr "5 minutters belastning:"
+
+msgid "6-octet identifier as a hex string - no colons"
+msgstr ""
+
+msgid "802.11r Fast Transition"
+msgstr ""
+
+msgid "802.11w Association SA Query maximum timeout"
+msgstr ""
+
+msgid "802.11w Association SA Query retry timeout"
+msgstr ""
+
+msgid "802.11w Management Frame Protection"
+msgstr ""
+
+msgid "802.11w maximum timeout"
+msgstr ""
+
+msgid "802.11w retry timeout"
+msgstr ""
 
 msgid "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
 msgstr "<abbr title=\"Basic Service Set Identifier\">BSSID</abbr>"
@@ -117,23 +147,29 @@ msgstr "<abbr title=\"Maksimal\">Maks.</abbr> samtidige spørringer"
 msgid "<abbr title='Pairwise: %s / Group: %s'>%s - %s</abbr>"
 msgstr "<abbr title='Parvis: %s / Gruppe: %s'>%s - %s</abbr>"
 
-msgid "ADSL"
+msgid "A43C + J43 + A43"
 msgstr ""
 
-msgid "ADSL Status"
+msgid "A43C + J43 + A43 + V43"
+msgstr ""
+
+msgid "ADSL"
 msgstr ""
 
 msgid "AICCU (SIXXS)"
 msgstr ""
 
+msgid "ANSI T1.413"
+msgstr ""
+
 msgid "APN"
 msgstr "<abbr title=\"Aksesspunkt Navn\">APN</abbr>"
 
-msgid "AR Support"
-msgstr "AR Støtte"
-
 msgid "ARP retry threshold"
 msgstr "APR terskel for nytt forsøk"
+
+msgid "ATM (Asynchronous Transfer Mode)"
+msgstr ""
 
 msgid "ATM Bridges"
 msgstr "<abbr title=\"Asynchronous Transfer Mode\">ATM</abbr> Broer"
@@ -159,6 +195,9 @@ msgstr ""
 
 msgid "ATM device number"
 msgstr "<abbr title=\"Asynchronous Transfer Mode\">ATM</abbr> enhetsnummer"
+
+msgid "ATU-C System Vendor ID"
+msgstr ""
 
 msgid "AYIYA"
 msgstr ""
@@ -223,8 +262,19 @@ msgstr "Administrasjon"
 msgid "Advanced Settings"
 msgstr "Avanserte Innstillinger"
 
+msgid "Aggregate Transmit Power(ACTATP)"
+msgstr ""
+
 msgid "Alert"
 msgstr "Varsle"
+
+msgid ""
+"Allocate IP addresses sequentially, starting from the lowest available "
+"address"
+msgstr ""
+
+msgid "Allocate IP sequentially"
+msgstr ""
 
 msgid "Allow <abbr title=\"Secure Shell\">SSH</abbr> password authentication"
 msgstr "Tillat <abbr title=\"Secure Shell\">SSH</abbr> passord godkjenning"
@@ -251,6 +301,9 @@ msgid ""
 "Allow upstream responses in the 127.0.0.0/8 range, e.g. for RBL services"
 msgstr "Tillat oppstrøms svar i 127.0.0.0/8 nettet, f.eks for RBL tjenester"
 
+msgid "Allowed IPs"
+msgstr ""
+
 msgid ""
 "Also see <a href=\"https://www.sixxs.net/faq/connectivity/?faq=comparison"
 "\">Tunneling Comparison</a> on SIXXS"
@@ -259,8 +312,50 @@ msgstr ""
 msgid "Always announce default router"
 msgstr ""
 
-msgid "An additional network will be created if you leave this unchecked."
-msgstr "Et nytt nettverk vil bli opprettet hvis du tar bort haken."
+msgid "Annex"
+msgstr ""
+
+msgid "Annex A + L + M (all)"
+msgstr ""
+
+msgid "Annex A G.992.1"
+msgstr ""
+
+msgid "Annex A G.992.2"
+msgstr ""
+
+msgid "Annex A G.992.3"
+msgstr ""
+
+msgid "Annex A G.992.5"
+msgstr ""
+
+msgid "Annex B (all)"
+msgstr ""
+
+msgid "Annex B G.992.1"
+msgstr ""
+
+msgid "Annex B G.992.3"
+msgstr ""
+
+msgid "Annex B G.992.5"
+msgstr ""
+
+msgid "Annex J (all)"
+msgstr ""
+
+msgid "Annex L G.992.3 POTS 1"
+msgstr ""
+
+msgid "Annex M (all)"
+msgstr ""
+
+msgid "Annex M G.992.3"
+msgstr ""
+
+msgid "Annex M G.992.5"
+msgstr ""
 
 msgid "Announce as default router even if no public prefix is available."
 msgstr ""
@@ -269,6 +364,15 @@ msgid "Announced DNS domains"
 msgstr ""
 
 msgid "Announced DNS servers"
+msgstr ""
+
+msgid "Anonymous Identity"
+msgstr ""
+
+msgid "Anonymous Mount"
+msgstr ""
+
+msgid "Anonymous Swap"
 msgstr ""
 
 msgid "Antenna 1"
@@ -303,14 +407,17 @@ msgstr ""
 msgid "Associated Stations"
 msgstr "Tilkoblede Klienter"
 
-msgid "Atheros 802.11%s Wireless Controller"
-msgstr "Atheros 802.11%s Trådløs Kontroller"
+msgid "Auth Group"
+msgstr ""
 
 msgid "AuthGroup"
 msgstr ""
 
 msgid "Authentication"
 msgstr "Godkjenning"
+
+msgid "Authentication Type"
+msgstr ""
 
 msgid "Authoritative"
 msgstr "Autoritativ"
@@ -327,6 +434,21 @@ msgstr ""
 msgid "Automatic Homenet (HNCP)"
 msgstr ""
 
+msgid "Automatically check filesystem for errors before mounting"
+msgstr ""
+
+msgid "Automatically mount filesystems on hotplug"
+msgstr ""
+
+msgid "Automatically mount swap on hotplug"
+msgstr ""
+
+msgid "Automount Filesystem"
+msgstr ""
+
+msgid "Automount Swap"
+msgstr ""
+
 msgid "Available"
 msgstr "Tilgjengelig"
 
@@ -335,6 +457,12 @@ msgstr "Tilgjengelige pakker"
 
 msgid "Average:"
 msgstr "Gjennomsnitt:"
+
+msgid "B43 + B43C"
+msgstr ""
+
+msgid "B43 + B43C + V43"
+msgstr ""
 
 msgid "BR / DMR / AFTR"
 msgstr ""
@@ -356,9 +484,6 @@ msgstr "Tilbake til oversikt"
 
 msgid "Back to scan results"
 msgstr "Tilbake til skanne resultat"
-
-msgid "Background Scan"
-msgstr "Bakgrunns Skanning"
 
 msgid "Backup / Flash Firmware"
 msgstr "Sikkerhetskopiering/Firmware oppgradering"
@@ -386,6 +511,15 @@ msgstr ""
 "Nedenfor er listen med filer som blir sikkerthetskopiert. Listen består av "
 "konfigurasjonsfiler som er merket av opkg, essensielle enhets filer og andre "
 "filer valgt av bruker."
+
+msgid "Bind interface"
+msgstr ""
+
+msgid "Bind only to specific interfaces rather than wildcard address."
+msgstr ""
+
+msgid "Bind the tunnel to this interface (optional)."
+msgstr ""
 
 msgid "Bitrate"
 msgstr "Bitrate"
@@ -425,9 +559,6 @@ msgstr "Knapper"
 msgid "CA certificate; if empty it will be saved after the first connection."
 msgstr ""
 
-msgid "CPU"
-msgstr "CPU"
-
 msgid "CPU usage (%)"
 msgstr "CPU forbruk (%)"
 
@@ -455,6 +586,12 @@ msgstr "Kanal"
 msgid "Check"
 msgstr "Kontroller"
 
+msgid "Check fileystems before mount"
+msgstr ""
+
+msgid "Check this option to delete the existing networks from this radio."
+msgstr ""
+
 msgid "Checksum"
 msgstr "Kontrollsum"
 
@@ -478,6 +615,9 @@ msgstr ""
 
 msgid "Cipher"
 msgstr "Krypteringsmetode"
+
+msgid "Cisco UDP encapsulation"
+msgstr ""
 
 msgid ""
 "Click \"Generate archive\" to download a tar archive of the current "
@@ -512,9 +652,6 @@ msgstr "Kommando"
 
 msgid "Common Configuration"
 msgstr "Vanlige Innstillinger"
-
-msgid "Compression"
-msgstr "Komprimering"
 
 msgid "Configuration"
 msgstr "Konfigurasjon"
@@ -627,11 +764,32 @@ msgstr "DNS videresendinger"
 msgid "DNS-Label / FQDN"
 msgstr ""
 
+msgid "DNSSEC"
+msgstr ""
+
+msgid "DNSSEC check unsigned"
+msgstr ""
+
+msgid "DPD Idle Timeout"
+msgstr ""
+
 msgid "DS-Lite AFTR address"
+msgstr ""
+
+msgid "DSL"
+msgstr ""
+
+msgid "DSL Status"
+msgstr ""
+
+msgid "DSL line mode"
 msgstr ""
 
 msgid "DUID"
 msgstr "DUID"
+
+msgid "Data Rate"
+msgstr ""
 
 msgid "Debug"
 msgstr "Feilsøking"
@@ -641,6 +799,9 @@ msgstr "Standard %d"
 
 msgid "Default gateway"
 msgstr "Standard gateway"
+
+msgid "Default is stateless + stateful"
+msgstr ""
 
 msgid "Default route"
 msgstr ""
@@ -661,9 +822,6 @@ msgstr ""
 
 msgid "Delete"
 msgstr "Fjern"
-
-msgid "Delete this interface"
-msgstr "Fjern dette grensesnitt"
 
 msgid "Delete this network"
 msgstr "Fjern dette nettverket"
@@ -711,11 +869,14 @@ msgstr ""
 msgid "Disable DNS setup"
 msgstr "Deaktiver DNS oppsett"
 
-msgid "Disable HW-Beacon timer"
-msgstr "Deaktiver HW-Beacon timer"
+msgid "Disable Encryption"
+msgstr ""
 
 msgid "Disabled"
 msgstr "Deaktivert"
+
+msgid "Disabled (default)"
+msgstr ""
 
 msgid "Discard upstream RFC1918 responses"
 msgstr "Forkast oppstrøms RFC1918 svar"
@@ -757,14 +918,14 @@ msgstr ""
 msgid "Do not forward reverse lookups for local networks"
 msgstr "Ikke videresend reverserte oppslag for lokale nettverk"
 
-msgid "Do not send probe responses"
-msgstr "Ikke send probe svar"
-
 msgid "Domain required"
 msgstr "Domene kreves"
 
 msgid "Domain whitelist"
 msgstr "Domene hviteliste"
+
+msgid "Don't Fragment"
+msgstr ""
 
 msgid ""
 "Don't forward <abbr title=\"Domain Name System\">DNS</abbr>-Requests without "
@@ -838,11 +999,20 @@ msgstr "Aktiver <abbr title=\"Spanning Tree Protocol\">STP</abbr>"
 msgid "Enable HE.net dynamic endpoint update"
 msgstr "Aktiver HE,net dynamisk endepunkt oppdatering"
 
+msgid "Enable IPv6 negotiation"
+msgstr ""
+
+msgid "Enable IPv6 negotiation on the PPP link"
+msgstr "Aktiver IPv6 på PPP lenke"
+
 msgid "Enable Jumbo Frame passthrough"
 msgstr "Aktiver Jumbo Frames gjennomgang"
 
 msgid "Enable NTP client"
 msgstr "Aktiver NTP klient"
+
+msgid "Enable Single DES"
+msgstr ""
 
 msgid "Enable TFTP server"
 msgstr "Aktiver TFTP server"
@@ -862,6 +1032,9 @@ msgstr ""
 msgid "Enable mirroring of outgoing packets"
 msgstr ""
 
+msgid "Enable the DF (Don't Fragment) flag of the encapsulating packets."
+msgstr ""
+
 msgid "Enable this mount"
 msgstr "Aktiver dette monteringspunktet"
 
@@ -874,6 +1047,11 @@ msgstr "Aktiver/Deaktiver"
 msgid "Enabled"
 msgstr "Aktivert"
 
+msgid ""
+"Enables fast roaming among access points that belong to the same Mobility "
+"Domain"
+msgstr ""
+
 msgid "Enables the Spanning Tree Protocol on this bridge"
 msgstr "Aktiverer Spanning Tree Protocol på denne broen"
 
@@ -883,17 +1061,29 @@ msgstr "Innkapsling modus"
 msgid "Encryption"
 msgstr "Kryptering"
 
+msgid "Endpoint Host"
+msgstr ""
+
+msgid "Endpoint Port"
+msgstr ""
+
 msgid "Erasing..."
 msgstr "Sletter..."
 
 msgid "Error"
 msgstr "Feil"
 
+msgid "Errored seconds (ES)"
+msgstr ""
+
 msgid "Ethernet Adapter"
 msgstr "Ethernet Tilslutning"
 
 msgid "Ethernet Switch"
 msgstr "Ethernet Svitsj"
+
+msgid "Exclude interfaces"
+msgstr ""
 
 msgid "Expand hosts"
 msgstr "Utvid vertsliste"
@@ -909,14 +1099,23 @@ msgstr "Utløpstid på leide adresser, minimum er 2 minutter (<code>2m</code>)."
 msgid "External"
 msgstr ""
 
+msgid "External R0 Key Holder List"
+msgstr ""
+
+msgid "External R1 Key Holder List"
+msgstr ""
+
 msgid "External system log server"
 msgstr "Ekstern systemlogg server"
 
 msgid "External system log server port"
 msgstr "Ekstern systemlogg server port"
 
-msgid "Fast Frames"
-msgstr "Fast Frames"
+msgid "External system log server protocol"
+msgstr ""
+
+msgid "Extra SSH command options"
+msgstr ""
 
 msgid "File"
 msgstr "Fil"
@@ -936,6 +1135,11 @@ msgstr "Filtrer private"
 msgid "Filter useless"
 msgstr "Filtrer ubrukelige"
 
+msgid ""
+"Find all currently attached filesystems and swap and replace configuration "
+"with defaults based on what was detected"
+msgstr ""
+
 msgid "Find and join network"
 msgstr "Finn og koble til nettverk"
 
@@ -948,20 +1152,23 @@ msgstr "Fullfør"
 msgid "Firewall"
 msgstr "Brannmur"
 
+msgid "Firewall Mark"
+msgstr ""
+
 msgid "Firewall Settings"
 msgstr "Brannmur Innstillinger"
 
 msgid "Firewall Status"
 msgstr "Brannmur Status"
 
+msgid "Firmware File"
+msgstr ""
+
 msgid "Firmware Version"
 msgstr "Firmware Versjon"
 
 msgid "Fixed source port for outbound DNS queries"
 msgstr "Fast kilde port for utgående DNS-spørringer"
-
-msgid "Flags"
-msgstr "Flagg"
 
 msgid "Flash Firmware"
 msgstr "Firmware Oppradering"
@@ -994,11 +1201,17 @@ msgstr "Bruk TKIP"
 msgid "Force TKIP and CCMP (AES)"
 msgstr "Bruk TKIP og CCMP (AES)"
 
+msgid "Force use of NAT-T"
+msgstr ""
+
 msgid "Form token mismatch"
 msgstr ""
 
 msgid "Forward DHCP traffic"
 msgstr "Videresend DHCP trafikk"
+
+msgid "Forward Error Correction Seconds (FECS)"
+msgstr ""
 
 msgid "Forward broadcast traffic"
 msgstr "Videresend kringkastingstrafikk"
@@ -1017,6 +1230,11 @@ msgstr "Ledig"
 
 msgid "Free space"
 msgstr "Ledig plass"
+
+msgid ""
+"Further information about WireGuard interfaces and peers at <a href=\"http://"
+"wireguard.io\">wireguard.io</a>."
+msgstr ""
 
 msgid "GHz"
 msgstr "GHz"
@@ -1039,6 +1257,9 @@ msgstr "Generelt Oppsett"
 msgid "General options for opkg"
 msgstr ""
 
+msgid "Generate Config"
+msgstr ""
+
 msgid "Generate archive"
 msgstr "Opprett arkiv"
 
@@ -1047,6 +1268,9 @@ msgstr "Generell 802.11%s Trådløs Kontroller"
 
 msgid "Given password confirmation did not match, password not changed!"
 msgstr "Det oppgitte passordet var ikke korrekt, passord ble ikke endret!"
+
+msgid "Global Settings"
+msgstr ""
 
 msgid "Global network options"
 msgstr ""
@@ -1057,6 +1281,9 @@ msgstr "Gå til passord konfigurasjon..."
 msgid "Go to relevant configuration page"
 msgstr "Gå til relevant konfigurasjonen side"
 
+msgid "Group Password"
+msgstr ""
+
 msgid "Guest"
 msgstr ""
 
@@ -1066,11 +1293,17 @@ msgstr "HE.net passord"
 msgid "HE.net username"
 msgstr ""
 
+msgid "HT mode (802.11n)"
+msgstr ""
+
 msgid "Handler"
 msgstr "Behandler"
 
 msgid "Hang Up"
 msgstr "Slå av"
+
+msgid "Header Error Code Errors (HEC)"
+msgstr ""
 
 msgid "Heartbeat"
 msgstr ""
@@ -1094,6 +1327,9 @@ msgstr "Hermes 802.11b Trådløs Kontroller"
 msgid "Hide <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 msgstr "Skjul <abbr title=\"Extended Service Set Identifier\">ESSID</abbr>"
 
+msgid "Host"
+msgstr ""
+
 msgid "Host entries"
 msgstr "Vertsoppføringer"
 
@@ -1114,6 +1350,12 @@ msgid "Hostnames"
 msgstr "Vertsnavn"
 
 msgid "Hybrid"
+msgstr ""
+
+msgid "IKE DH Group"
+msgstr ""
+
+msgid "IP Addresses"
 msgstr ""
 
 msgid "IP address"
@@ -1157,6 +1399,9 @@ msgstr "IPv4 prefikslengde"
 
 msgid "IPv4-Address"
 msgstr "IPv4-Adresse"
+
+msgid "IPv4-in-IPv4 (RFC2003)"
+msgstr ""
 
 msgid "IPv6"
 msgstr "IPv6"
@@ -1206,6 +1451,9 @@ msgstr ""
 msgid "IPv6-Address"
 msgstr "IPv6-Adresse"
 
+msgid "IPv6-PD"
+msgstr ""
+
 msgid "IPv6-in-IPv4 (RFC4213)"
 msgstr "IPv6-i-IPv4 (RFC4213)"
 
@@ -1217,6 +1465,12 @@ msgstr "IPv6-over-IPv4 (6til4)"
 
 msgid "Identity"
 msgstr "Identitet"
+
+msgid "If checked, 1DES is enaled"
+msgstr ""
+
+msgid "If checked, encryption is disabled"
+msgstr ""
 
 msgid ""
 "If specified, mount the device by its UUID instead of a fixed device node"
@@ -1310,6 +1564,9 @@ msgstr "Grensesnittet kobler til igjen..."
 msgid "Interface is shutting down..."
 msgstr "Grensesnittet slår seg av..."
 
+msgid "Interface name"
+msgstr ""
+
 msgid "Interface not present or not connected yet."
 msgstr "Grensesnittet er ikke tilgjengelig eller er ikke tilknyttet."
 
@@ -1348,17 +1605,17 @@ msgstr ""
 "Det virker som du prøver å flashe med en firmware som ikke passer inn i "
 "flash-minnet, vennligst kontroller firmware filen!"
 
-msgid "Java Script required!"
-msgstr "Java Script kreves!"
+msgid "JavaScript required!"
+msgstr "JavaScript kreves!"
 
 msgid "Join Network"
 msgstr "Koble til nettverket"
 
-msgid "Join Network: Settings"
-msgstr "Koble til nettverk: Innstilling"
-
 msgid "Join Network: Wireless Scan"
 msgstr "Koble til nettverk: Trådløs Skanning"
+
+msgid "Joining Network: %q"
+msgstr ""
 
 msgid "Keep settings"
 msgstr "Behold innstillinger"
@@ -1402,7 +1659,13 @@ msgstr "Språk"
 msgid "Language and Style"
 msgstr "Språk og Utseende"
 
+msgid "Latency"
+msgstr ""
+
 msgid "Leaf"
+msgstr ""
+
+msgid "Lease time"
 msgstr ""
 
 msgid "Lease validity time"
@@ -1429,13 +1692,22 @@ msgstr "Forklaring:"
 msgid "Limit"
 msgstr "Grense"
 
-msgid "Line Attenuation"
+msgid "Limit DNS service to subnets interfaces on which we are serving DNS."
 msgstr ""
 
-msgid "Line Speed"
+msgid "Limit listening to these interfaces, and loopback."
+msgstr ""
+
+msgid "Line Attenuation (LATN)"
+msgstr ""
+
+msgid "Line Mode"
 msgstr ""
 
 msgid "Line State"
+msgstr ""
+
+msgid "Line Uptime"
 msgstr ""
 
 msgid "Link On"
@@ -1448,11 +1720,36 @@ msgstr ""
 "Liste med <abbr title=\"Domain Name System\">DNS</abbr> servere som "
 "forespørsler blir videresendt til"
 
+msgid ""
+"List of R0KHs in the same Mobility Domain. <br />Format: MAC-address,NAS-"
+"Identifier,128-bit key as hex string. <br />This list is used to map R0KH-ID "
+"(NAS Identifier) to a destination MAC address when requesting PMK-R1 key "
+"from the R0KH that the STA used during the Initial Mobility Domain "
+"Association."
+msgstr ""
+
+msgid ""
+"List of R1KHs in the same Mobility Domain. <br />Format: MAC-address,R1KH-ID "
+"as 6 octets with colons,128-bit key as hex string. <br />This list is used "
+"to map R1KH-ID to a destination MAC address when sending PMK-R1 key from the "
+"R0KH. This is also the list of authorized R1KHs in the MD that can request "
+"PMK-R1 keys."
+msgstr ""
+
+msgid "List of SSH key files for auth"
+msgstr ""
+
 msgid "List of domains to allow RFC1918 responses for"
 msgstr "Liste over domener hvor en tillater RFC1918 svar"
 
 msgid "List of hosts that supply bogus NX domain results"
 msgstr "Liste over verter som returneren falske NX domene resultater"
+
+msgid "Listen Interfaces"
+msgstr ""
+
+msgid "Listen Port"
+msgstr ""
 
 msgid "Listen only on the given interface or, if unspecified, on all"
 msgstr ""
@@ -1470,11 +1767,17 @@ msgstr "Belastning Gjennomsnitt"
 msgid "Loading"
 msgstr "Laster"
 
+msgid "Local IP address to assign"
+msgstr ""
+
 msgid "Local IPv4 address"
 msgstr "Lokal IPv4 adresse"
 
 msgid "Local IPv6 address"
 msgstr "Lokal IPv6 adresse"
+
+msgid "Local Service Only"
+msgstr ""
 
 msgid "Local Startup"
 msgstr "Lokal Oppstart"
@@ -1509,7 +1812,7 @@ msgstr ""
 msgid "Localise queries"
 msgstr "Lokalisere søk"
 
-msgid "Locked to channel %d used by: %s"
+msgid "Locked to channel %s used by: %s"
 msgstr ""
 
 msgid "Log output level"
@@ -1526,6 +1829,9 @@ msgstr "Logg inn"
 
 msgid "Logout"
 msgstr "Logg ut"
+
+msgid "Loss of Signal Seconds (LOSS)"
+msgstr ""
 
 msgid "Lowest leased address as offset from the network address."
 msgstr "Laveste leide adresse, forskjøvet fra nettverks adressen."
@@ -1548,6 +1854,9 @@ msgstr ""
 msgid "MB/s"
 msgstr "MB/s"
 
+msgid "MD5"
+msgstr ""
+
 msgid "MHz"
 msgstr "MHz"
 
@@ -1562,8 +1871,8 @@ msgstr ""
 msgid "Manual"
 msgstr ""
 
-msgid "Maximum Rate"
-msgstr "Maksimal hastighet"
+msgid "Max. Attainable Data Rate (ATTNDR)"
+msgstr ""
 
 msgid "Maximum allowed number of active DHCP leases"
 msgstr "Maksimalt antall aktive DHCP leieavtaler"
@@ -1580,6 +1889,11 @@ msgstr "Maksimalt antall sekunder å vente på at modemet skal bli klart"
 msgid "Maximum hold time"
 msgstr "Maksimal holde tid"
 
+msgid ""
+"Maximum length of the name is 15 characters including the automatic protocol/"
+"bridge prefix (br-, 6in4-, pppoe- etc.)"
+msgstr ""
+
 msgid "Maximum number of leased addresses."
 msgstr "Maksimalt antall utleide adresser."
 
@@ -1595,9 +1909,6 @@ msgstr "Minne forbruk (%)"
 msgid "Metric"
 msgstr "Metrisk"
 
-msgid "Minimum Rate"
-msgstr "Minimum hastighet"
-
 msgid "Minimum hold time"
 msgstr "Minimum holde tid"
 
@@ -1609,6 +1920,9 @@ msgstr ""
 
 msgid "Missing protocol extension for proto %q"
 msgstr "Mangler protokoll utvidelse for proto %q"
+
+msgid "Mobility Domain"
+msgstr ""
 
 msgid "Mode"
 msgstr "Modus"
@@ -1647,11 +1961,17 @@ msgstr ""
 "Monterings punkter definerer hvor lagrings enheter blir tilsluttet "
 "filsystemet"
 
+msgid "Mount filesystems not specifically configured"
+msgstr ""
+
 msgid "Mount options"
 msgstr "Monterings alternativer"
 
 msgid "Mount point"
 msgstr "Monterings punkt"
+
+msgid "Mount swap not specifically configured"
+msgstr ""
 
 msgid "Mounted file systems"
 msgstr "Monterte Filsystemer"
@@ -1662,19 +1982,25 @@ msgstr "Flytt ned"
 msgid "Move up"
 msgstr "Flytt opp"
 
-msgid "Multicast Rate"
-msgstr "Multicast hastighet"
-
 msgid "Multicast address"
 msgstr "Multicast adresse"
 
 msgid "NAS ID"
 msgstr "NAS ID"
 
+msgid "NAT-T Mode"
+msgstr ""
+
 msgid "NAT64 Prefix"
 msgstr ""
 
+msgid "NCM"
+msgstr ""
+
 msgid "NDP-Proxy"
+msgstr ""
+
+msgid "NT Domain"
 msgstr ""
 
 msgid "NTP server candidates"
@@ -1716,6 +2042,9 @@ msgstr "Neste »"
 msgid "No DHCP Server configured for this interface"
 msgstr "Ingen DHCP server er konfigurert for dette grensesnittet"
 
+msgid "No NAT-T"
+msgstr ""
+
 msgid "No chains in this table"
 msgstr "Ingen lenker i denne tabellen"
 
@@ -1749,11 +2078,17 @@ msgstr "Ingen sone tilknyttet"
 msgid "Noise"
 msgstr "Støy"
 
-msgid "Noise Margin"
+msgid "Noise Margin (SNR)"
 msgstr ""
 
 msgid "Noise:"
 msgstr "Støy:"
+
+msgid "Non Pre-emtive CRC errors (CRC_P)"
+msgstr ""
+
+msgid "Non-wildcard"
+msgstr ""
 
 msgid "None"
 msgstr "Ingen"
@@ -1773,6 +2108,9 @@ msgstr "Ikke tilkoblet"
 msgid "Note: Configuration files will be erased."
 msgstr "Merk: Konfigurasjonsfiler vil bli slettet"
 
+msgid "Note: interface name length"
+msgstr ""
+
 msgid "Notice"
 msgstr "Merk"
 
@@ -1784,6 +2122,12 @@ msgstr "OK"
 
 msgid "OPKG-Configuration"
 msgstr "<abbr title=\"Open PacKaGe Management\">OPKG</abbr>-Konfigurasjon"
+
+msgid "Obfuscated Group Password"
+msgstr ""
+
+msgid "Obfuscated Password"
+msgstr ""
 
 msgid "Off-State Delay"
 msgstr "Forsinkelse ved tilstand Av"
@@ -1812,6 +2156,9 @@ msgstr "Enten Vertsnavn eller Mac-adresse må oppgis!"
 msgid "One or more fields contain invalid values!"
 msgstr "Ett eller flere felt inneholder ugyldige verdier!"
 
+msgid "One or more invalid/required values on tab"
+msgstr ""
+
 msgid "One or more required fields have no value!"
 msgstr "Ett eller flere obligatoriske felter har ingen verdi!"
 
@@ -1830,10 +2177,48 @@ msgstr "Innstilling endret"
 msgid "Option removed"
 msgstr "Innstilling fjernet"
 
+msgid "Optional"
+msgstr ""
+
 msgid "Optional, specify to override default server (tic.sixxs.net)"
 msgstr ""
 
 msgid "Optional, use when the SIXXS account has more than one tunnel"
+msgstr ""
+
+msgid "Optional."
+msgstr ""
+
+msgid ""
+"Optional. 32-bit mark for outgoing encrypted packets. Enter value in hex, "
+"starting with <code>0x</code>."
+msgstr ""
+
+msgid ""
+"Optional. Base64-encoded preshared key. Adds in an additional layer of "
+"symmetric-key cryptography for post-quantum resistance."
+msgstr ""
+
+msgid "Optional. Create routes for Allowed IPs for this peer."
+msgstr ""
+
+msgid ""
+"Optional. Host of peer. Names are resolved prior to bringing up the "
+"interface."
+msgstr ""
+
+msgid "Optional. Maximum Transmission Unit of tunnel interface."
+msgstr ""
+
+msgid "Optional. Port of peer."
+msgstr ""
+
+msgid ""
+"Optional. Seconds between keep alive messages. Default is 0 (disabled). "
+"Recommended value if this device is behind a NAT is 25."
+msgstr ""
+
+msgid "Optional. UDP port used for outgoing and incoming packets."
 msgstr ""
 
 msgid "Options"
@@ -1848,9 +2233,6 @@ msgstr "Ut"
 msgid "Outbound:"
 msgstr "Ugående:"
 
-msgid "Outdoor Channels"
-msgstr "Utendørs Kanaler"
-
 msgid "Output Interface"
 msgstr ""
 
@@ -1859,6 +2241,15 @@ msgstr "Overstyr MAC adresse"
 
 msgid "Override MTU"
 msgstr "Overstyr MTU"
+
+msgid "Override TOS"
+msgstr ""
+
+msgid "Override TTL"
+msgstr ""
+
+msgid "Override default interface name"
+msgstr ""
 
 msgid "Override the gateway in DHCP responses"
 msgstr "Overstyr gatewayen mottatt av DHCP respons"
@@ -1891,6 +2282,9 @@ msgstr "PID"
 msgid "PIN"
 msgstr "PIN"
 
+msgid "PMK R1 Push"
+msgstr ""
+
 msgid "PPP"
 msgstr "PPP"
 
@@ -1903,6 +2297,9 @@ msgstr "PPPoATM"
 msgid "PPPoE"
 msgstr "PPPoE"
 
+msgid "PPPoSSH"
+msgstr ""
+
 msgid "PPtP"
 msgstr "PPtP"
 
@@ -1910,6 +2307,9 @@ msgid "PSID offset"
 msgstr ""
 
 msgid "PSID-bits length"
+msgstr ""
+
+msgid "PTM/EFM (Packet Transfer Mode)"
 msgstr ""
 
 msgid "Package libiwinfo required!"
@@ -1936,6 +2336,9 @@ msgstr "Passord godkjenning"
 msgid "Password of Private Key"
 msgstr "Passord for privatnøkkel"
 
+msgid "Password of inner Private Key"
+msgstr ""
+
 msgid "Password successfully changed!"
 msgstr "Passordet er endret!"
 
@@ -1951,14 +2354,35 @@ msgstr "Sti til privatnøkkel"
 msgid "Path to executable which handles the button event"
 msgstr "Sti til program som håndterer handling ved bruk av knapp"
 
+msgid "Path to inner CA-Certificate"
+msgstr ""
+
+msgid "Path to inner Client-Certificate"
+msgstr ""
+
+msgid "Path to inner Private Key"
+msgstr ""
+
 msgid "Peak:"
 msgstr "Maksimalt:"
+
+msgid "Peer IP address to assign"
+msgstr ""
+
+msgid "Peers"
+msgstr ""
+
+msgid "Perfect Forward Secrecy"
+msgstr ""
 
 msgid "Perform reboot"
 msgstr "Omstart nå"
 
 msgid "Perform reset"
 msgstr "Foreta nullstilling"
+
+msgid "Persistent Keep Alive"
+msgstr ""
 
 msgid "Phy Rate:"
 msgstr "Phy Hastighet:"
@@ -1981,14 +2405,26 @@ msgstr "Policy"
 msgid "Port"
 msgstr "Port"
 
-msgid "Port %d"
-msgstr "Port %d"
-
-msgid "Port %d is untagged in multiple VLANs!"
-msgstr "Port %d er utagget i flere VLANs!"
-
 msgid "Port status:"
 msgstr "Port status:"
+
+msgid "Power Management Mode"
+msgstr ""
+
+msgid "Pre-emtive CRC errors (CRCP_P)"
+msgstr ""
+
+msgid "Prefer LTE"
+msgstr ""
+
+msgid "Prefer UMTS"
+msgstr ""
+
+msgid "Prefix Delegated"
+msgstr ""
+
+msgid "Preshared Key"
+msgstr ""
 
 msgid ""
 "Presume peer to be dead after given amount of LCP echo failures, use 0 to "
@@ -1997,17 +2433,26 @@ msgstr ""
 "Annta at peer er uten forbindelse om angitt LCP ekko feiler, bruk verdi 0 "
 "for å overse feil"
 
+msgid "Prevent listening on these interfaces."
+msgstr ""
+
 msgid "Prevents client-to-client communication"
 msgstr "Hindrer klient-til-klient kommunikasjon"
 
 msgid "Prism2/2.5/3 802.11b Wireless Controller"
 msgstr "Prism2/2.5/3 802.11b Trådløs Kontroller"
 
+msgid "Private Key"
+msgstr ""
+
 msgid "Proceed"
 msgstr "Fortsett"
 
 msgid "Processes"
 msgstr "Prosesser"
+
+msgid "Profile"
+msgstr ""
 
 msgid "Prot."
 msgstr "Prot."
@@ -2033,11 +2478,26 @@ msgstr "Lag nytt nettverk"
 msgid "Pseudo Ad-Hoc (ahdemo)"
 msgstr "Pseudo Ad-Hoc (ahdemo)"
 
+msgid "Public Key"
+msgstr ""
+
 msgid "Public prefix routed to this device for distribution to clients."
+msgstr ""
+
+msgid "QMI Cellular"
 msgstr ""
 
 msgid "Quality"
 msgstr "Kvalitet"
+
+msgid "R0 Key Lifetime"
+msgstr ""
+
+msgid "R1 Key Holder"
+msgstr ""
+
+msgid "RFC3947 NAT-T mode"
+msgstr ""
 
 msgid "RTS/CTS Threshold"
 msgstr "RTS/CTS Terskel"
@@ -2129,6 +2589,9 @@ msgstr "Trafikk Sanntid"
 msgid "Realtime Wireless"
 msgstr "Trådløst i sanntid"
 
+msgid "Reassociation Deadline"
+msgstr ""
+
 msgid "Rebind protection"
 msgstr "Binde beskyttelse"
 
@@ -2147,6 +2610,9 @@ msgstr "Motta"
 msgid "Receiver Antenna"
 msgstr "Mottak antenne"
 
+msgid "Recommended. IP addresses of the WireGuard interface."
+msgstr ""
+
 msgid "Reconnect this interface"
 msgstr "Koble til igjen"
 
@@ -2155,9 +2621,6 @@ msgstr "Kobler til igjen"
 
 msgid "References"
 msgstr "Referanser"
-
-msgid "Regulatory Domain"
-msgstr "Regulerende Domene"
 
 msgid "Relay"
 msgstr "Relay"
@@ -2173,6 +2636,9 @@ msgstr "Relay bro"
 
 msgid "Remote IPv4 address"
 msgstr "Ekstern IPv4 adresse"
+
+msgid "Remote IPv4 address or FQDN"
+msgstr ""
 
 msgid "Remove"
 msgstr "Avinstaller"
@@ -2195,8 +2661,33 @@ msgstr ""
 msgid "Require TLS"
 msgstr ""
 
+msgid "Required"
+msgstr ""
+
 msgid "Required for certain ISPs, e.g. Charter with DOCSIS 3"
 msgstr "Er nødvendig for noen nettleverandører, f.eks Charter med DOCSIS 3"
+
+msgid "Required. Base64-encoded private key for this interface."
+msgstr ""
+
+msgid "Required. Base64-encoded public key of peer."
+msgstr ""
+
+msgid ""
+"Required. IP addresses and prefixes that this peer is allowed to use inside "
+"the tunnel. Usually the peer's tunnel IP addresses and the networks the peer "
+"routes through the tunnel."
+msgstr ""
+
+msgid ""
+"Requires the 'full' version of wpad/hostapd and support from the wifi driver "
+"<br />(as of Feb 2017: ath9k and ath10k, in LEDE also mwlwifi and mt76)"
+msgstr ""
+
+msgid ""
+"Requires upstream supports DNSSEC; verify unsigned domain responses really "
+"come from unsigned domains"
+msgstr ""
 
 msgid "Reset"
 msgstr "Nullstill"
@@ -2237,6 +2728,12 @@ msgstr "Rot katalog for filer gitt fra TFTP"
 msgid "Root preparation"
 msgstr ""
 
+msgid "Route Allowed IPs"
+msgstr ""
+
+msgid "Route type"
+msgstr ""
+
 msgid "Routed IPv6 prefix for downstream interfaces"
 msgstr ""
 
@@ -2256,14 +2753,14 @@ msgstr ""
 "Ruter, angir hvilket nettverksgrensesnitt og hvilken gateway som brukes for "
 "å nå et gitt nettverk eller vert."
 
-msgid "Rule #"
-msgstr "Regel #"
-
 msgid "Run a filesystem check before mounting the device"
 msgstr "Kjør filsystem sjekk før montering av enheten"
 
 msgid "Run filesystem check"
 msgstr "Kjør filsystem sjekk"
+
+msgid "SHA256"
+msgstr ""
 
 msgid ""
 "SIXXS supports TIC only, for static tunnels using IP protocol 41 (RFC4213) "
@@ -2273,8 +2770,20 @@ msgstr ""
 msgid "SIXXS-handle[/Tunnel-ID]"
 msgstr ""
 
+msgid "SNR"
+msgstr ""
+
 msgid "SSH Access"
 msgstr "SSH Tilgang"
+
+msgid "SSH server address"
+msgstr ""
+
+msgid "SSH server port"
+msgstr ""
+
+msgid "SSH username"
+msgstr ""
 
 msgid "SSH-Keys"
 msgstr "SSH-Nøkler"
@@ -2316,9 +2825,6 @@ msgstr ""
 msgid "Separate Clients"
 msgstr "Separerte Klienter"
 
-msgid "Separate WDS"
-msgstr "Separert WDS"
-
 msgid "Server Settings"
 msgstr "Server Innstillinger"
 
@@ -2349,6 +2855,12 @@ msgstr "Oppsett tidssynkronisering"
 msgid "Setup DHCP Server"
 msgstr "Oppsett DHCP server"
 
+msgid "Severely Errored Seconds (SES)"
+msgstr ""
+
+msgid "Short GI"
+msgstr ""
+
 msgid "Show current backup file list"
 msgstr "Vis gjeldende liste med sikkerhetskopifiler"
 
@@ -2360,6 +2872,9 @@ msgstr "Slå av dette nettverket"
 
 msgid "Signal"
 msgstr "Signal"
+
+msgid "Signal Attenuation (SATN)"
+msgstr ""
 
 msgid "Signal:"
 msgstr "Signal:"
@@ -2385,6 +2900,9 @@ msgstr "Slot tid"
 msgid "Software"
 msgstr "Programvare"
 
+msgid "Software VLAN"
+msgstr ""
+
 msgid "Some fields are invalid, cannot save values!"
 msgstr "Noen felt er ugyldige, kan ikke lagre verdier!"
 
@@ -2394,15 +2912,14 @@ msgstr "Beklager, objektet du spurte om ble ikke funnet."
 msgid "Sorry, the server encountered an unexpected error."
 msgstr "Beklager, det oppstod en uventet feil på serveren."
 
-#, fuzzy
 msgid ""
 "Sorry, there is no sysupgrade support present; a new firmware image must be "
-"flashed manually. Please refer to the OpenWrt wiki for device specific "
-"install instructions."
+"flashed manually. Please refer to the wiki for device specific install "
+"instructions."
 msgstr ""
 "Beklager, men finner ikke støtte for 'sysupgrade', ny firmware må derfor "
-"flashes manuelt. Viser til OpenWrt wiki for installering av firmare på "
-"forskjellige enheter."
+"flashes manuelt. Viser til wiki for installering av firmare på forskjellige "
+"enheter."
 
 msgid "Sort"
 msgstr "Sortering"
@@ -2433,6 +2950,19 @@ msgid ""
 "dead"
 msgstr "Angir maksimalt antall sekunder før verter ansees som frakoblet"
 
+msgid "Specify a TOS (Type of Service)."
+msgstr ""
+
+msgid ""
+"Specify a TTL (Time to Live) for the encapsulating packet other than the "
+"default (64)."
+msgstr ""
+
+msgid ""
+"Specify an MTU (Maximum Transmission Unit) other than the default (1280 "
+"bytes)."
+msgstr ""
+
 msgid "Specify the secret encryption key here."
 msgstr "Angi krypteringsnøkkelen her."
 
@@ -2456,9 +2986,6 @@ msgstr "Statiske Leier"
 
 msgid "Static Routes"
 msgstr "Statiske Ruter"
-
-msgid "Static WDS"
-msgstr "Statisk WDS"
 
 msgid "Static address"
 msgstr "Statisk adresse"
@@ -2484,6 +3011,12 @@ msgstr "Streng overholdelse"
 msgid "Submit"
 msgstr "Send"
 
+msgid "Suppress logging"
+msgstr ""
+
+msgid "Suppress logging of the routine operation of these protocols"
+msgstr ""
+
 msgid "Swap"
 msgstr ""
 
@@ -2498,6 +3031,13 @@ msgstr "Svitsj %q"
 
 msgid "Switch %q (%s)"
 msgstr "Svitsj %q (%s)"
+
+msgid ""
+"Switch %q has an unknown topology - the VLAN settings might not be accurate."
+msgstr ""
+
+msgid "Switch VLAN"
+msgstr ""
 
 msgid "Switch protocol"
 msgstr "Svitsj protokoll"
@@ -2541,6 +3081,9 @@ msgstr "Tabell"
 msgid "Target"
 msgstr "Mål"
 
+msgid "Target network"
+msgstr ""
+
 msgid "Terminate"
 msgstr "Avslutte"
 
@@ -2569,6 +3112,10 @@ msgstr ""
 msgid ""
 "The HE.net endpoint update configuration changed, you must now use the plain "
 "username instead of the user ID!"
+msgstr ""
+
+msgid ""
+"The IPv4 address or the fully-qualified domain name of the remote tunnel end."
 msgstr ""
 
 msgid ""
@@ -2638,6 +3185,9 @@ msgstr "Lengden IPv4 prefikset i bits, resten brukt i IPv6-adresser."
 
 msgid "The length of the IPv6 prefix in bits"
 msgstr "Lengden på IPv6 prefikset i bits"
+
+msgid "The local IPv4 address over which the tunnel is created (optional)."
+msgstr ""
 
 msgid ""
 "The network ports on this device can be combined to several <abbr title="
@@ -2807,6 +3357,9 @@ msgstr ""
 "For å gjenopprette konfigurasjonsfiler, kan du her laste opp et backup arkiv "
 "som ble opprettet tidligere."
 
+msgid "Tone"
+msgstr ""
+
 msgid "Total Available"
 msgstr "Totalt Tilgjengelig"
 
@@ -2855,9 +3408,6 @@ msgstr ""
 msgid "Tunnel type"
 msgstr ""
 
-msgid "Turbo Mode"
-msgstr "Turbo Modus"
-
 msgid "Tx-Power"
 msgstr "Tx-Styrke"
 
@@ -2876,11 +3426,17 @@ msgstr "UMTS/GPRS/EV-DO"
 msgid "USB Device"
 msgstr "USB Enhet"
 
+msgid "USB Ports"
+msgstr ""
+
 msgid "UUID"
 msgstr "UUID"
 
 msgid "Unable to dispatch"
 msgstr "Kan ikke sende"
+
+msgid "Unavailable Seconds (UAS)"
+msgstr ""
 
 msgid "Unknown"
 msgstr "Ukjent"
@@ -2890,6 +3446,9 @@ msgstr "Ukjent feil, passordet ble ikke endret!"
 
 msgid "Unmanaged"
 msgstr "Uhåndtert"
+
+msgid "Unmount"
+msgstr ""
 
 msgid "Unsaved Changes"
 msgstr "Ulagrede Endringer"
@@ -2902,12 +3461,12 @@ msgstr "Oppdater lister"
 
 msgid ""
 "Upload a sysupgrade-compatible image here to replace the running firmware. "
-"Check \"Keep settings\" to retain the current configuration (requires an "
-"OpenWrt compatible firmware image)."
+"Check \"Keep settings\" to retain the current configuration (requires a "
+"compatible firmware image)."
 msgstr ""
 "Last her opp en sysupgrade-kompatibel firmware som skal erstatte den "
 "kjørende firmware. Merk av \"Behold innstillinger\" for å beholde gjeldene "
-"konfigurasjon. (en OpenWrt kompatibel firmware er nødvendig)"
+"konfigurasjon. (en kompatibel firmware er nødvendig)"
 
 msgid "Upload archive..."
 msgstr "Last opp arkiv..."
@@ -2964,7 +3523,8 @@ msgid ""
 "Use the <em>Add</em> Button to add a new lease entry. The <em>MAC-Address</"
 "em> indentifies the host, the <em>IPv4-Address</em> specifies to the fixed "
 "address to use and the <em>Hostname</em> is assigned as symbolic name to the "
-"requesting host."
+"requesting host. The optional <em>Lease time</em> can be used to set non-"
+"standard host-specific lease time, e.g. 12h, 3d or infinite."
 msgstr ""
 "Bruk <em>Legg til</em> knappen får å legge til en leieavtale. <em>MAC-"
 "Adresse</em> identifiserer verten, <em>IPv4-Adresse</em> angir hvilken "
@@ -2976,6 +3536,11 @@ msgstr "Brukt"
 
 msgid "Used Key Slot"
 msgstr "Brukte Nøkler"
+
+msgid ""
+"Used for two different purposes: RADIUS NAS ID and 802.11r R0KH-ID. Not "
+"needed with normal WPA(2)-PSK."
+msgstr ""
 
 msgid "User certificate (PEM encoded)"
 msgstr ""
@@ -2989,14 +3554,20 @@ msgstr "Brukernavn"
 msgid "VC-Mux"
 msgstr "VC-Mux"
 
-msgid "VLAN Interface"
-msgstr "VLAN grensesnitt"
+msgid "VDSL"
+msgstr ""
 
 msgid "VLANs on %q"
 msgstr "VLANs på %q"
 
 msgid "VLANs on %q (%s)"
 msgstr "VLANs på %q (%s)"
+
+msgid "VPN Local address"
+msgstr ""
+
+msgid "VPN Local port"
+msgstr ""
 
 msgid "VPN Server"
 msgstr "VPN server"
@@ -3005,6 +3576,12 @@ msgid "VPN Server port"
 msgstr ""
 
 msgid "VPN Server's certificate SHA1 hash"
+msgstr ""
+
+msgid "VPNC (CISCO 3000 (and others) VPN)"
+msgstr ""
+
+msgid "Vendor"
 msgstr ""
 
 msgid "Vendor Class to send when requesting DHCP"
@@ -3075,8 +3652,8 @@ msgstr ""
 msgid "Width"
 msgstr ""
 
-msgid "Wifi"
-msgstr "Trådløs"
+msgid "WireGuard VPN"
+msgstr ""
 
 msgid "Wireless"
 msgstr "Trådløs"
@@ -3114,8 +3691,8 @@ msgstr "Trådløst er slått av"
 msgid "Write received DNS requests to syslog"
 msgstr "Skriv mottatte DNS forespørsler til syslog"
 
-msgid "XR Support"
-msgstr "XR Støtte"
+msgid "Write system log to file"
+msgstr ""
 
 msgid ""
 "You can enable or disable installed init scripts here. Changes will applied "
@@ -3128,9 +3705,9 @@ msgstr ""
 "utilgjengelig! </strong>"
 
 msgid ""
-"You must enable Java Script in your browser or LuCI will not work properly."
+"You must enable JavaScript in your browser or LuCI will not work properly."
 msgstr ""
-"Du må aktivere Java Script i nettleseren din ellers vil ikke LuCI fungere "
+"Du må aktivere JavaScript i nettleseren din ellers vil ikke LuCI fungere "
 "skikkelig."
 
 msgid ""
@@ -3221,6 +3798,9 @@ msgstr "lokal <abbr title=\"Domain Navn System\">DNS</abbr>-fil"
 msgid "minimum 1280, maximum 1480"
 msgstr ""
 
+msgid "minutes"
+msgstr ""
+
 msgid "navigation Navigation"
 msgstr ""
 
@@ -3275,6 +3855,9 @@ msgstr ""
 msgid "tagged"
 msgstr "tagget"
 
+msgid "time units (TUs / 1.024 ms) [1000-65535]"
+msgstr ""
+
 msgid "unknown"
 msgstr "ukjent"
 
@@ -3296,702 +3879,68 @@ msgstr "ja"
 msgid "« Back"
 msgstr "« Tilbake"
 
-#~ msgid "Enable IPv6 negotiation on the PPP link"
-#~ msgstr "Aktiver IPv6 på PPP lenke"
+#~ msgid "AR Support"
+#~ msgstr "AR Støtte"
 
-#~ msgid "Ignore Hosts files"
-#~ msgstr "Ignorer vertsfiler"
+#~ msgid "Atheros 802.11%s Wireless Controller"
+#~ msgstr "Atheros 802.11%s Trådløs Kontroller"
 
-#~ msgid "Please wait: Device rebooting..."
-#~ msgstr "Vent: Enheten starter på nytt..."
+#~ msgid "Background Scan"
+#~ msgstr "Bakgrunns Skanning"
 
-#~ msgid ""
-#~ "Warning: There are unsaved changes that will be lost while rebooting!"
-#~ msgstr ""
-#~ "Advarsel: Det er ulagrede endringer som vil gå tapt under omstarten!"
+#~ msgid "Compression"
+#~ msgstr "Komprimering"
 
-#~ msgid ""
-#~ "Always use 40MHz channels even if the secondary channel overlaps. Using "
-#~ "this option does not comply with IEEE 802.11n-2009!"
-#~ msgstr ""
-#~ "Bruk alltid 40MHz kanaler selv om sekundær kanal overlapper. Dette "
-#~ "alternativet er ikke i samsvar med IEEE 802.11n-2009!"
+#~ msgid "Disable HW-Beacon timer"
+#~ msgstr "Deaktiver HW-Beacon timer"
 
-#~ msgid "Cached"
-#~ msgstr "Hurtigbufret"
+#~ msgid "Do not send probe responses"
+#~ msgstr "Ikke send probe svar"
 
-#~ msgid "Configures this mount as overlay storage for block-extroot"
-#~ msgstr ""
-#~ "Konfigurerer dette monteringspunktet som overlay lagringspunkt for block-"
-#~ "extroot"
+#~ msgid "Fast Frames"
+#~ msgstr "Fast Frames"
 
-#~ msgid "Force 40MHz mode"
-#~ msgstr "Bruk 40MHz modus"
+#~ msgid "Maximum Rate"
+#~ msgstr "Maksimal hastighet"
 
-#~ msgid "Frequency Hopping"
-#~ msgstr "Frekvens Hopping"
+#~ msgid "Minimum Rate"
+#~ msgstr "Minimum hastighet"
 
-#~ msgid "Locked to channel %d used by %s"
-#~ msgstr "Låst til kanal %d brukt av %s"
+#~ msgid "Multicast Rate"
+#~ msgstr "Multicast hastighet"
 
-#~ msgid "Use as root filesystem"
-#~ msgstr "Bruk som rot filsystem"
+#~ msgid "Outdoor Channels"
+#~ msgstr "Utendørs Kanaler"
 
-#~ msgid "HE.net user ID"
-#~ msgstr "HE.net bruker ID"
+#~ msgid "Regulatory Domain"
+#~ msgstr "Regulerende Domene"
 
-#~ msgid "This is the 32 byte hex encoded user ID, not the login name"
-#~ msgstr "Dette er det 32 byte hexkodede bruker ID'en, ikke påloggingsnavnet"
+#~ msgid "Separate WDS"
+#~ msgstr "Separert WDS"
 
-#~ msgid "40MHz 2nd channel above"
-#~ msgstr "40MHz, Sekundær kanal over"
+#~ msgid "Static WDS"
+#~ msgstr "Statisk WDS"
 
-#~ msgid "40MHz 2nd channel below"
-#~ msgstr "40MHz, Sekundær kanal under"
+#~ msgid "Turbo Mode"
+#~ msgstr "Turbo Modus"
 
-#~ msgid "Accept router advertisements"
-#~ msgstr "Godta ruterkunngjøringer"
+#~ msgid "XR Support"
+#~ msgstr "XR Støtte"
 
-#~ msgid "Advertise IPv6 on network"
-#~ msgstr "Annonser IPv6 på nettverket"
+#~ msgid "An additional network will be created if you leave this unchecked."
+#~ msgstr "Et nytt nettverk vil bli opprettet hvis du tar bort haken."
 
-#~ msgid "Advertised network ID"
-#~ msgstr "Annonsert nettverks ID"
+#~ msgid "Join Network: Settings"
+#~ msgstr "Koble til nettverk: Innstilling"
 
-#~ msgid "Allowed range is 1 to 65535"
-#~ msgstr "Det tillatte området er fra 1 til 65535"
+#~ msgid "CPU"
+#~ msgstr "CPU"
 
-#~ msgid "HT capabilities"
-#~ msgstr "HT Muligheter"
+#~ msgid "Port %d"
+#~ msgstr "Port %d"
 
-#~ msgid "HT mode"
-#~ msgstr "HT Modus"
+#~ msgid "Port %d is untagged in multiple VLANs!"
+#~ msgstr "Port %d er utagget i flere VLANs!"
 
-#~ msgid "Router Model"
-#~ msgstr "Ruter Modell"
-
-#~ msgid "Router Name"
-#~ msgstr "Ruter Navn"
-
-#~ msgid "Send router solicitations"
-#~ msgstr "Send ruter anmodninger"
-
-#~ msgid "Specifies the advertised preferred prefix lifetime in seconds"
-#~ msgstr "Angir den annonserte foretrukne prefikslevetiden i sekunder"
-
-#~ msgid "Specifies the advertised valid prefix lifetime in seconds"
-#~ msgstr "Angir den annonserte gyldige prefikslevetiden i sekunder"
-
-#~ msgid "Use preferred lifetime"
-#~ msgstr "Bruk foretrukket levetid"
-
-#~ msgid "Use valid lifetime"
-#~ msgstr "Bruk gyldig levetid"
-
-#~ msgid "Waiting for router..."
-#~ msgstr "Venter på ruter..."
-
-#~ msgid "Active Leases"
-#~ msgstr "Aktive leier"
-
-#~ msgid "Open"
-#~ msgstr "Åpne"
-
-#~ msgid "KB"
-#~ msgstr "KB"
-
-#~ msgid "Bit Rate"
-#~ msgstr "Bithastighet"
-
-#~ msgid "Configuration / Apply"
-#~ msgstr "Konfigurasjon / Bruk"
-
-#~ msgid "Configuration / Changes"
-#~ msgstr "Konfigurasjon / Endringer"
-
-#~ msgid "Configuration / Revert"
-#~ msgstr "Konfigurasjon / Tilbakestill"
-
-#~ msgid "MAC"
-#~ msgstr "MAC"
-
-#~ msgid "MAC Address"
-#~ msgstr "MAC adresse"
-
-#~ msgid "<abbr title=\"Encrypted\">Encr.</abbr>"
-#~ msgstr "<abbr title=\"Encrypted\">Kryptert</abbr>"
-
-#~ msgid "<abbr title=\"Wireless Local Area Network\">WLAN</abbr>-Scan"
-#~ msgstr "<abbr title=\"Wireless Local Area Network\">WLAN</abbr>-Skanning"
-
-#~ msgid ""
-#~ "Choose the network you want to attach to this wireless interface. Select "
-#~ "<em>unspecified</em> to not attach any network or fill out the "
-#~ "<em>create</em> field to define a new network."
-#~ msgstr ""
-#~ "Velg det nettverket du ønsker å knytte til dette trådløse grensesnittet. "
-#~ "Velg <em>uspesifisert</em> for ikke tilknytte noe nettverk, eller fyll ut "
-#~ "<em>opprett</em> feltet for å definere et nytt nettverk."
-
-#~ msgid "Create Network"
-#~ msgstr "Opprett Nettverk"
-
-#~ msgid "Link"
-#~ msgstr "Link"
-
-#~ msgid "Networks"
-#~ msgstr "Nettverk"
-
-#~ msgid "Power"
-#~ msgstr "Styrke"
-
-#~ msgid "Wifi networks in your local environment"
-#~ msgstr "Trådløse nettverk i nærheten av deg"
-
-#~ msgid ""
-#~ "<abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>-Notation: "
-#~ "address/prefix"
-#~ msgstr ""
-#~ "<abbr title=\"Classless Inter-Domain Routing\">CIDR</abbr>-Notasjon: "
-#~ "adresse/prefiks"
-
-#~ msgid "<abbr title=\"Domain Name System\">DNS</abbr>-Server"
-#~ msgstr "<abbr title=\"Domain Name System\">DNS</abbr>-Server"
-
-#~ msgid "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Broadcast"
-#~ msgstr ""
-#~ "<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Kringkasting"
-
-#~ msgid "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Address"
-#~ msgstr "<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Adresse"
-
-#~ msgid "IP-Aliases"
-#~ msgstr "IP aliaser"
-
-#~ msgid "IPv6 Setup"
-#~ msgstr "IPv6 oppsett"
-
-#~ msgid ""
-#~ "Note: If you choose an interface here which is part of another network, "
-#~ "it will be moved into this network."
-#~ msgstr ""
-#~ "Vær oppmerksom på at om du velger et grensesnitt som allerede er med et "
-#~ "annet nettverk, blir det flyttet til dette nettverket"
-
-#~ msgid ""
-#~ "Really delete this interface? The deletion cannot be undone!\\nYou might "
-#~ "lose access to this router if you are connected via this interface."
-#~ msgstr ""
-#~ "Fjerne dette grensesnittet? Slettingen kan ikke omgjøres!\\nDu kan miste "
-#~ "kontakten med ruteren om du er tilkoblet via dette grensesnittet."
-
-#~ msgid ""
-#~ "Really delete this wireless network? The deletion cannot be undone!\\nYou "
-#~ "might lose access to this router if you are connected via this network."
-#~ msgstr ""
-#~ "Fjerne dette trådløse nettverket? Slettingen kan ikke omgjøres!\\nDu kan "
-#~ "miste kontakten med ruteren om du er tilkoblet via dette nettverket."
-
-#~ msgid ""
-#~ "Really shutdown interface \"%s\" ?\\nYou might lose access to this router "
-#~ "if you are connected via this interface."
-#~ msgstr ""
-#~ "Slå av dette grensesnittet? \"%s\" ?\\nDu kan miste kontakten med ruteren "
-#~ "om du er tilkoblet via dette grensesnittet."
-
-#~ msgid ""
-#~ "The network ports on your router can be combined to several <abbr title="
-#~ "\"Virtual Local Area Network\">VLAN</abbr>s in which computers can "
-#~ "communicate directly with each other. <abbr title=\"Virtual Local Area "
-#~ "Network\">VLAN</abbr>s are often used to separate different network "
-#~ "segments. Often there is by default one Uplink port for a connection to "
-#~ "the next greater network like the internet and other ports for a local "
-#~ "network."
-#~ msgstr ""
-#~ "Nettverks portene på ruteren kan kombineres til flere <abbr title="
-#~ "\"Virtual Lokal Network\">VLAN</abbr>s der datamaskiner kan kommunisere "
-#~ "direkte med hverandre. <abbr title=\"Virtual Lokal Network\">VLAN</abbr>s "
-#~ "brukes ofte for å skille ulike nettverk segmenter. Det er vanlig og ha en "
-#~ "uplink-port for tilkobling til større nettverk som internett og andre "
-#~ "porter til lokalt nettverk."
-
-#~ msgid "Custom Files"
-#~ msgstr "Egendefinerte Filer"
-
-#~ msgid "Custom files"
-#~ msgstr "Egendefinerte filer"
-
-#~ msgid "Detected Files"
-#~ msgstr "Filer funnet"
-
-#~ msgid "Detected files"
-#~ msgstr "Filer funnet"
-
-#~ msgid "Files to be kept when flashing a new firmware"
-#~ msgstr "Beholde filer ved programvare oppgradering"
-
-#~ msgid "General"
-#~ msgstr "Generelt"
-
-#~ msgid ""
-#~ "Here you can customize the settings and the functionality of <abbr title="
-#~ "\"Lua Configuration Interface\">LuCI</abbr>."
-#~ msgstr "Her kan du endre innstillinger og funksjonaliteten til LuCI."
-
-#~ msgid "Post-commit actions"
-#~ msgstr "Aktiver endringer"
-
-#~ msgid ""
-#~ "The following files are detected by the system and will be kept "
-#~ "automatically during sysupgrade"
-#~ msgstr ""
-#~ "Følgende filer er oppdaget av systemet og vil automatisk bli bevart under "
-#~ "systemoppgradering"
-
-#~ msgid ""
-#~ "These commands will be executed automatically when a given <abbr title="
-#~ "\"Unified Configuration Interface\">UCI</abbr> configuration is committed "
-#~ "allowing changes to be applied instantly."
-#~ msgstr ""
-#~ "Disse endringene vil bli utført automatisk når en <abbr title=\"Unified "
-#~ "Configuration Interface\">UCI</abbr> konfigurasjon brukes, endringen trer "
-#~ "i kraft umiddelbart."
-
-#~ msgid ""
-#~ "This is a list of shell glob patterns for matching files and directories "
-#~ "to include during sysupgrade"
-#~ msgstr ""
-#~ "Dette er en liste med filer og regler som skal inkluderes ved "
-#~ "systemoppgradering"
-
-#~ msgid "Web <abbr title=\"User Interface\">UI</abbr>"
-#~ msgstr "Web Brukergrensesnitt"
-
-#~ msgid "<abbr title=\"Point-to-Point Tunneling Protocol\">PPTP</abbr>-Server"
-#~ msgstr ""
-#~ "<abbr title=\"Point-to-Point Tunneling Protocol\">PPTP</abbr>-Server"
-
-#~ msgid "AHCP Settings"
-#~ msgstr "AHCP Innstillinger"
-
-#~ msgid "ARP ping retries"
-#~ msgstr "ARP ping forsøk"
-
-#~ msgid "ATM Settings"
-#~ msgstr "<abbr title=\"Asynchronous Transfer Mode\">ATM</abbr>Innstillinger"
-
-#~ msgid "Accept Router Advertisements"
-#~ msgstr "Godta Ruter Annonseringer"
-
-#~ msgid "Access point (APN)"
-#~ msgstr "Aksesspunkt (APN)"
-
-#~ msgid "Additional pppd options"
-#~ msgstr "Andre pppd alternativer"
-
-#~ msgid "Allowed range is 1 to FFFF"
-#~ msgstr "Det tillatte området er 1 til FFFF"
-
-#~ msgid "Automatic Disconnect"
-#~ msgstr "Automatisk nedkobling"
-
-#~ msgid "Backup Archive"
-#~ msgstr "Sikkerhetskopi arkiv"
-
-#~ msgid ""
-#~ "Configure the local DNS server to use the name servers adverticed by the "
-#~ "PPP peer"
-#~ msgstr ""
-#~ "Konfigurer den lokale DNS-serveren slik at den bruker navnetjeneren som "
-#~ "blir gitt av PPP peer"
-
-#~ msgid "Connect script"
-#~ msgstr "Oppkoblings skript"
-
-#~ msgid "Create backup"
-#~ msgstr "Lag sikkerhetskopi"
-
-#~ msgid "Default"
-#~ msgstr "Standard"
-
-#~ msgid "Disconnect script"
-#~ msgstr "Frakoblings skript"
-
-#~ msgid "Edit package lists and installation targets"
-#~ msgstr "Endre pakke-liste og installasjon mål"
-
-#~ msgid "Enable 4K VLANs"
-#~ msgstr "Aktiver 4K VLANs"
-
-#~ msgid "Enable IPv6 on PPP link"
-#~ msgstr "Aktiver IPv6 på PPP lenke"
-
-#~ msgid "Firmware image"
-#~ msgstr "Firmware fil"
-
-#~ msgid "Forward DHCP"
-#~ msgstr "Videresend DHCP"
-
-#~ msgid "Forward broadcasts"
-#~ msgstr "Videresend broadcast"
-
-#~ msgid "HE.net Tunnel ID"
-#~ msgstr "HE.net Tunnel ID"
-
-#~ msgid ""
-#~ "Here you can backup and restore your router configuration and - if "
-#~ "possible - reset the router to the default settings."
-#~ msgstr ""
-#~ "Her kan du ta sikkerhetskopi og gjenopprette ruterens konfigurasjon og -"
-#~ "om mulig- tilbakestille ruteren til standardinnstillingene."
-
-#~ msgid "Installation targets"
-#~ msgstr "Installasjon mål"
-
-#~ msgid "Keep configuration files"
-#~ msgstr "Behold konfigurasjonsfiler"
-
-#~ msgid "Keep-Alive"
-#~ msgstr "Keep-Alive"
-
-#~ msgid "Kernel"
-#~ msgstr "Kjerne"
-
-#~ msgid ""
-#~ "Let pppd replace the current default route to use the PPP interface after "
-#~ "successful connect"
-#~ msgstr ""
-#~ "Etter vellykket oppkobling, la pppd erstatte standard rute og sett den "
-#~ "opp for PPP-grensesnittet"
-
-#~ msgid "Let pppd run this script after establishing the PPP link"
-#~ msgstr "La pppd kjøre dette skriptet etter PPP oppkobling"
-
-#~ msgid "Let pppd run this script before tearing down the PPP link"
-#~ msgstr "La pppd kjøre dette skriptet før frakobling av PPP lenke"
-
-#~ msgid ""
-#~ "Make sure that you provide the correct pin code here or you might lock "
-#~ "your sim card!"
-#~ msgstr ""
-#~ "Pass på at du oppgir riktig PIN-kode her, om ikke kan du låse SIM-kortet!"
-
-#~ msgid ""
-#~ "Most of them are network servers, that offer a certain service for your "
-#~ "device or network like shell access, serving webpages like <abbr title="
-#~ "\"Lua Configuration Interface\">LuCI</abbr>, doing mesh routing, sending "
-#~ "e-mails, ..."
-#~ msgstr ""
-#~ "De fleste av dem er nettverkstjenere som tilbyr tjenester på enheten "
-#~ "eller nettverket. Som f.eks. shell tilgang, webserver for <abbr title="
-#~ "\"Lua Configuration Interface\">LuCI</abbr>, mesh ruting, sende e-"
-#~ "post, ..."
-
-#~ msgid "Number of failed connection tests to initiate automatic reconnect"
-#~ msgstr ""
-#~ "Antallet mislykkede forsøk på forbindelse før automatisk oppkobling blir "
-#~ "initiert."
-
-#~ msgid "Override Gateway"
-#~ msgstr "Overstyr Gateway"
-
-#~ msgid "PIN code"
-#~ msgstr "PIN kode"
-
-#~ msgid "PPP Settings"
-#~ msgstr "PPP Innstillinger"
-
-#~ msgid "Package lists"
-#~ msgstr "Pakke-lister"
-
-#~ msgid ""
-#~ "Port <abbr title=\"Primary VLAN IDs\">PVIDs</abbr> specify the default "
-#~ "VLAN ID added to received untagged frames."
-#~ msgstr ""
-#~ "Port <abbr title=\"Primary VLAN IDs\">PVIDs</abbr> spesifiserer standard "
-#~ "VLAN ID som legges på mottatte utaggete ethernet-rammer.<br />"
-
-#~ msgid "Port PVIDs on %q"
-#~ msgstr "Port PVIDs på %q"
-
-#~ msgid "Proceed reverting all settings and resetting to firmware defaults?"
-#~ msgstr "Fortsette tilbakestilling av alle innstillinger til standard?"
-
-#~ msgid "Processor"
-#~ msgstr "Prosessor"
-
-#~ msgid "Radius-Port"
-#~ msgstr "Radius-Port"
-
-#~ msgid "Radius-Server"
-#~ msgstr "Radius-Server"
-
-#~ msgid "Relay Settings"
-#~ msgstr "Relay Innstillinger"
-
-#~ msgid "Replace default route"
-#~ msgstr "Erstatt standard rute"
-
-#~ msgid "Reset router to defaults"
-#~ msgstr "Tilbakestill ruteren til standard innstilling"
-
-#~ msgid "Routing table ID"
-#~ msgstr "Ruting tabell ID"
-
-#~ msgid ""
-#~ "Seconds to wait for the modem to become ready before attempting to connect"
-#~ msgstr "Antall sekunder en må vente før modemet er klar for oppkobling"
-
-#~ msgid "Send Router Solicitiations"
-#~ msgstr "Send Ruter Anmodninger"
-
-#~ msgid "Server IPv4-Address"
-#~ msgstr "Server IPv4-Adresse"
-
-#~ msgid "Service type"
-#~ msgstr "Tjeneste type"
-
-#~ msgid "Services and daemons perform certain tasks on your device."
-#~ msgstr "Tjenester og daemoner utfører forskjellige oppgaver på enheten."
-
-#~ msgid "Settings"
-#~ msgstr "Innstillinger"
-
-#~ msgid "Setup wait time"
-#~ msgstr "Initialiserings ventetid"
-
-#~ msgid ""
-#~ "Sorry. OpenWrt does not support a system upgrade on this platform.<br /> "
-#~ "You need to manually flash your device."
-#~ msgstr ""
-#~ "Beklager. OpenWrt støtter ikke systemoppgradering på denne plattformen."
-#~ "<br /> Du må flashe enheten manuelt."
-
-#~ msgid "Specify additional command line arguments for pppd here"
-#~ msgstr "Angi flere kommandolinje argumenter for pppd her"
-
-#~ msgid "TTL"
-#~ msgstr "TTL"
-
-#~ msgid "The device node of your modem, e.g. /dev/ttyUSB0"
-#~ msgstr "Node enheten for modemet, f.eks. /dev/ttyUSB0"
-
-#~ msgid "Time (in seconds) after which an unused connection will be closed"
-#~ msgstr "Tid (i sekunder) før ubrukt forbindelse vil bli frakoblet"
-
-#~ msgid "Time Server (rdate)"
-#~ msgstr "Tids Server (rdate)"
-
-#~ msgid "Tunnel Settings"
-#~ msgstr "Tunnel Innstillinger"
-
-#~ msgid "Update package lists"
-#~ msgstr "Oppdater pakke-listene"
-
-#~ msgid "Upload an OpenWrt image file to reflash the device."
-#~ msgstr ""
-#~ "Last opp en OpenWrt Firmware fil, som deretter blir brukt til å "
-#~ "oppgradere enheten."
-
-#~ msgid "Upload image"
-#~ msgstr "Last opp firmware"
-
-#~ msgid "Use peer DNS"
-#~ msgstr "Bruk peer DNS"
-
-#~ msgid "VLAN %d"
-#~ msgstr "VLAN %d"
-
-#~ msgid ""
-#~ "You can specify multiple DNS servers here, press enter to add a new "
-#~ "entry. Servers entered here will override automatically assigned ones."
-#~ msgstr ""
-#~ "Her kan du definere flere DNS servere, trykk 'Enter' for å legge til en "
-#~ "ny oppføring. Servere definert her vil overstyre de automatisk tildelte."
-
-#~ msgid ""
-#~ "You need to install \"comgt\" for UMTS/GPRS, \"ppp-mod-pppoe\" for PPPoE, "
-#~ "\"ppp-mod-pppoa\" for PPPoA or \"pptp\" for PPtP support"
-#~ msgstr ""
-#~ "Du må installere \"comgt\" for UMTS/GPRS, \"ppp-mod-pppoe\" for PPPoE, "
-#~ "\"ppp-mod-pppoa\" for PPPoA eller \"pptp\" for PPtP støtte"
-
-#~ msgid "back"
-#~ msgstr "tilbake"
-
-#~ msgid "buffered"
-#~ msgstr "bufret"
-
-#~ msgid "cached"
-#~ msgstr "hurtigbufrede"
-
-#~ msgid "free"
-#~ msgstr "tilgjengelig"
-
-#~ msgid "static"
-#~ msgstr "Statisk"
-
-#~ msgid ""
-#~ "<abbr title=\"Lua Configuration Interface\">LuCI</abbr> is a collection "
-#~ "of free Lua software including an <abbr title=\"Model-View-Controller"
-#~ "\">MVC</abbr>-Webframework and webinterface for embedded devices. <abbr "
-#~ "title=\"Lua Configuration Interface\">LuCI</abbr> is licensed under the "
-#~ "Apache-License."
-#~ msgstr ""
-#~ "<abbr title=\"Lua Configuration Interface\">LuCI</abbr> er en samling av "
-#~ "fri Lua programvare som inkluderer <abbr title=\"Model-View-Controller"
-#~ "\">MVC</abbr>-Webframework og webgrensnitt for innebygde enheter. <abbr "
-#~ "title=\"Lua Configuration Interface\">LuCI</abbr> er lisensert under "
-#~ "Apache-lisensen."
-
-#~ msgid "<abbr title=\"Secure Shell\">SSH</abbr>-Keys"
-#~ msgstr "<abbr title=\"Secure Shell\">SSH</abbr>-Nøkler"
-
-#~ msgid ""
-#~ "A lightweight HTTP/1.1 webserver written in C and Lua designed to serve "
-#~ "LuCI"
-#~ msgstr "En lettvekts HTTP/1.1 webserver skrevet i C og Lua laget for LuCI"
-
-#~ msgid ""
-#~ "A small webserver which can be used to serve <abbr title=\"Lua "
-#~ "Configuration Interface\">LuCI</abbr>."
-#~ msgstr ""
-#~ "En lettvekts webserver som kan brukes til å tjene <abbr title=\"Lua "
-#~ "Configuration Interface\">LuCI</abbr>."
-
-#~ msgid "About"
-#~ msgstr "Om"
-
-#~ msgid "Active IP Connections"
-#~ msgstr "Aktive IP tilkoblinger"
-
-#~ msgid "Addresses"
-#~ msgstr "Adresser"
-
-#~ msgid "Admin Password"
-#~ msgstr "Admin Passord"
-
-#~ msgid "Alias"
-#~ msgstr "Alias"
-
-#~ msgid "Authentication Realm"
-#~ msgstr "Passord beskyttet område"
-
-#~ msgid "Bridge Port"
-#~ msgstr "Bro Port"
-
-#~ msgid ""
-#~ "Change the password of the system administrator (User <code>root</code>)"
-#~ msgstr "Endre passordet for systemansvarlig (Bruker <code>root</code>)"
-
-#~ msgid "Client + WDS"
-#~ msgstr "Klient + WDS"
-
-#~ msgid "Configuration file"
-#~ msgstr "Konfigurasjonsfil"
-
-#~ msgid "Connection timeout"
-#~ msgstr "Tidsavbrudd for tilkobling"
-
-#~ msgid "Contributing Developers"
-#~ msgstr "Medvirkende utviklere"
-
-#~ msgid "DHCP assigned"
-#~ msgstr "DHCP tildelt"
-
-#~ msgid "Document root"
-#~ msgstr "Dokument-roten"
-
-#~ msgid "Enable Keep-Alive"
-#~ msgstr "Aktiver Keep-Alive"
-
-#~ msgid "Enable device"
-#~ msgstr "Aktiver enhet"
-
-#~ msgid "Ethernet Bridge"
-#~ msgstr "Ethernet Bro"
-
-#~ msgid ""
-#~ "Here you can paste public <abbr title=\"Secure Shell\">SSH</abbr>-Keys "
-#~ "(one per line) for <abbr title=\"Secure Shell\">SSH</abbr> public-key "
-#~ "authentication."
-#~ msgstr ""
-#~ "Her kan du lime inn felles <abbr title=\"Secure Shell\">SSH</abbr>-nøkler "
-#~ "(en per linje) for <abbr title=\"Secure Shell\">SSH</abbr> godkjenning."
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "IP Configuration"
-#~ msgstr "IP Konfigurasjon"
-
-#~ msgid "Interface Status"
-#~ msgstr "Grensesnitt Status"
-
-#~ msgid "Lead Development"
-#~ msgstr "Hovedutviklere"
-
-#~ msgid "Master"
-#~ msgstr "Aksesspunkt"
-
-#~ msgid "Master + WDS"
-#~ msgstr "Aksesspunkt + WDS"
-
-#~ msgid "No address configured on this interface."
-#~ msgstr "Ingen adresse er konfigurert på dette grensesnittet."
-
-#~ msgid "Not configured"
-#~ msgstr "Ikke konfigurert"
-
-#~ msgid "Password successfully changed"
-#~ msgstr "Passordet er endret"
-
-#~ msgid "Plugin path"
-#~ msgstr "Plugin sti"
-
-#~ msgid "Ports"
-#~ msgstr "Porter"
-
-#~ msgid "Primary"
-#~ msgstr "Primær"
-
-#~ msgid "Project Homepage"
-#~ msgstr "Prosjektets Hjemmeside"
-
-#~ msgid "Pseudo Ad-Hoc"
-#~ msgstr "Pseudo Ad-Hoc"
-
-#~ msgid "STP"
-#~ msgstr "STP"
-
-#~ msgid "Thanks To"
-#~ msgstr "Takk til"
-
-#~ msgid ""
-#~ "The realm which will be displayed at the authentication prompt for "
-#~ "protected pages."
-#~ msgstr "Beskrivelse av passord beskyttet område, vises ved innlogging."
-
-#~ msgid "Unknown Error"
-#~ msgstr "Ukjent feil"
-
-#~ msgid "VLAN"
-#~ msgstr "VLAN"
-
-#~ msgid "defaults to <code>/etc/httpd.conf</code>"
-#~ msgstr "Standard <code>/etc/httpd.conf</code>"
-
-#~ msgid "Enable this switch"
-#~ msgstr "Aktiver denne svitsj"
-
-#~ msgid "OPKG error code %i"
-#~ msgstr "OPKG feil kode %i"
-
-#~ msgid "Package lists updated"
-#~ msgstr "Pakke-listene oppdatert"
-
-#~ msgid "Reset switch during setup"
-#~ msgstr "Nullstill svitsj under oppstart"
-
-#~ msgid "Upgrade installed packages"
-#~ msgstr "Oppgrader installerte pakker"
+#~ msgid "VLAN Interface"
+#~ msgstr "VLAN grensesnitt"

@@ -168,14 +168,13 @@ local function _nethints(what, callback)
 		end
 	end
 
-	if fs.access("/proc/net/arp") then
-		for e in io.lines("/proc/net/arp") do
-			ip, mac = e:match("^([%d%.]+)%s+%S+%s+%S+%s+([a-fA-F0-9:]+)%s+")
-			if ip and mac then
-				_add(what, mac:upper(), ip, nil, nil)
-			end
+	luci.ip.neighbors(nil, function(neigh)
+		if neigh.mac and neigh.family == 4 then
+			_add(what, neigh.mac:upper(), neigh.dest:string(), nil, nil)
+		elseif neigh.mac and neigh.family == 6 then
+			_add(what, neigh.mac:upper(), nil, neigh.dest:string(), nil)
 		end
-	end
+	end)
 
 	if fs.access("/etc/ethers") then
 		for e in io.lines("/etc/ethers") do
@@ -186,14 +185,18 @@ local function _nethints(what, callback)
 		end
 	end
 
-	if fs.access("/var/dhcp.leases") then
-		for e in io.lines("/var/dhcp.leases") do
-			mac, ip, name = e:match("^%d+ (%S+) (%S+) (%S+)")
-			if mac and ip then
-				_add(what, mac:upper(), ip, nil, name ~= "*" and name)
+	cur:foreach("dhcp", "dnsmasq",
+		function(s)
+			if s.leasefile and fs.access(s.leasefile) then
+				for e in io.lines(s.leasefile) do
+					mac, ip, name = e:match("^%d+ (%S+) (%S+) (%S+)")
+					if mac and ip then
+						_add(what, mac:upper(), ip, nil, name ~= "*" and name)
+					end
+				end
 			end
 		end
-	end
+	)
 
 	cur:foreach("dhcp", "host",
 		function(s)
@@ -292,48 +295,76 @@ function net.ipv6_hints(callback)
 	end
 end
 
-function net.conntrack(callback)
-	local connt = {}
-	if fs.access("/proc/net/nf_conntrack", "r") then
-		for line in io.lines("/proc/net/nf_conntrack") do
-			line = line:match "^(.-( [^ =]+=).-)%2"
-			local entry, flags = _parse_mixed_record(line, " +")
-			if flags[6] ~= "TIME_WAIT" then
-				entry.layer3 = flags[1]
-				entry.layer4 = flags[3]
-				for i=1, #entry do
-					entry[i] = nil
-				end
-
-				if callback then
-					callback(entry)
-				else
-					connt[#connt+1] = entry
-				end
+function net.host_hints(callback)
+	if callback then
+		_nethints(1, function(mac, v4, v6, name)
+			if mac and mac ~= "00:00:00:00:00:00" and (v4 or v6 or name) then
+				callback(mac, v4, v6, name)
 			end
-		end
-	elseif fs.access("/proc/net/ip_conntrack", "r") then
-		for line in io.lines("/proc/net/ip_conntrack") do
-			line = line:match "^(.-( [^ =]+=).-)%2"
-			local entry, flags = _parse_mixed_record(line, " +")
-			if flags[4] ~= "TIME_WAIT" then
-				entry.layer3 = "ipv4"
-				entry.layer4 = flags[1]
-				for i=1, #entry do
-					entry[i] = nil
-				end
-
-				if callback then
-					callback(entry)
-				else
-					connt[#connt+1] = entry
-				end
-			end
-		end
+		end)
 	else
+		local rv = { }
+		_nethints(1, function(mac, v4, v6, name)
+			if mac and mac ~= "00:00:00:00:00:00" and (v4 or v6 or name) then
+				local e = { }
+				if v4   then e.ipv4 = v4   end
+				if v6   then e.ipv6 = v6   end
+				if name then e.name = name end
+				rv[mac] = e
+			end
+		end)
+		return rv
+	end
+end
+
+function net.conntrack(callback)
+	local ok, nfct = pcall(io.lines, "/proc/net/nf_conntrack")
+	if not ok or not nfct then
 		return nil
 	end
-	return connt
+
+	local line, connt = nil, (not callback) and { }
+	for line in nfct do
+		local fam, l3, l4, timeout, tuples =
+			line:match("^(ipv[46]) +(%d+) +%S+ +(%d+) +(%d+) +(.+)$")
+
+		if fam and l3 and l4 and timeout and not tuples:match("^TIME_WAIT ") then
+			l4 = nixio.getprotobynumber(l4)
+
+			local entry = {
+				bytes = 0,
+				packets = 0,
+				layer3 = fam,
+				layer4 = l4 and l4.name or "unknown",
+				timeout = tonumber(timeout, 10)
+			}
+
+			local key, val
+			for key, val in tuples:gmatch("(%w+)=(%S+)") do
+				if key == "bytes" or key == "packets" then
+					entry[key] = entry[key] + tonumber(val, 10)
+				elseif key == "src" or key == "dst" then
+					if entry[key] == nil then
+						entry[key] = luci.ip.new(val):string()
+					end
+				elseif key == "sport" or key == "dport" then
+					if entry[key] == nil then
+						entry[key] = val
+					end
+				elseif val then
+					entry[key] = val
+				end
+			end
+
+			if callback then
+				callback(entry)
+			else
+				connt[#connt+1] = entry
+			end
+		end
+	end
+
+	return callback and true or connt
 end
 
 function net.devices()
@@ -581,30 +612,20 @@ function wifi.getiwinfo(ifname)
 	local stat, iwinfo = pcall(require, "iwinfo")
 
 	if ifname then
-		local c = 0
-		local u = uci.cursor_state()
 		local d, n = ifname:match("^(%w+)%.network(%d+)")
-		if d and n then
+		local wstate = luci.util.ubus("network.wireless", "status") or { }
+
+		d = d or ifname
+		n = n and tonumber(n) or 1
+
+		if type(wstate[d]) == "table" and
+		   type(wstate[d].interfaces) == "table" and
+		   type(wstate[d].interfaces[n]) == "table" and
+		   type(wstate[d].interfaces[n].ifname) == "string"
+		then
+			ifname = wstate[d].interfaces[n].ifname
+		else
 			ifname = d
-			n = tonumber(n)
-			u:foreach("wireless", "wifi-iface",
-				function(s)
-					if s.device == d then
-						c = c + 1
-						if c == n then
-							ifname = s.ifname or s.device
-							return false
-						end
-					end
-				end)
-		elseif u:get("wireless", ifname) == "wifi-device" then
-			u:foreach("wireless", "wifi-iface",
-				function(s)
-					if s.device == ifname and s.ifname then
-						ifname = s.ifname
-						return false
-					end
-				end)
 		end
 
 		local t = stat and iwinfo.type(ifname)
@@ -664,29 +685,4 @@ end
 
 function init.stop(name)
 	return (init_action("stop", name) == 0)
-end
-
-
--- Internal functions
-
-function _parse_mixed_record(cnt, delimiter)
-	delimiter = delimiter or "  "
-	local data = {}
-	local flags = {}
-
-	for i, l in pairs(luci.util.split(luci.util.trim(cnt), "\n")) do
-		for j, f in pairs(luci.util.split(luci.util.trim(l), delimiter, nil, true)) do
-			local k, x, v = f:match('([^%s][^:=]*) *([:=]*) *"*([^\n"]*)"*')
-
-			if k then
-				if x == "" then
-					table.insert(flags, k)
-				else
-					data[k] = v
-				end
-			end
-		end
-	end
-
-	return data, flags
 end

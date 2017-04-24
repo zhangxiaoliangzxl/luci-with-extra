@@ -17,6 +17,14 @@ To install all its package definitions, run:
 ./scripts/feeds install -a -p luci
 ```
 
+## API Reference
+
+You can browse the generated API documentation [directly on Github](http://htmlpreview.github.io/?http://raw.githubusercontent.com/openwrt/luci/master/documentation/api/index.html).
+
+## Development
+
+Documentation for developing and extending LuCI can be found [in the Wiki](https://github.com/openwrt/luci/wiki)
+
 ## License
 
 See [LICENSE](LICENSE) file.

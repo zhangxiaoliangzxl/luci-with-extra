@@ -31,12 +31,6 @@ msgstr ""
 msgid "(Unnamed SNAT)"
 msgstr ""
 
-msgid "-- Please choose --"
-msgstr " -- Selezionare --"
-
-msgid "-- custom --"
-msgstr " -- personalizzata --"
-
 msgid "<var>%d</var> pkts. per <var>%s</var>"
 msgstr ""
 
@@ -99,7 +93,7 @@ msgid "Do not rewrite"
 msgstr ""
 
 msgid "Drop invalid packets"
-msgstr ""
+msgstr "Attiva"
 
 msgid "Enable"
 msgstr ""
@@ -114,28 +108,28 @@ msgid "Enable logging on this zone"
 msgstr ""
 
 msgid "External IP address"
-msgstr ""
+msgstr "Indirizzo IP Esterno"
 
 msgid "External port"
 msgstr "Porta Esterna"
 
 msgid "External zone"
-msgstr ""
+msgstr "Zona Esterna"
 
 msgid "Extra arguments"
-msgstr ""
+msgstr "Comandi extra"
 
 msgid "Firewall"
 msgstr "Firewall"
 
 msgid "Firewall - Custom Rules"
-msgstr ""
+msgstr "Firewall - Regole Personalizzate"
 
 msgid "Firewall - Port Forwards"
-msgstr ""
+msgstr "Firewall - Inoltro Porte"
 
 msgid "Firewall - Traffic Rules"
-msgstr ""
+msgstr "Firewall - Regole Traffico"
 
 msgid "Firewall - Zone Settings"
 msgstr "Firewall - Opzioni delle Zone"
@@ -144,9 +138,12 @@ msgid "Force connection tracking"
 msgstr ""
 
 msgid "Forward"
-msgstr ""
+msgstr "Inoltra"
 
 msgid "Forward to"
+msgstr "Inoltro a"
+
+msgid "Friday"
 msgstr ""
 
 msgid "From %s in %s"
@@ -177,7 +174,7 @@ msgid "IPv6 only"
 msgstr "Solo IPv6"
 
 msgid "Input"
-msgstr ""
+msgstr "Ingresso"
 
 msgid "Inter-Zone Forwarding"
 msgstr ""
@@ -189,7 +186,7 @@ msgid "Internal port"
 msgstr "Porta interna"
 
 msgid "Internal zone"
-msgstr ""
+msgstr "Zona Interna"
 
 msgid "Limit log messages"
 msgstr ""
@@ -198,7 +195,7 @@ msgid "MSS clamping"
 msgstr ""
 
 msgid "Masquerading"
-msgstr ""
+msgstr "Dettagli"
 
 msgid "Match"
 msgstr ""
@@ -219,6 +216,12 @@ msgid ""
 "on the client host."
 msgstr ""
 
+msgid "Monday"
+msgstr ""
+
+msgid "Month Days"
+msgstr ""
+
 msgid "Name"
 msgstr "Nome"
 
@@ -229,7 +232,7 @@ msgid "New forward rule"
 msgstr ""
 
 msgid "New input rule"
-msgstr ""
+msgstr "Nuova regola di inoltro porta"
 
 msgid "New port forward"
 msgstr ""
@@ -270,6 +273,9 @@ msgid ""
 "Port forwarding allows remote computers on the Internet to connect to a "
 "specific computer or service within the private LAN."
 msgstr ""
+"L'inoltro delle porte permette ai computer in remoto su Internet "
+"diconnettersi a uno specifico computer o servizio presente nella tua LAN "
+"privata"
 
 msgid "Protocol"
 msgstr "Protocollo"
@@ -279,6 +285,9 @@ msgid ""
 msgstr ""
 
 msgid "Redirect matched incoming traffic to the specified internal host"
+msgstr ""
+
+msgid "Restart Firewall"
 msgstr ""
 
 msgid "Restrict Masquerading to given destination subnets"
@@ -308,6 +317,9 @@ msgid "SNAT IP address"
 msgstr ""
 
 msgid "SNAT port"
+msgstr ""
+
+msgid "Saturday"
 msgstr ""
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -355,10 +367,27 @@ msgstr "Porta di origine"
 msgid "Source zone"
 msgstr "Zona di origine"
 
+msgid "Start Date (yyyy-mm-dd)"
+msgstr ""
+
+msgid "Start Time (hh:mm:ss)"
+msgstr ""
+
+msgid "Stop Date (yyyy-mm-dd)"
+msgstr ""
+
+msgid "Stop Time (hh:mm:ss)"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
+
 msgid ""
 "The firewall creates zones over your network interfaces to control network "
 "traffic flow."
 msgstr ""
+"Il firewall crea delle zone nelle tue interfacce di rete per controllareil "
+"flusso del traffico."
 
 msgid ""
 "The options below control the forwarding policies between this zone (%s) and "
@@ -385,6 +414,12 @@ msgid ""
 "leaving this zone while the <em>forward</em> option describes the policy for "
 "forwarded traffic between different networks within the zone. <em>Covered "
 "networks</em> specifies which available networks are members of this zone."
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
+msgid "Time in UTC"
 msgstr ""
 
 msgid "To %s at %s on <var>this device</var>"
@@ -414,10 +449,19 @@ msgid ""
 "the router."
 msgstr ""
 
+msgid "Tuesday"
+msgstr ""
+
 msgid "Via %s"
 msgstr ""
 
 msgid "Via %s at %s"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
+
+msgid "Week Days"
 msgstr ""
 
 msgid ""
@@ -460,43 +504,3 @@ msgstr "rifiuta"
 
 msgid "traffic"
 msgstr ""
-
-#~ msgid "Destination"
-#~ msgstr "Destinazione"
-
-#~ msgid "Source"
-#~ msgstr "Origine"
-
-#~ msgid "Accept input"
-#~ msgstr "Accetta INPUT"
-
-#~ msgid "(optional)"
-#~ msgstr "(facoltativo)"
-
-#~ msgid "Internal port (optional)"
-#~ msgstr "Porta interna (opzionale)"
-
-#~ msgid "Advanced Options"
-#~ msgstr "Opzioni Avanzate"
-
-#~ msgid "Advanced Rules"
-#~ msgstr "Regole Avanzate"
-
-#~ msgid ""
-#~ "Advanced rules let you customize the firewall to your needs. Only new "
-#~ "connections will be matched. Packets belonging to already open "
-#~ "connections are automatically allowed to pass the firewall."
-#~ msgstr ""
-#~ "Le regole avanzate consentono di personalizzare il firewall per le tue "
-#~ "necessità. Solo le nuove connessioni saranno combinate. I pacchetti "
-#~ "appartenenti alle connessioni già aperte sono automaticamente autorizzate "
-#~ "ad oltrepassare il firewall."
-
-#~ msgid "Custom Rules (/etc/firewall.user)"
-#~ msgstr "Regole Personalizzate (/etc/firewall.user)"
-
-#~ msgid "Device"
-#~ msgstr "Dispositivo"
-
-#~ msgid "Rules"
-#~ msgstr "Regole"

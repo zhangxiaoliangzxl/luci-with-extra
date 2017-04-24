@@ -1,7 +1,7 @@
 *Note:* If you plan to integrate your module into LuCI, you should read the [wiki:Documentation/Modules Module Reference] before.
 
 This tutorial describes how to write your own modules for the LuCI WebUI.
-For this tutorial we refer to your LuCI installation direcotry as *lucidir_' (/usr/lib/lua/luci if you are working with an installed version) and assume your LuCI installation is reachable through your webserver via '_/cgi-bin/luci*.
+For this tutorial we refer to your LuCI installation directory as *lucidir_' (/usr/lib/lua/luci if you are working with an installed version) and assume your LuCI installation is reachable through your webserver via '_/cgi-bin/luci*.
 
 If you are working with the development environment replace *lucidir_' with '''''/path/to/your/luci/checkout''/applications/myapplication/luasrc''' (this is a default empty module you can use for your experiments) and your LuCI installation can probably be reached via http://localhost:8080/luci/ after you ran '_make runhttpd*.
 
@@ -101,7 +101,7 @@ Now type */cgi-bin/luci/my/new/template_' ('_[http://localhost:8080/luci/my/new/
 You may notice those fancy <% %>-Tags, these are [wiki:Documentation/Templates|template markups] used by the LuCI template processor.
 It is always good to include header and footer at the beginning and end of a template as those create the default design and menu.
 
-## CBI models
+## <a name=cbimodels></a> CBI models
 The CBI is one of the uber coolest features of LuCI. It creates a formular based user interface and saves its contents to a specific UCI config file. You only have to describe the structure of the configuration file in a CBI model file and Luci does the rest of the work. This includes generating, parsing and validating a XHTML form and reading and writing the UCI file.
 
 So let's be serious at least for this paragraph and create a real pratical example *_lucidir_/model/cbi/myapp-mymodule/netifaces.lua* with the following contents:

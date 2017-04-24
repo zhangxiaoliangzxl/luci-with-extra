@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI Support for shadowsocks
-LUCI_DEPENDS:=+shadowsocks-libev
+LUCI_DEPENDS:=+ss-local-standalone
 
 include ../../luci.mk
 

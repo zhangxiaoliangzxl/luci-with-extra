@@ -2,6 +2,8 @@
 -- Licensed to the public under the Apache License 2.0.
 
 local ipc = require "luci.ip"
+local o
+require "luci.util"
 
 m = Map("dhcp", translate("DHCP and DNS"),
 	translate("Dnsmasq is a combined <abbr title=\"Dynamic Host Configuration Protocol" ..
@@ -56,6 +58,15 @@ s:taboption("files", Flag, "nohosts",
 s:taboption("files", DynamicList, "addnhosts",
 	translate("Additional Hosts files")).optional = true
 
+qu = s:taboption("advanced", Flag, "quietdhcp",
+	translate("Suppress logging"),
+	translate("Suppress logging of the routine operation of these protocols"))
+qu.optional = true
+
+se = s:taboption("advanced", Flag, "sequential_ip",
+	translate("Allocate IP sequentially"),
+	translate("Allocate IP addresses sequentially, starting from the lowest available address"))
+se.optional = true
 
 s:taboption("advanced", Flag, "boguspriv",
 	translate("Filter private"),
@@ -69,6 +80,19 @@ s:taboption("advanced", Flag, "filterwin2k",
 s:taboption("advanced", Flag, "localise_queries",
 	translate("Localise queries"),
 	translate("Localise hostname depending on the requesting subnet if multiple IPs are available"))
+
+local have_dnssec_support = luci.util.checklib("/usr/sbin/dnsmasq", "libhogweed.so")
+
+if have_dnssec_support then
+	o = s:taboption("advanced", Flag, "dnssec",
+		translate("DNSSEC"))
+	o.optional = true
+
+	o = s:taboption("advanced", Flag, "dnsseccheckunsigned",
+		translate("DNSSEC check unsigned"),
+		translate("Requires upstream supports DNSSEC; verify unsigned domain responses really come from unsigned domains"))
+	o.optional = true
+end
 
 s:taboption("general", Value, "local",
 	translate("Local server"),
@@ -85,6 +109,10 @@ s:taboption("advanced", Flag, "expandhosts",
 s:taboption("advanced", Flag, "nonegcache",
 	translate("No negative cache"),
 	translate("Do not cache negative replies, e.g. for not existing domains"))
+
+s:taboption("advanced", Flag, "allservers",
+	translate("Use all servers"),
+	translate("Setting this flag forces dnsmasq to send all queries to all available servers. The reply from the server which answers first will be returned to the original requester."))
 
 s:taboption("advanced", Value, "serversfile",
 	translate("Additional servers file"),
@@ -103,6 +131,12 @@ bn = s:taboption("advanced", DynamicList, "bogusnxdomain", translate("Bogus NX D
 bn.optional = true
 bn.placeholder = "67.215.65.132"
 
+fl = s:taboption("advanced", Value, "fil_iplist",
+	translate("IP list for DNS Filter"),
+	translate("IP list for dnsmasq to select a server.By using this, dnsmasq will only forward the reply from servers in this list if the replied ip is in the list."..
+		"Or it will forward the reply from other servers.<br />Leave empty to disable this feature."))
+fl:depends("allservers", "1")
+fl.optional = true
 
 s:taboption("general", Flag, "logqueries",
 	translate("Log queries"),
@@ -133,9 +167,10 @@ rl:depends("rebind_protection", "1")
 rd = s:taboption("general", DynamicList, "rebind_domain",
 	translate("Domain whitelist"),
 	translate("List of domains to allow RFC1918 responses for"))
+rd.optional = true
 
 rd:depends("rebind_protection", "1")
-rd.datatype = "host"
+rd.datatype = "host(1)"
 rd.placeholder = "ihost.netflix.com"
 
 
@@ -206,6 +241,29 @@ db.optional = true
 db:depends("enable_tftp", "1")
 db.placeholder = "pxelinux.0"
 
+o = s:taboption("general", Flag, "localservice",
+	translate("Local Service Only"),
+	translate("Limit DNS service to subnets interfaces on which we are serving DNS."))
+o.optional = false
+o.rmempty = false
+
+o = s:taboption("general", Flag, "nonwildcard",
+	translate("Non-wildcard"),
+	translate("Bind only to specific interfaces rather than wildcard address."))
+o.optional = false
+o.rmempty = false
+
+o = s:taboption("general", DynamicList, "interface",
+	translate("Listen Interfaces"),
+	translate("Limit listening to these interfaces, and loopback."))
+o.optional = true
+o:depends("nonwildcard", true)
+
+o = s:taboption("general", DynamicList, "notinterface",
+	translate("Exclude interfaces"),
+	translate("Prevent listening on these interfaces."))
+o.optional = true
+o:depends("nonwildcard", true)
 
 m:section(SimpleSection).template = "admin_network/lease_status"
 
@@ -215,7 +273,9 @@ s = m:section(TypedSection, "host", translate("Static Leases"),
 		"only hosts with a corresponding lease are served.") .. "<br />" ..
 	translate("Use the <em>Add</em> Button to add a new lease entry. The <em>MAC-Address</em> " ..
 		"indentifies the host, the <em>IPv4-Address</em> specifies to the fixed address to " ..
-		"use and the <em>Hostname</em> is assigned as symbolic name to the requesting host."))
+		"use and the <em>Hostname</em> is assigned as symbolic name to the requesting host. " ..
+		"The optional <em>Lease time</em> can be used to set non-standard host-specific " ..
+		"lease time, e.g. 12h, 3d or infinite."))
 
 s.addremove = true
 s.anonymous = true
@@ -231,6 +291,9 @@ mac.rmempty  = true
 
 ip = s:option(Value, "ip", translate("<abbr title=\"Internet Protocol Version 4\">IPv4</abbr>-Address"))
 ip.datatype = "or(ip4addr,'ignore')"
+
+time = s:option(Value, "leasetime", translate("Lease time"))
+time.rmempty  = true
 
 hostid = s:option(Value, "hostid", translate("<abbr title=\"Internet Protocol Version 6\">IPv6</abbr>-Suffix (hex)"))
 

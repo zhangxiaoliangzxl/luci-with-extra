@@ -147,6 +147,9 @@ msgstr ""
 msgid "Don't log timestamps"
 msgstr ""
 
+msgid "Don't pull routes automatically"
+msgstr ""
+
 msgid "Don't re-read key on restart"
 msgstr ""
 
@@ -487,6 +490,15 @@ msgid "TOS passthrough (applies to IPv4 only)"
 msgstr ""
 
 msgid "Temporary directory for client-connect return file"
+msgstr ""
+
+msgid "The highest supported TLS version"
+msgstr ""
+
+msgid "The key direction for 'tls-auth' and 'secret' options"
+msgstr ""
+
+msgid "The lowest supported TLS version"
 msgstr ""
 
 msgid "Timeframe for key exchange"

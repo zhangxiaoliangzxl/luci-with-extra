@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2008-2015 The LuCI Team <luci@lists.subsignal.org>
+# Copyright (C) 2008-2016 The LuCI Team <luci@lists.subsignal.org>
 #
 # This is free software, licensed under the Apache License, Version 2.0 .
 #
@@ -10,7 +10,7 @@ PKG_NAME:=luci-app-radicale
 
 # Version == major.minor.patch
 # increase "minor" on new functionality and "patch" on patches/optimization
-PKG_VERSION:=1.0.1
+PKG_VERSION:=1.1.0
 
 # Release == build
 # increase on changes of translation files
@@ -36,6 +36,6 @@ help
 	$(PKG_MAINTAINER)
 endef
 
-include $(TOPDIR)/feeds/luci/luci.mk
+include ../../luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature

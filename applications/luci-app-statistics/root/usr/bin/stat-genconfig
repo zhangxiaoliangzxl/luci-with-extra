@@ -273,6 +273,12 @@ plugins = {
 		{ }
 	},
 
+	cpufreq	= {
+		{ },
+		{ },
+		{ }
+	},
+
 	csv	= {
 		{ "DataDir" },
 		{ "StoreRates" },
@@ -343,12 +349,6 @@ plugins = {
 		{ }
 	},
 
-	madwifi = {
-		{ "WatchSet" },
-		{ },
-		{ "Interfaces", "WatchAdds" }
-	},
-
 	memory = { 
 		{ },
 		{ },
@@ -415,6 +415,12 @@ plugins = {
 		{ },
 		{ "ListeningPorts" },
 		{ "LocalPorts", "RemotePorts" }
+	},
+
+	thermal	= {
+		{ },
+		{ "IgnoreSelected" },
+		{ "Device" }
 	},
 
 	unixsock = {

@@ -1,4 +1,5 @@
 -- Copyright 2010 Jo-Philipp Wich <jow@openwrt.org>
+-- Copyright 2017 Dan Luedtke <mail@danrl.com>
 -- Licensed to the public under the Apache License 2.0.
 
 local fs = require "nixio.fs"
@@ -131,6 +132,48 @@ function ip6prefix(val)
 	return ( val and val >= 0 and val <= 128 )
 end
 
+function ipmask(val)
+	return ipmask4(val) or ipmask6(val)
+end
+
+function ipmask4(val)
+	local ip, mask = val:match("^([^/]+)/([^/]+)$")
+	local bits = tonumber(mask)
+
+	if bits and (bits < 0 or bits > 32) then
+		return false
+	end
+
+	if not bits and mask and not ip4addr(mask) then
+		return false
+	end
+
+	return ip4addr(ip or val)
+end
+
+function ipmask6(val)
+	local ip, mask = val:match("^([^/]+)/([^/]+)$")
+	local bits = tonumber(mask)
+
+	if bits and (bits < 0 or bits > 128) then
+		return false
+	end
+
+	if not bits and mask and not ip6addr(mask) then
+		return false
+	end
+
+	return ip6addr(ip or val)
+end
+
+function ip6hostid(val)
+	if val and val:match("^[a-fA-F0-9:]+$") and (#val > 2) then
+		return (ip6addr("2001:db8:0:0" .. val) or ip6addr("2001:db8:0:0:" .. val))
+	end
+
+	return false
+end
+
 function port(val)
 	val = tonumber(val)
 	return ( val and val >= 0 and val <= 65535 )
@@ -176,12 +219,41 @@ function hostname(val)
 	return false
 end
 
-function host(val)
-	return hostname(val) or ipaddr(val)
+function host(val, ipv4only)
+	return hostname(val) or ((ipv4only == 1) and ip4addr(val)) or ((not (ipv4only == 1)) and ipaddr(val))
 end
 
 function network(val)
 	return uciname(val) or host(val)
+end
+
+function hostport(val, ipv4only)
+	local h, p = val:match("^([^:]+):([^:]+)$")
+	return not not (h and p and host(h, ipv4only) and port(p))
+end
+
+function ip4addrport(val, bracket)
+	local h, p = val:match("^([^:]+):([^:]+)$")
+	return (h and p and ip4addr(h) and port(p))
+end
+
+function ip4addrport(val)
+	local h, p = val:match("^([^:]+):([^:]+)$")
+	return (h and p and ip4addr(h) and port(p))
+end
+
+function ipaddrport(val, bracket)
+	local h, p = val:match("^([^%[%]:]+):([^:]+)$")
+	if (h and p and ip4addr(h) and port(p)) then
+		return true
+	elseif (bracket == 1) then
+		h, p = val:match("^%[(.+)%]:([^:]+)$")
+		if  (h and p and ip6addr(h) and port(p)) then
+			return true
+		end
+	end
+	h, p = val:match("^([^%[%]]+):([^:]+)$")
+	return (h and p and ip6addr(h) and port(p))
 end
 
 function wpakey(val)
@@ -204,11 +276,33 @@ function wepkey(val)
 	end
 end
 
+function hexstring(val)
+	if val then
+		return (val:match("^[a-fA-F0-9]+$") ~= nil)
+	end
+	return false
+end
+
+function hex(val, maxbytes)
+	maxbytes = tonumber(maxbytes)
+	if val and maxbytes ~= nil then
+		return ((val:match("^0x[a-fA-F0-9]+$") ~= nil) and (#val <= 2 + maxbytes * 2))
+	end
+	return false
+end
+
+function base64(val)
+	if val then
+		return (val:match("^[a-zA-Z0-9/+]+=?=?$") ~= nil) and (math.fmod(#val, 4) == 0)
+	end
+	return false
+end
+
 function string(val)
 	return true		-- Everything qualifies as valid string
 end
 
-function directory( val, seen )
+function directory(val, seen)
 	local s = fs.stat(val)
 	seen = seen or { }
 
@@ -224,7 +318,7 @@ function directory( val, seen )
 	return false
 end
 
-function file( val, seen )
+function file(val, seen)
 	local s = fs.stat(val)
 	seen = seen or { }
 
@@ -240,7 +334,7 @@ function file( val, seen )
 	return false
 end
 
-function device( val, seen )
+function device(val, seen)
 	local s = fs.stat(val)
 	seen = seen or { }
 
@@ -330,4 +424,48 @@ end
 
 function phonedigit(val)
 	return (val:match("^[0-9\*#!%.]+$") ~= nil)
+end
+
+function timehhmmss(val)
+	return (val:match("^[0-6][0-9]:[0-6][0-9]:[0-6][0-9]$") ~= nil)
+end
+
+function dateyyyymmdd(val)
+	if val ~= nil then
+		yearstr, monthstr, daystr = val:match("^(%d%d%d%d)-(%d%d)-(%d%d)$")
+		if (yearstr == nil) or (monthstr == nil) or (daystr == nil) then
+			return false;
+		end
+		year = tonumber(yearstr)
+		month = tonumber(monthstr)
+		day = tonumber(daystr)
+		if (year == nil) or (month == nil) or (day == nil) then
+			return false;
+		end
+
+		local days_in_month = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }
+
+		local function is_leap_year(year)
+			return (year % 4 == 0) and ((year % 100 ~= 0) or (year % 400 == 0))
+		end
+
+		function get_days_in_month(month, year)
+			if (month == 2) and is_leap_year(year) then
+				return 29
+			else
+				return days_in_month[month]
+			end
+		end
+		if (year < 2015) then
+			return false
+		end
+		if ((month == 0) or (month > 12)) then
+			return false
+		end
+		if ((day == 0) or (day > get_days_in_month(month, year))) then
+			return false
+		end
+		return true
+	end
+	return false
 end

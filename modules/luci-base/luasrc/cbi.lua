@@ -38,7 +38,7 @@ function load(cbimap, ...)
 	require("luci.config")
 	require("luci.util")
 
-	local upldir = "/lib/uci/upload/"
+	local upldir = "/etc/luci-uploads/"
 	local cbidir = luci.util.libpath() .. "/model/cbi/"
 	local func, err
 
@@ -262,6 +262,7 @@ function Node.render_children(self, ...)
 	local k, node
 	for k, node in ipairs(self.children) do
 		node.last_child = (k == #self.children)
+		node.index = k
 		node:render(...)
 	end
 end
@@ -336,7 +337,7 @@ function Map.__init__(self, config, ...)
 end
 
 function Map.formvalue(self, key)
-	return self.readinput and luci.http.formvalue(key)
+	return self.readinput and luci.http.formvalue(key) or nil
 end
 
 function Map.formvaluetable(self, key)
@@ -385,41 +386,45 @@ function Map.parse(self, readinput, ...)
 
 	Node.parse(self, ...)
 
-	self:_run_hooks("on_save", "on_before_save")
-	for i, config in ipairs(self.parsechain) do
-		self.uci:save(config)
-	end
-	self:_run_hooks("on_after_save")
-	if (not self.proceed and self.flow.autoapply) or luci.http.formvalue("cbi.apply") then
-		self:_run_hooks("on_before_commit")
+	if self.save then
+		self:_run_hooks("on_save", "on_before_save")
 		for i, config in ipairs(self.parsechain) do
-			self.uci:commit(config)
-
-			-- Refresh data because commit changes section names
-			self.uci:load(config)
+			self.uci:save(config)
 		end
-		self:_run_hooks("on_commit", "on_after_commit", "on_before_apply")
-		if self.apply_on_parse then
-			self.uci:apply(self.parsechain)
-			self:_run_hooks("on_apply", "on_after_apply")
-		else
-			-- This is evaluated by the dispatcher and delegated to the
-			-- template which in turn fires XHR to perform the actual
-			-- apply actions.
-			self.apply_needed = true
+		self:_run_hooks("on_after_save")
+		if (not self.proceed and self.flow.autoapply) or luci.http.formvalue("cbi.apply") then
+			self:_run_hooks("on_before_commit")
+			for i, config in ipairs(self.parsechain) do
+				self.uci:commit(config)
+
+				-- Refresh data because commit changes section names
+				self.uci:load(config)
+			end
+			self:_run_hooks("on_commit", "on_after_commit", "on_before_apply")
+			if self.apply_on_parse then
+				self.uci:apply(self.parsechain)
+				self:_run_hooks("on_apply", "on_after_apply")
+			else
+				-- This is evaluated by the dispatcher and delegated to the
+				-- template which in turn fires XHR to perform the actual
+				-- apply actions.
+				self.apply_needed = true
+			end
+
+			-- Reparse sections
+			Node.parse(self, true)
 		end
-
-		-- Reparse sections
-		Node.parse(self, true)
-	end
-	for i, config in ipairs(self.parsechain) do
-		self.uci:unload(config)
-	end
-	if type(self.commit_handler) == "function" then
-		self:commit_handler(self:submitstate())
+		for i, config in ipairs(self.parsechain) do
+			self.uci:unload(config)
+		end
+		if type(self.commit_handler) == "function" then
+			self:commit_handler(self:submitstate())
+		end
 	end
 
-	if self.proceed then
+	if not self.save then
+		self.state = FORM_INVALID
+	elseif self.proceed then
 		self.state = FORM_PROCEED
 	elseif self.changed then
 		self.state = FORM_CHANGED
@@ -881,19 +886,24 @@ function AbstractSection.render_tab(self, tab, ...)
 	local k, node
 	for k, node in ipairs(self.tabs[tab].childs) do
 		node.last_child = (k == #self.tabs[tab].childs)
+		node.index = k
 		node:render(...)
 	end
 end
 
 -- Parse optional options
-function AbstractSection.parse_optionals(self, section)
+function AbstractSection.parse_optionals(self, section, noparse)
 	if not self.optional then
 		return
 	end
 
 	self.optionals[section] = {}
 
-	local field = self.map:formvalue("cbi.opt."..self.config.."."..section)
+	local field = nil
+	if not noparse then
+		field = self.map:formvalue("cbi.opt."..self.config.."."..section)
+	end
+
 	for k,v in ipairs(self.children) do
 		if v.optional and not v:cfgvalue(section) and not self:has_tabs() then
 			if field == v.option then
@@ -1071,6 +1081,11 @@ function NamedSection.__init__(self, map, section, stype, ...)
 	self.section = section
 end
 
+function NamedSection.prepare(self)
+	AbstractSection.prepare(self)
+	AbstractSection.parse_optionals(self, self.section, true)
+end
+
 function NamedSection.parse(self, novld)
 	local s = self.section
 	local active = self:cfgvalue(s)
@@ -1118,6 +1133,15 @@ function TypedSection.__init__(self, map, type, ...)
 	self.template = "cbi/tsection"
 	self.deps = {}
 	self.anonymous = false
+end
+
+function TypedSection.prepare(self)
+	AbstractSection.prepare(self)
+
+	local i, s
+	for i, s in ipairs(self:cfgsections()) do
+		AbstractSection.parse_optionals(self, s, true)
+	end
 end
 
 -- Return all matching UCI sections for this TypedSection
@@ -1272,7 +1296,6 @@ function AbstractValue.__init__(self, map, section, option, ...)
 	self.tag_reqerror = {}
 	self.tag_error = {}
 	self.deps = {}
-	self.subdeps = {}
 	--self.cast = "string"
 
 	self.track_missing = false
@@ -1296,7 +1319,30 @@ function AbstractValue.depends(self, field, value)
 		deps = field
 	end
 
-	table.insert(self.deps, {deps=deps, add=""})
+	table.insert(self.deps, deps)
+end
+
+-- Serialize dependencies
+function AbstractValue.deplist2json(self, section, deplist)
+	local deps, i, d = { }
+
+	if type(self.deps) == "table" then
+		for i, d in ipairs(deplist or self.deps) do
+			local a, k, v = { }
+			for k, v in pairs(d) do
+				if k:find("!", 1, true) then
+					a[k] = v
+				elseif k:find(".", 1, true) then
+					a['cbid.%s' % k] = v
+				else
+					a['cbid.%s.%s.%s' %{ self.config, section, k }] = v
+				end
+			end
+			deps[#deps+1] = a
+		end
+	end
+
+	return util.serialize_json(deps)
 end
 
 -- Generates the unique CBID
@@ -1471,6 +1517,7 @@ function Value.__init__(self, ...)
 	self.template  = "cbi/value"
 	self.keylist = {}
 	self.vallist = {}
+	self.readonly = nil
 end
 
 function Value.reset_values(self)
@@ -1484,6 +1531,10 @@ function Value.value(self, key, val)
 	table.insert(self.vallist, tostring(val))
 end
 
+function Value.parse(self, section, novld)
+	if self.readonly then return end
+	AbstractValue.parse(self, section, novld)
+end
 
 -- DummyValue - This does nothing except being there
 DummyValue = class(AbstractValue)
@@ -1528,17 +1579,25 @@ function Flag.__init__(self, ...)
 end
 
 -- A flag can only have two states: set or unset
-function Flag.parse(self, section)
+function Flag.parse(self, section, novld)
 	local fexists = self.map:formvalue(
 		FEXIST_PREFIX .. self.config .. "." .. section .. "." .. self.option)
 
 	if fexists then
 		local fvalue = self:formvalue(section) and self.enabled or self.disabled
 		local cvalue = self:cfgvalue(section)
-		if fvalue ~= self.default or (not self.optional and not self.rmempty) then
-			self:write(section, fvalue)
-		else
+		local val_err
+		fvalue, val_err = self:validate(fvalue, section)
+		if not fvalue then
+			if not novld then
+				self:add_error(section, "invalid", val_err)
+			end
+			return
+		end
+		if fvalue == self.default and (self.optional or self.rmempty) then
 			self:remove(section)
+		else
+			self:write(section, fvalue)
 		end
 		if (fvalue ~= cvalue) then self.section.changed = true end
 	else
@@ -1550,7 +1609,9 @@ end
 function Flag.cfgvalue(self, section)
 	return AbstractValue.cfgvalue(self, section) or self.default
 end
-
+function Flag.validate(self, value)
+	return value
+end
 
 --[[
 ListValue - A one-line value predefined in a list
@@ -1562,15 +1623,16 @@ function ListValue.__init__(self, ...)
 	AbstractValue.__init__(self, ...)
 	self.template  = "cbi/lvalue"
 
-	self.keylist = {}
-	self.vallist = {}
 	self.size   = 1
 	self.widget = "select"
+
+	self:reset_values()
 end
 
 function ListValue.reset_values(self)
 	self.keylist = {}
 	self.vallist = {}
+	self.deplist = {}
 end
 
 function ListValue.value(self, key, val, ...)
@@ -1581,10 +1643,7 @@ function ListValue.value(self, key, val, ...)
 	val = val or key
 	table.insert(self.keylist, tostring(key))
 	table.insert(self.vallist, tostring(val))
-
-	for i, deps in ipairs({...}) do
-		self.subdeps[#self.subdeps + 1] = {add = "-"..key, deps=deps}
-	end
+	table.insert(self.deplist, {...})
 end
 
 function ListValue.validate(self, val)
@@ -1608,11 +1667,10 @@ function MultiValue.__init__(self, ...)
 	AbstractValue.__init__(self, ...)
 	self.template = "cbi/mvalue"
 
-	self.keylist = {}
-	self.vallist = {}
-
 	self.widget = "checkbox"
 	self.delimiter = " "
+
+	self:reset_values()
 end
 
 function MultiValue.render(self, ...)
@@ -1626,6 +1684,7 @@ end
 function MultiValue.reset_values(self)
 	self.keylist = {}
 	self.vallist = {}
+	self.deplist = {}
 end
 
 function MultiValue.value(self, key, val)
@@ -1700,8 +1759,7 @@ function DynamicList.__init__(self, ...)
 	AbstractValue.__init__(self, ...)
 	self.template  = "cbi/dynlist"
 	self.cast = "table"
-	self.keylist = {}
-	self.vallist = {}
+	self:reset_values()
 end
 
 function DynamicList.reset_values(self)
@@ -1796,6 +1854,7 @@ function Button.__init__(self, ...)
 	self.template  = "cbi/button"
 	self.inputstyle = nil
 	self.rmempty = true
+        self.unsafeupload = false
 end
 
 
@@ -1812,9 +1871,15 @@ function FileUpload.__init__(self, ...)
 end
 
 function FileUpload.formcreated(self, section)
-	return AbstractValue.formcreated(self, section) or
-		self.map:formvalue("cbi.rlf."..section.."."..self.option) or
-		self.map:formvalue("cbi.rlf."..section.."."..self.option..".x")
+	if self.unsafeupload then
+		return AbstractValue.formcreated(self, section) or
+			self.map:formvalue("cbi.rlf."..section.."."..self.option) or
+			self.map:formvalue("cbi.rlf."..section.."."..self.option..".x") or
+			self.map:formvalue("cbid."..self.map.config.."."..section.."."..self.option..".textbox")
+	else
+		return AbstractValue.formcreated(self, section) or
+			self.map:formvalue("cbid."..self.map.config.."."..section.."."..self.option..".textbox")
+	end
 end
 
 function FileUpload.cfgvalue(self, section)
@@ -1825,26 +1890,49 @@ function FileUpload.cfgvalue(self, section)
 	return nil
 end
 
+-- If we have a new value, use it
+-- otherwise use old value
+-- deletion should be managed by a separate button object
+-- unless self.unsafeupload is set in which case if the user
+-- choose to remove the old file we do so.
+-- Also, allow to specify (via textbox) a file already on router
 function FileUpload.formvalue(self, section)
 	local val = AbstractValue.formvalue(self, section)
 	if val then
-		if not self.map:formvalue("cbi.rlf."..section.."."..self.option) and
-		   not self.map:formvalue("cbi.rlf."..section.."."..self.option..".x")
-		then
+		if self.unsafeupload then
+			if not self.map:formvalue("cbi.rlf."..section.."."..self.option) and
+		   	    not self.map:formvalue("cbi.rlf."..section.."."..self.option..".x")
+			then
+				return val
+			end
+			fs.unlink(val)
+			self.value = nil
+			return nil
+                elseif val ~= "" then
 			return val
-		end
-		fs.unlink(val)
-		self.value = nil
+                end
 	end
-	return nil
+	val = luci.http.formvalue("cbid."..self.map.config.."."..section.."."..self.option..".textbox")
+	if val == "" then
+		val = nil
+	end
+        if not self.unsafeupload then
+		if not val then
+			val = self.map:formvalue("cbi.rlf."..section.."."..self.option)
+		end
+        end
+	return val
 end
 
 function FileUpload.remove(self, section)
-	local val = AbstractValue.formvalue(self, section)
-	if val and fs.access(val) then fs.unlink(val) end
-	return AbstractValue.remove(self, section)
+	if self.unsafeupload then
+		local val = AbstractValue.formvalue(self, section)
+		if val and fs.access(val) then fs.unlink(val) end
+		return AbstractValue.remove(self, section)
+	else
+		return nil
+	end
 end
-
 
 FileBrowser = class(AbstractValue)
 

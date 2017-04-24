@@ -152,6 +152,9 @@ msgstr "Nie dziedzicz globalnej opcji push"
 msgid "Don't log timestamps"
 msgstr "Nie zapisuj czasu w logu"
 
+msgid "Don't pull routes automatically"
+msgstr ""
+
 msgid "Don't re-read key on restart"
 msgstr "Nie wczytuj ponownie klucza podczas restartu"
 
@@ -507,6 +510,15 @@ msgstr "Przepuszczanie TOS (dotyczy tylko IPv4)"
 
 msgid "Temporary directory for client-connect return file"
 msgstr "Katalog tymczasowy dla pliku zwrotnego połączenia klienta"
+
+msgid "The highest supported TLS version"
+msgstr ""
+
+msgid "The key direction for 'tls-auth' and 'secret' options"
+msgstr ""
+
+msgid "The lowest supported TLS version"
+msgstr ""
 
 msgid "Timeframe for key exchange"
 msgstr ""

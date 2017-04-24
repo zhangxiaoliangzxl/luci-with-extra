@@ -53,6 +53,9 @@ config statistics 'collectd_conntrack'
 	option enable '0'
 
 config statistics 'collectd_cpu'
+	option enable '1'
+
+config statistics 'collectd_cpufreq'
 	option enable '0'
 
 config statistics 'collectd_df'
@@ -113,7 +116,7 @@ config statistics 'collectd_load'
 	option enable '1'
 
 config statistics 'collectd_memory'
-	option enable '0'
+	option enable '1'
 
 config statistics 'collectd_netlink'
 	option enable '0'
@@ -150,6 +153,11 @@ config statistics 'collectd_tcpconns'
 	option enable '0'
 	option ListeningPorts '0'
 	option LocalPorts '22 80'
+
+config statistics 'collectd_thermal'
+	option enable '0'
+	option IgnoreSelected '0'
+	option Device ''
 
 config statistics 'collectd_uptime'
 	option enable '0'

@@ -87,8 +87,8 @@ function action_json()
 	local v4_port = uci:get("olsrd", "olsrd_jsoninfo", "port") or 9090
 	local v6_port = uci:get("olsrd6", "olsrd_jsoninfo", "port") or 9090
 
-	jsonreq4 = utl.exec("(echo /status | nc 127.0.0.1 " .. v4_port .. ") 2>/dev/null" )
-	jsonreq6 = utl.exec("(echo /status | nc ::1 " .. v6_port .. ") 2>/dev/null")
+	jsonreq4 = utl.exec("(echo /status | nc 127.0.0.1 " .. v4_port .. " | sed -n '/^[}{ ]/p') 2>/dev/null" )
+	jsonreq6 = utl.exec("(echo /status | nc ::1 " .. v6_port .. " | sed -n '/^[}{ ]/p') 2>/dev/null")
 	http.prepare_content("application/json")
 	if not jsonreq4 or jsonreq4 == "" then
 		jsonreq4 = "{}"
@@ -171,11 +171,12 @@ function action_neigh(json)
 
 	for _, dev in ipairs(devices) do
 		for _, net in ipairs(dev:get_wifinets()) do
+			local radio = net:get_device()
 			assoclist[#assoclist+1] = {} 
-			assoclist[#assoclist]['ifname'] = net.iwdata.ifname
-			assoclist[#assoclist]['network'] = net.iwdata.network
-			assoclist[#assoclist]['device'] = net.iwdata.device
-			assoclist[#assoclist]['list'] = net.iwinfo.assoclist
+			assoclist[#assoclist]['ifname'] = net:ifname()
+			assoclist[#assoclist]['network'] = net:network()[1]
+			assoclist[#assoclist]['device'] = radio and radio:name() or nil
+			assoclist[#assoclist]['list'] = net:assoclist()
 		end
 	end
 
@@ -374,8 +375,8 @@ function fetch_jsoninfo(otable)
 	local v4_port = uci:get("olsrd", "olsrd_jsoninfo", "port") or 9090
 	local v6_port = uci:get("olsrd6", "olsrd_jsoninfo", "port") or 9090
 
-	jsonreq4 = utl.exec("(echo /" .. otable .. " | nc 127.0.0.1 " .. v4_port .. ") 2>/dev/null")
-	jsonreq6 = utl.exec("(echo /" .. otable .. " | nc ::1 " .. v6_port .. ") 2>/dev/null")
+	jsonreq4 = utl.exec("(echo /" .. otable .. " | nc 127.0.0.1 " .. v4_port .. " | sed -n '/^[}{ ]/p') 2>/dev/null")
+	jsonreq6 = utl.exec("(echo /" .. otable .. " | nc ::1 " .. v6_port .. " | sed -n '/^[}{ ]/p') 2>/dev/null")
 	local jsondata4 = {}
 	local jsondata6 = {}
 	local data4 = {}
